@@ -265,7 +265,7 @@
 						<!--<td colspan="4"><xsl:apply-templates select="./error"/></td>-->
 					<!--</tr>-->
 				<!--</xsl:if>-->
-				<xsl:apply-templates select="." />
+				<xsl:apply-templates select="/testsuite/testcase[@classname = current()/@classname]" />
 			</table>
 
 			<p/>
@@ -370,7 +370,7 @@
 <xsl:template name="testcase.test.header">
 	<tr valign="top">
 		<th>Testcase</th>
-		<th>Name</th>
+		<th width="20%">Name</th>
 		<th>Status</th>
 		<th width="80%">Details</th>
 		<th>Screenshot</th>
@@ -411,8 +411,9 @@
 			</xsl:choose>
 		</xsl:attribute>
 		<!--TODO-->
-		<td><xsl:value-of select="@name"/> </td>
-		<td><xsl:value-of select="@name"/> </td>
+		<xsl:variable name="testID" select="substring-before(@name, ' ')"/>
+		<td> <a href="https://chegg.testrail.com/index.php?/cases/view/{$testID}" target="_blank"><xsl:value-of select="$testID"/></a>  </td>
+		<td><xsl:value-of select="substring-after(@name, ' ')"/> </td>
 		<xsl:choose>
 			<xsl:when test="failure">
 				<td>Failure</td>
@@ -427,6 +428,7 @@
 				<td>N/A</td>
 			</xsl:otherwise>
 		</xsl:choose>
+		<td>Screenshot</td>
 		<td>
 			<xsl:call-template name="display-time">
 				<xsl:with-param name="value" select="@time"/>
@@ -447,7 +449,7 @@
 <!-- Style for the error and failure in the tescase template -->
 <xsl:template name="display-failures">
 	<xsl:choose>
-		<xsl:when test="not(@message)">N/A</xsl:when>
+		<xsl:when test="not(text())">N/A</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="@message"/>
 		</xsl:otherwise>
