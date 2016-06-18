@@ -168,7 +168,7 @@
 			<hr size="1" width="95%" align="left"/>
 			
 			<!-- For each package create its part -->
-			<xsl:call-template name="packages"/>
+			<!--<xsl:call-template name="packages"/>-->
 			<hr size="1" width="95%" align="left"/>
 			
 			<!-- For each class create the  part -->
@@ -192,10 +192,11 @@
 			<!--<xsl:for-each select="/testsuite/testcase[not(@classname = current())]">-->
 			<xsl:for-each select="/testsuite/testcase[not(@classname = following::testcase/@classname)]">
 			<xsl:sort select="@classname"/>
-				<xsl:variable name="testsuites-in-package" select="/testsuite/testcase[not(@classname = current())]/@classname"/>
-				<xsl:variable name="testCount" select="sum($testsuites-in-package/@tests)"/>
-				<xsl:variable name="errorCount" select="sum($testsuites-in-package/@errors)"/>
-				<xsl:variable name="failureCount" select="sum($testsuites-in-package/@failures)"/>
+				<xsl:variable name="testsuites-in-package" select="/testsuite/testcase[@classname = current()/@classname]"/>
+				<xsl:variable name="testCount" select="count($testsuites-in-package)"/>
+				<xsl:variable name="successCount" select="count($testsuites-in-package/info)"/>
+				<xsl:variable name="errorCount" select="count($testsuites-in-package/error1)"/>
+				<xsl:variable name="failureCount" select="count($testsuites-in-package/error)"/>
 				<xsl:variable name="timeCount" select="sum($testsuites-in-package/@time)"/>
 				
 				<!-- write a summary for the package -->
@@ -207,9 +208,9 @@
 							<xsl:when test="$errorCount &gt; 0">Error</xsl:when>
 						</xsl:choose>
 					</xsl:attribute>
-					<td><a href="#{@package}"><xsl:value-of select="@classname"/></a></td>
+					<td><a href="#{@classname}"><xsl:value-of select="@classname"/></a></td>
 					<td><xsl:value-of select="$testCount"/></td>
-					<td><xsl:value-of select="$errorCount"/></td>
+					<td><xsl:value-of select="$successCount"/></td>
 					<td><xsl:value-of select="$failureCount"/></td>
 					<td>
 					<xsl:call-template name="display-time">
@@ -229,9 +230,9 @@
 	<!-- ================================================================== -->
 	<xsl:template name="packages">
 		<!-- create an anchor to this package name -->
-		<xsl:for-each select="/testsuite/testcase[./@classname = current()]">
+		<xsl:for-each select="/testsuite/testcase[not(@classname = following::testcase/@classname)]">
 			<xsl:sort select="@classname"/>
-				<a name="{@package}"></a>
+				<a name="{@classname}"></a>
 				<h3>Package <xsl:value-of select="@classname"/></h3>
 				
 				<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
@@ -250,8 +251,8 @@
 		<xsl:for-each select="testsuite">
 			<xsl:sort select="@name"/>
 			<!-- create an anchor to this class name -->
-			<a name="{@name}"></a>
-			<h3>TestCase <xsl:value-of select="@name"/></h3>
+			<a name="{@classname}"></a>
+			<h3>TestSuite <xsl:value-of select="@classname"/></h3>
 			
 			<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 			  <xsl:call-template name="testcase.test.header"/>
@@ -266,12 +267,7 @@
 				</xsl:if>
 				<xsl:apply-templates select="./testcase" />
 			</table>
-            <div class="Properties">
-                <a>
-			        <xsl:attribute name="href">javascript:displayProperties('<xsl:value-of select="@package"/>.<xsl:value-of select="@name"/>');</xsl:attribute>
-			        Properties &#187;
-			    </a>
-            </div>
+
 			<p/>
 			
 			<a href="#top">Back to top</a>
@@ -281,13 +277,15 @@
 	<xsl:template name="summary">
 		<h2>Summary</h2>
 		<xsl:variable name="testCount" select="sum(testsuite/@tests)"/>
-		<xsl:variable name="errorCount" select="sum(testsuite/@errors)"/>
-		<xsl:variable name="failureCount" select="sum(testsuite/@failures)"/>
-		<xsl:variable name="timeCount" select="sum(testsuite/@time)"/>
+		<xsl:variable name="successCount" select="count(testsuite/testcase/info)"/>
+		<xsl:variable name="errorCount" select="sum(testsuite/@errors1)"/>
+		<xsl:variable name="failureCount" select="sum(testsuite/@errors)"/>
+		<xsl:variable name="timeCount" select="sum(testsuite/testcase/@time)"/>
 		<xsl:variable name="successRate" select="($testCount - $failureCount - $errorCount) div $testCount"/>
 		<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
 			<th>Tests</th>
+			<th>Success</th>
 			<th>Failures</th>
 			<th>Errors</th>
 			<th>Success rate</th>
@@ -301,6 +299,7 @@
 				</xsl:choose>
 			</xsl:attribute>
 			<td><xsl:value-of select="$testCount"/></td>
+			<td><xsl:value-of select="$successCount"/></td>
 			<td><xsl:value-of select="$failureCount"/></td>
 			<td><xsl:value-of select="$errorCount"/></td>
 			<td>
@@ -347,8 +346,9 @@
 
 <xsl:template match="testsuite">
 	<tr valign="top">
-		<th width="80%">Name</th>
+		<th width="80%">Name1</th>
 		<th>Tests</th>
+		<th>Success</th>
 		<th>Errors</th>
 		<th>Failures</th>
 		<th nowrap="nowrap">Time(s)</th>
@@ -360,7 +360,7 @@
 	<tr valign="top">
 		<th width="80%">Name</th>
 		<th>Tests</th>
-		<th>Errors</th>
+		<th>Success</th>
 		<th>Failures</th>
 		<th nowrap="nowrap">Time(s)</th>
 	</tr>
