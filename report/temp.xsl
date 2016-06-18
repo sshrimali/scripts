@@ -248,8 +248,8 @@
 	</xsl:template>
 	
 	<xsl:template name="classes">
-		<xsl:for-each select="testsuite">
-			<xsl:sort select="@name"/>
+		<xsl:for-each select="/testsuite/testcase[not(@classname = following::testcase/@classname)]">
+			<xsl:sort select="@classname"/>
 			<!-- create an anchor to this class name -->
 			<a name="{@classname}"></a>
 			<h3>TestSuite <xsl:value-of select="@classname"/></h3>
@@ -260,12 +260,12 @@
 			  test can even not be started at all (failure to load the class)
 			  so report the error directly
 			  -->
-				<xsl:if test="./error">
-					<tr class="Error">
-						<td colspan="4"><xsl:apply-templates select="./error"/></td>
-					</tr>
-				</xsl:if>
-				<xsl:apply-templates select="./testcase" />
+				<!--<xsl:if test="./error">-->
+					<!--<tr class="Failure">-->
+						<!--<td colspan="4"><xsl:apply-templates select="./error"/></td>-->
+					<!--</tr>-->
+				<!--</xsl:if>-->
+				<xsl:apply-templates select="." />
 			</table>
 
 			<p/>
@@ -369,9 +369,11 @@
 <!-- method header -->
 <xsl:template name="testcase.test.header">
 	<tr valign="top">
+		<th>Testcase</th>
 		<th>Name</th>
 		<th>Status</th>
-		<th width="80%">Type</th>
+		<th width="80%">Details</th>
+		<th>Screenshot</th>
 		<th nowrap="nowrap">Time(s)</th>
 	</tr>
 </xsl:template>
@@ -408,7 +410,9 @@
 				<xsl:when test="failure | error">Error</xsl:when>
 			</xsl:choose>
 		</xsl:attribute>
-		<td><xsl:value-of select="@name"/></td>
+		<!--TODO-->
+		<td><xsl:value-of select="@name"/> </td>
+		<td><xsl:value-of select="@name"/> </td>
 		<xsl:choose>
 			<xsl:when test="failure">
 				<td>Failure</td>
@@ -420,7 +424,7 @@
 			</xsl:when>
 			<xsl:otherwise>
 				<td>Success</td>
-				<td></td>
+				<td>N/A</td>
 			</xsl:otherwise>
 		</xsl:choose>
 		<td>
