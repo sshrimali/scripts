@@ -54,17 +54,17 @@
  information on the Apache Software Foundation, please see
  <http://www.apache.org/>.
  -->
- 
-<!--
- 
 
- 
+<!--
+
+
+
  It creates a non-framed report that can be useful to send via
  e-mail or such.
- 
+
  @author Stephane Bailliez <a href="mailto:sbailliez@apache.org"/>
  @author Erik Hatcher <a href="mailto:ehatcher@apache.org"/>
- 
+
 -->
 <xsl:template match="/">
 	<HTML>
@@ -85,7 +85,7 @@
       table.details tr td{
       	background:#eeeee0;
       }
-      
+
       p {
       	line-height:1.5em;
       	margin-top:0.5em; margin-bottom:1.0em;
@@ -121,7 +121,7 @@
       <script language="JavaScript">
         var TestCases = new Array();
         var cur;
-        <xsl:for-each select="./testsuite">      
+        <xsl:for-each select="./testsuite">
             <xsl:apply-templates select="properties"/>
         </xsl:for-each>
 
@@ -152,41 +152,41 @@
           doc.close();
           win.focus();
         }
-      ]]>  
+      ]]>
       </script>
 		</HEAD>
 		<body>
 			<a name="top"></a>
-			<xsl:call-template name="pageHeader"/>	
-			
+			<xsl:call-template name="pageHeader"/>
+
 			<!-- Summary part -->
 			<xsl:call-template name="summary"/>
-			<hr size="1" width="95%" align="left"/>
-			
+			<hr size="1" width="100%" align="left"/>
+
 			<!-- Package List part -->
 			<xsl:call-template name="packagelist"/>
-			<hr size="1" width="95%" align="left"/>
-			
+			<hr size="1" width="100%" align="left"/>
+
 			<!-- For each package create its part -->
 			<!--<xsl:call-template name="packages"/>-->
-			<hr size="1" width="95%" align="left"/>
-			
+			<hr size="1" width="100%" align="left"/>
+
 			<!-- For each class create the  part -->
 			<xsl:call-template name="classes"/>
-			
+
 		</body>
 	</HTML>
 </xsl:template>
-	
-	
-	
+
+
+
 	<!-- ================================================================== -->
 	<!-- Write a list of all packages with an hyperlink to the anchor of    -->
 	<!-- of the package name.                                               -->
 	<!-- ================================================================== -->
-	<xsl:template name="packagelist">	
+	<xsl:template name="packagelist">
 		<h2>Test Suites</h2>
-		<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+		<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 			<xsl:call-template name="testsuite.test.header"/>
 			<!-- list all packages recursively -->
 			<!--<xsl:for-each select="/testsuite/testcase[not(@classname = current())]">-->
@@ -198,17 +198,17 @@
 				<xsl:variable name="errorCount" select="count($testsuites-in-package/error1)"/>
 				<xsl:variable name="failureCount" select="count($testsuites-in-package/error)"/>
 				<xsl:variable name="timeCount" select="sum($testsuites-in-package/@time)"/>
-				
+
 				<!-- write a summary for the package -->
 				<tr valign="top">
 					<!-- set a nice color depending if there is an error/failure -->
 					<xsl:attribute name="class">
 						<xsl:choose>
 							<xsl:when test="$failureCount &gt; 0">Failure</xsl:when>
-							<xsl:when test="$errorCount &gt; 0">Error</xsl:when>
+							<xsl:when test="$errorCount &gt; 0">Failure</xsl:when>
 						</xsl:choose>
 					</xsl:attribute>
-					<td><a href="#{@classname}"><xsl:value-of select="@classname"/></a></td>
+					<td><a href="#{@classname}"><xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></a></td>
 					<td><xsl:value-of select="$testCount"/></td>
 					<td><xsl:value-of select="$successCount"/></td>
 					<td><xsl:value-of select="$failureCount"/></td>
@@ -219,10 +219,10 @@
 					</td>
 				</tr>
 			</xsl:for-each>
-		</table>		
+		</table>
 	</xsl:template>
-	
-	
+
+
 	<!-- ================================================================== -->
 	<!-- Write a package level report                                       -->
 	<!-- It creates a table with values from the document:                  -->
@@ -234,10 +234,10 @@
 			<xsl:sort select="@classname"/>
 				<a name="{@classname}"></a>
 				<h3>Package <xsl:value-of select="@classname"/></h3>
-				
-				<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+
+				<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 					<xsl:call-template name="testsuite.test.header"/>
-			
+
 					<!-- match the testsuites of this package -->
 					<xsl:apply-templates select="/testsuite[./@package = current()/@package]" />
 				</table>
@@ -246,15 +246,15 @@
 				<p/>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<xsl:template name="classes">
 		<xsl:for-each select="/testsuite/testcase[not(@classname = following::testcase/@classname)]">
 			<xsl:sort select="@classname"/>
 			<!-- create an anchor to this class name -->
 			<a name="{@classname}"></a>
-			<h3>TestSuite <xsl:value-of select="@classname"/></h3>
-			
-			<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+			<h3>TestSuite - <xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></h3>
+
+			<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 			  <xsl:call-template name="testcase.test.header"/>
 			  <!--
 			  test can even not be started at all (failure to load the class)
@@ -269,11 +269,11 @@
 			</table>
 
 			<p/>
-			
+
 			<a href="#top">Back to top</a>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<xsl:template name="summary">
 		<h2>Summary</h2>
 		<xsl:variable name="testCount" select="sum(testsuite/@tests)"/>
@@ -282,14 +282,14 @@
 		<xsl:variable name="failureCount" select="sum(testsuite/@errors)"/>
 		<xsl:variable name="timeCount" select="sum(testsuite/testcase/@time)"/>
 		<xsl:variable name="successRate" select="($testCount - $failureCount - $errorCount) div $testCount"/>
-		<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+		<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 		<tr valign="top">
 			<th>Tests</th>
 			<th>Success</th>
 			<th>Failures</th>
 			<th>Errors</th>
 			<th>Success rate</th>
-			<th>Time</th>
+			<th width="150px">Time(H:MM:SS)</th>
 		</tr>
 		<tr valign="top">
 			<xsl:attribute name="class">
@@ -315,7 +315,7 @@
 
 		</tr>
 		</table>
-		<table border="0" width="95%">
+		<table border="0" width="100%">
 		<tr>
 		<td	style="text-align: justify;">
 		Note: <i>failures</i> are anticipated and checked for with assertions while <i>errors</i> are unanticipated.
@@ -323,7 +323,7 @@
 		</tr>
 		</table>
 	</xsl:template>
-	
+
   <!--
    Write properties into a JavaScript data structure.
    This is based on the original idea by Erik Hatcher (ehatcher@apache.org)
@@ -335,7 +335,7 @@
         cur['<xsl:value-of select="@name"/>'] = '<xsl:call-template name="JS-escape"><xsl:with-param name="string" select="@value"/></xsl:call-template>';
   	</xsl:for-each>
   </xsl:template>
-	
+
 <!-- Page HEADER -->
 <xsl:template name="pageHeader">
 	<h1>Chegg Test Report</h1>
@@ -351,7 +351,7 @@
 		<th>Success</th>
 		<th>Errors</th>
 		<th>Failures</th>
-		<th nowrap="nowrap">Time(s)</th>
+		<th nowrap="nowrap">Time(H:MM:SS)</th>
 	</tr>
 </xsl:template>
 
@@ -362,7 +362,7 @@
 		<th>Tests</th>
 		<th>Success</th>
 		<th>Failures</th>
-		<th nowrap="nowrap">Time(s)</th>
+		<th nowrap="nowrap">Time(H:MM:SS)</th>
 	</tr>
 </xsl:template>
 
@@ -372,9 +372,8 @@
 		<th>Testcase</th>
 		<th width="20%">Name</th>
 		<th>Status</th>
-		<th width="80%">Details</th>
-		<th>Screenshot</th>
-		<th nowrap="nowrap">Time(s)</th>
+		<th width="70%">Details</th>
+		<th nowrap="nowrap">Time<br/>(H:MM:SS)</th>
 	</tr>
 </xsl:template>
 
@@ -389,7 +388,7 @@
 				<xsl:when test="@errors[.&gt; 0]">Error</xsl:when>
 			</xsl:choose>
 		</xsl:attribute>
-	
+
 		<!-- print testsuite information -->
 		<td><a href="#{@name}"><xsl:value-of select="@name"/></a></td>
 		<td><xsl:value-of select="@tests"/></td>
@@ -407,28 +406,28 @@
 	<tr valign="top">
 		<xsl:attribute name="class">
 			<xsl:choose>
-				<xsl:when test="failure | error">Error</xsl:when>
+				<xsl:when test="failure | error">Failure</xsl:when>
 			</xsl:choose>
 		</xsl:attribute>
 		<!--TODO-->
 		<xsl:variable name="testID" select="substring-before(@name, ' ')"/>
 		<td> <a href="https://chegg.testrail.com/index.php?/cases/view/{$testID}" target="_blank"><xsl:value-of select="$testID"/></a>  </td>
-		<td><xsl:value-of select="substring-after(@name, ' ')"/> </td>
+		<td width="50%"><xsl:value-of select="substring-after(@name, ' ')"/> </td>
 		<xsl:choose>
 			<xsl:when test="failure">
 				<td>Failure</td>
 				<td><xsl:apply-templates select="failure"/></td>
 			</xsl:when>
 			<xsl:when test="error">
-				<td>Error</td>
-				<td><xsl:apply-templates select="error"/></td>
+				<td>Failure</td>
+				<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+<xsl:apply-templates select="error"/></td>
 			</xsl:when>
 			<xsl:otherwise>
 				<td>Success</td>
-				<td>N/A</td>
+				<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a></td>
 			</xsl:otherwise>
 		</xsl:choose>
-		<td>Screenshot</td>
 		<td>
 			<xsl:call-template name="display-time">
 				<xsl:with-param name="value" select="@time"/>
@@ -451,7 +450,7 @@
 	<xsl:choose>
 		<xsl:when test="not(text())">N/A</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="@message"/>
+			<!--<xsl:value-of select="text()"/>-->
 		</xsl:otherwise>
 	</xsl:choose>
 	<!-- display the stacktrace -->
@@ -461,7 +460,7 @@
 			<xsl:with-param name="word" select="."/>
 		</xsl:call-template>
 	</code>
-	<!-- the later is better but might be problematic for non-21" monitors... -->
+	 <!--the later is better but might be problematic for non-21" monitors... -->
 	<!--pre><xsl:value-of select="."/></pre-->
 </xsl:template>
 
@@ -472,7 +471,7 @@
 			<xsl:value-of select="substring-before($string,&quot;'&quot;)"/>\&apos;<xsl:call-template name="JS-escape">
 				<xsl:with-param name="string" select="substring-after($string,&quot;'&quot;)"/>
 			</xsl:call-template>
-		</xsl:when> 
+		</xsl:when>
 		<xsl:when test="contains($string,'\')">
 			<xsl:value-of select="substring-before($string,'\')"/>\\<xsl:call-template name="JS-escape">
 				<xsl:with-param name="string" select="substring-after($string,'\')"/>
@@ -491,23 +490,36 @@
 -->
 <xsl:template name="br-replace">
 	<xsl:param name="word"/>
+
 	<xsl:choose>
-		<xsl:when test="contains($word,'&#xA;')">
-			<xsl:value-of select="substring-before($word,'&#xA;')"/>
-			<br/>
-			<xsl:call-template name="br-replace">
-				<xsl:with-param name="word" select="substring-after($word,'&#xA;')"/>
-			</xsl:call-template>
+		<xsl:when test="contains($word,'ERROR')">
+
+			<xsl:choose>
+				<xsl:when test="contains($word,'&#xA;')">
+					<xsl:value-of select="substring-before($word,'&#xA;')"/>
+					<br/>
+					<xsl:call-template name="br-replace">
+
+						<xsl:with-param name="word" select="substring-after($word,'&#xA;')"/>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$word"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:when>
-		<xsl:otherwise>
-			<xsl:value-of select="$word"/>
-		</xsl:otherwise>
 	</xsl:choose>
+
 </xsl:template>
 
 <xsl:template name="display-time">
 	<xsl:param name="value"/>
-	<xsl:value-of select="format-number($value,'0.000')"/>
+
+<xsl:value-of select="floor($value div 3600)" />
+
+	<xsl:variable name="r" select="$value mod 3600"/>
+	<xsl:value-of select="format-number(floor($r div 60), ':00')"/>
+	<xsl:value-of select="format-number($r mod 60, ':00')"/>
 </xsl:template>
 
 <xsl:template name="display-percent">
