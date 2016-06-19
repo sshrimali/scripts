@@ -69,6 +69,7 @@
 	<xsl:template match="/">
 		<HTML>
 			<HEAD>
+				<title>Chegg test framework report</title>
 				<style type="text/css">
 					body {
 					font:normal 68% verdana,arial,helvetica;
