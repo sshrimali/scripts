@@ -70,10 +70,19 @@
 		<HTML>
 			<HEAD>
 				<title>Chegg test framework report</title>
+				<script src="https://code.jquery.com/jquery-1.9.1.min.js">test </script>
 				<script src="https://www.amcharts.com/lib/3/amcharts.js"> test</script>
 				<script src="https://www.amcharts.com/lib/3/pie.js"> test </script>
 				<script src="https://www.amcharts.com/lib/3/themes/light.js"> test </script>
 				<script>
+					$(document).ready(function()
+					{
+					var result = document.getElementsByClassName("details")[0].innerHTML;
+
+					console.log("sourabh : " + result);
+
+
+
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
 					"theme": "light",
@@ -83,28 +92,7 @@
 					}, {
 					"country": "Czech Republic",
 					"litres": 301.9
-					}, {
-					"country": "Ireland",
-					"litres": 201.1
-					}, {
-					"country": "Germany",
-					"litres": 165.8
-					}, {
-					"country": "Australia",
-					"litres": 139.9
-					}, {
-					"country": "Austria",
-					"litres": 128.3
-					}, {
-					"country": "UK",
-					"litres": 99
-					}, {
-					"country": "Belgium",
-					"litres": 60
-					}, {
-					"country": "The Netherlands",
-					"litres": 50
-					} ],
+					}],
 					"valueField": "litres",
 					"titleField": "country",
 					"balloon":{
@@ -114,6 +102,7 @@
 					"enabled": true
 					}
 					} );
+					});
 				</script>
 				<style type="text/css">
 					#chartdiv {
@@ -224,10 +213,10 @@
 							<xsl:when test="$errorCount &gt; 0">Failure</xsl:when>
 						</xsl:choose>
 					</xsl:attribute>
-					<td><a href="#{@classname}"><xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></a></td>
-					<td><xsl:value-of select="$testCount"/></td>
-					<td><xsl:value-of select="$successCount"/></td>
-					<td><xsl:value-of select="$failureCount"/></td>
+					<td class="suiteName"><a href="#{@classname}"><xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></a></td>
+					<td class="suiteTotal"><xsl:value-of select="$testCount"/></td>
+					<td class="suiteSuccess"><xsl:value-of select="$successCount"/></td>
+					<td class="suiteFailure"><xsl:value-of select="$failureCount"/></td>
 					<td>
 						<xsl:call-template name="display-time">
 							<xsl:with-param name="value" select="$timeCount"/>
@@ -300,7 +289,7 @@
 		<xsl:variable name="successRate" select="($testCount - $failureCount - $errorCount) div $testCount"/>
 		<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 			<tr valign="top">
-				<th>Tests</th>
+				<th id="details">Tests</th>
 				<th>Success</th>
 				<th>Failures</th>
 				<th>Errors</th>

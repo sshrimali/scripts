@@ -1,10 +1,19 @@
 <HTML>
   <HEAD>
     <title>Chegg test framework report</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js">test </script>
     <script src="https://www.amcharts.com/lib/3/amcharts.js"> test</script>
     <script src="https://www.amcharts.com/lib/3/pie.js"> test </script>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"> test </script>
     <script>
+					$(document).ready(function()
+					{
+					var result = document.getElementsByClassName("details")[0].innerHTML;
+
+					console.log("sourabh : " + result);
+
+
+
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
 					"theme": "light",
@@ -14,28 +23,7 @@
 					}, {
 					"country": "Czech Republic",
 					"litres": 301.9
-					}, {
-					"country": "Ireland",
-					"litres": 201.1
-					}, {
-					"country": "Germany",
-					"litres": 165.8
-					}, {
-					"country": "Australia",
-					"litres": 139.9
-					}, {
-					"country": "Austria",
-					"litres": 128.3
-					}, {
-					"country": "UK",
-					"litres": 99
-					}, {
-					"country": "Belgium",
-					"litres": 60
-					}, {
-					"country": "The Netherlands",
-					"litres": 50
-					} ],
+					}],
 					"valueField": "litres",
 					"titleField": "country",
 					"balloon":{
@@ -45,6 +33,7 @@
 					"enabled": true
 					}
 					} );
+					});
 				</script>
     <style type="text/css">
 					#chartdiv {
@@ -111,7 +100,7 @@
     <h2>Summary</h2>
     <table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
       <tr valign="top">
-        <th>Tests</th>
+        <th id="details">Tests</th>
         <th>Success</th>
         <th>Failures</th>
         <th>Errors</th>
@@ -145,102 +134,102 @@
         <th nowrap="nowrap">Time(H:MM:SS)</th>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.ISBN Searching">ISBN Searching</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:00:25</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.mdot signup">mdot signup</a>
         </td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">0</td>
+        <td class="suiteFailure">1</td>
         <td>0:00:41</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.rentbuy page">rentbuy page</a>
         </td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
+        <td class="suiteTotal">2</td>
+        <td class="suiteSuccess">2</td>
+        <td class="suiteFailure">0</td>
         <td>0:00:41</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.search page">search page</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:00:32</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.study page">study page</a>
         </td>
-        <td>3</td>
-        <td>3</td>
-        <td>0</td>
+        <td class="suiteTotal">3</td>
+        <td class="suiteSuccess">3</td>
+        <td class="suiteFailure">0</td>
         <td>0:00:24</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.test SIHP">test SIHP</a>
         </td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">0</td>
+        <td class="suiteFailure">1</td>
         <td>0:00:38</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.test the SOHP">test the SOHP</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:00:59</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.test the Sign In page and feature.">test the Sign In page and feature.</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:02:37</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.testing book pdp">testing book pdp</a>
         </td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
+        <td class="suiteTotal">2</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">1</td>
         <td>0:01:48</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.testing my account page">testing my account page</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:01:14</td>
       </tr>
       <tr valign="top" class="">
-        <td>
+        <td class="suiteName">
           <a href="#freshen.noseplugin.testing psychic search">testing psychic search</a>
         </td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
+        <td class="suiteTotal">1</td>
+        <td class="suiteSuccess">1</td>
+        <td class="suiteFailure">0</td>
         <td>0:02:53</td>
       </tr>
     </table>
