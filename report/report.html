@@ -5,27 +5,39 @@
     <script src="https://www.amcharts.com/lib/3/amcharts.js"> test</script>
     <script src="https://www.amcharts.com/lib/3/pie.js"> test </script>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"> test </script>
-    <script>
+    <script type="text/javascript">
+
 					$(document).ready(function()
 					{
-					var result = document.getElementsByClassName("details")[0].innerHTML;
+					var listSize = document.getElementsByClassName("graphSuiteTotal").length;
+					var result1 = document.getElementsByClassName("graphSuiteFailure")[1].innerHTML;
 
-					console.log("sourabh : " + result);
+					console.log("listSize : " + listSize);
+					var totalFailures=0;
+					var data=[];
+					for (var iterator=0;iterator<listSize;iterator++)
+					{
+						var suiteName=document.getElementsByClassName("graphSuiteName")[iterator].innerHTML;
+						var failures=document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
+						totalFailures=+totalFailures + +document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
 
+					var stat= {suiteName: suiteName,failures: failures};
+
+					data.push(stat);
+					}
+					console.log("Data : " + JSON.stringify(data));
+					console.log("Data : " + data);
 
 
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
+					"setLegendPosition" : "top center",
+					"bezierX": 1,
 					"theme": "light",
-					"dataProvider": [ {
-					"country": "Lithuania",
-					"litres": 501.9
-					}, {
-					"country": "Czech Republic",
-					"litres": 301.9
-					}],
-					"valueField": "litres",
-					"titleField": "country",
+					"legends": "true",
+					"dataProvider": data,
+					"valueField": "failures",
+					"titleField": "suiteName",
 					"balloon":{
 					"fixedPosition":true
 					},
@@ -33,13 +45,15 @@
 					"enabled": true
 					}
 					} );
+					chart.setPiePosition(400,400);
+					chart.draw();
 					});
 				</script>
     <style type="text/css">
 					#chartdiv {
-					width		: 100%;
-					height		: 500px;
-					font-size	: 11px;
+					width		: 800px;
+					height		: 400px;
+					font-size	: 10px;
 					}
 					body {
 					font:normal 68% verdana,arial,helvetica;
@@ -94,13 +108,12 @@
     <a name="top"/>
     <h1>Chegg Test Report</h1>
     <h2>Graphical Failure Analysis</h2>
-    <div id="chartdiv"> test </div>
-    <table width="100%"/>
+    <div id="chartdiv" width="200px"> test </div>
     <hr size="1"/>
     <h2>Summary</h2>
     <table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
       <tr valign="top">
-        <th id="details">Tests</th>
+        <th>Tests</th>
         <th>Success</th>
         <th>Failures</th>
         <th>Errors</th>
@@ -134,102 +147,102 @@
         <th nowrap="nowrap">Time(H:MM:SS)</th>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.ISBN Searching">ISBN Searching</a>
+        <td>
+          <a href="#freshen.noseplugin.ISBN Searching" class="graphSuiteName">ISBN Searching</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:00:25</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.mdot signup">mdot signup</a>
+        <td>
+          <a href="#freshen.noseplugin.mdot signup" class="graphSuiteName">mdot signup</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">0</td>
-        <td class="suiteFailure">1</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">0</td>
+        <td class="graphSuiteFailure">1</td>
         <td>0:00:41</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.rentbuy page">rentbuy page</a>
+        <td>
+          <a href="#freshen.noseplugin.rentbuy page" class="graphSuiteName">rentbuy page</a>
         </td>
-        <td class="suiteTotal">2</td>
-        <td class="suiteSuccess">2</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">2</td>
+        <td class="graphSuiteSuccess">2</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:00:41</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.search page">search page</a>
+        <td>
+          <a href="#freshen.noseplugin.search page" class="graphSuiteName">search page</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:00:32</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.study page">study page</a>
+        <td>
+          <a href="#freshen.noseplugin.study page" class="graphSuiteName">study page</a>
         </td>
-        <td class="suiteTotal">3</td>
-        <td class="suiteSuccess">3</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">3</td>
+        <td class="graphSuiteSuccess">3</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:00:24</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.test SIHP">test SIHP</a>
+        <td>
+          <a href="#freshen.noseplugin.test SIHP" class="graphSuiteName">test SIHP</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">0</td>
-        <td class="suiteFailure">1</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">0</td>
+        <td class="graphSuiteFailure">1</td>
         <td>0:00:38</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.test the SOHP">test the SOHP</a>
+        <td>
+          <a href="#freshen.noseplugin.test the SOHP" class="graphSuiteName">test the SOHP</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:00:59</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.test the Sign In page and feature.">test the Sign In page and feature.</a>
+        <td>
+          <a href="#freshen.noseplugin.test the Sign In page and feature." class="graphSuiteName">test the Sign In page and feature.</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:02:37</td>
       </tr>
       <tr valign="top" class="Failure">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.testing book pdp">testing book pdp</a>
+        <td>
+          <a href="#freshen.noseplugin.testing book pdp" class="graphSuiteName">testing book pdp</a>
         </td>
-        <td class="suiteTotal">2</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">1</td>
+        <td class="graphSuiteTotal">2</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">1</td>
         <td>0:01:48</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.testing my account page">testing my account page</a>
+        <td>
+          <a href="#freshen.noseplugin.testing my account page" class="graphSuiteName">testing my account page</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:01:14</td>
       </tr>
       <tr valign="top" class="">
-        <td class="suiteName">
-          <a href="#freshen.noseplugin.testing psychic search">testing psychic search</a>
+        <td>
+          <a href="#freshen.noseplugin.testing psychic search" class="graphSuiteName">testing psychic search</a>
         </td>
-        <td class="suiteTotal">1</td>
-        <td class="suiteSuccess">1</td>
-        <td class="suiteFailure">0</td>
+        <td class="graphSuiteTotal">1</td>
+        <td class="graphSuiteSuccess">1</td>
+        <td class="graphSuiteFailure">0</td>
         <td>0:02:53</td>
       </tr>
     </table>

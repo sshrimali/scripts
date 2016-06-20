@@ -74,27 +74,39 @@
 				<script src="https://www.amcharts.com/lib/3/amcharts.js"> test</script>
 				<script src="https://www.amcharts.com/lib/3/pie.js"> test </script>
 				<script src="https://www.amcharts.com/lib/3/themes/light.js"> test </script>
-				<script>
+				<script type="text/javascript">
+
 					$(document).ready(function()
 					{
-					var result = document.getElementsByClassName("details")[0].innerHTML;
+					var listSize = document.getElementsByClassName("graphSuiteTotal").length;
+					var result1 = document.getElementsByClassName("graphSuiteFailure")[1].innerHTML;
 
-					console.log("sourabh : " + result);
+					console.log("listSize : " + listSize);
+					var totalFailures=0;
+					var data=[];
+					for (var iterator=0;iterator<xsl:text disable-output-escaping="yes">&lt;</xsl:text>listSize;iterator++)
+					{
+						var suiteName=document.getElementsByClassName("graphSuiteName")[iterator].innerHTML;
+						var failures=document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
+						totalFailures=+totalFailures + +document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
 
+					var stat= {suiteName: suiteName,failures: failures};
+
+					data.push(stat);
+					}
+					console.log("Data : " + JSON.stringify(data));
+					console.log("Data : " + data);
 
 
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
+					"setLegendPosition" : "top center",
+					"bezierX": 1,
 					"theme": "light",
-					"dataProvider": [ {
-					"country": "Lithuania",
-					"litres": 501.9
-					}, {
-					"country": "Czech Republic",
-					"litres": 301.9
-					}],
-					"valueField": "litres",
-					"titleField": "country",
+					"legends": "true",
+					"dataProvider": data,
+					"valueField": "failures",
+					"titleField": "suiteName",
 					"balloon":{
 					"fixedPosition":true
 					},
@@ -102,13 +114,15 @@
 					"enabled": true
 					}
 					} );
+					chart.setPiePosition(400,400);
+					chart.draw();
 					});
 				</script>
 				<style type="text/css">
 					#chartdiv {
-					width		: 100%;
-					height		: 500px;
-					font-size	: 11px;
+					width		: 800px;
+					height		: 400px;
+					font-size	: 10px;
 					}
 					body {
 					font:normal 68% verdana,arial,helvetica;
@@ -213,10 +227,10 @@
 							<xsl:when test="$errorCount &gt; 0">Failure</xsl:when>
 						</xsl:choose>
 					</xsl:attribute>
-					<td class="suiteName"><a href="#{@classname}"><xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></a></td>
-					<td class="suiteTotal"><xsl:value-of select="$testCount"/></td>
-					<td class="suiteSuccess"><xsl:value-of select="$successCount"/></td>
-					<td class="suiteFailure"><xsl:value-of select="$failureCount"/></td>
+					<td><a href="#{@classname}" class="graphSuiteName"><xsl:value-of select="substring-after(@classname,'freshen.noseplugin.')"/></a></td>
+					<td class="graphSuiteTotal"><xsl:value-of select="$testCount"/></td>
+					<td class="graphSuiteSuccess"><xsl:value-of select="$successCount"/></td>
+					<td class="graphSuiteFailure"><xsl:value-of select="$failureCount"/></td>
 					<td>
 						<xsl:call-template name="display-time">
 							<xsl:with-param name="value" select="$timeCount"/>
@@ -289,7 +303,7 @@
 		<xsl:variable name="successRate" select="($testCount - $failureCount - $errorCount) div $testCount"/>
 		<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 			<tr valign="top">
-				<th id="details">Tests</th>
+				<th>Tests</th>
 				<th>Success</th>
 				<th>Failures</th>
 				<th>Errors</th>
@@ -346,11 +360,7 @@
 
 		<h1>Chegg Test Report</h1>
 		<h2>Graphical Failure Analysis</h2>
-
-		<div id="chartdiv"> test </div>
-
-		<table width="100%">
-		</table>
+		<div id="chartdiv" width="200px"> test </div>
 		<hr size="1"/>
 	</xsl:template>
 
