@@ -90,16 +90,22 @@
 						var failures=document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
 						totalFailures=+totalFailures + +document.getElementsByClassName("graphSuiteFailure")[iterator].innerHTML;
 
-					var stat= {suiteName: suiteName,failures: failures};
-
-					data.push(stat);
+						var stat= {suiteName: suiteName,failures: failures};
+						if (failures!="0")
+						{
+							data.push(stat);
+						}
 					}
 					console.log("Data : " + JSON.stringify(data));
 					console.log("Data : " + data);
 
-
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
+					 "legend":{
+					"position":"right",
+					"marginRight":400,
+					"autoMargins":false
+					},
 					"setLegendPosition" : "top center",
 					"bezierX": 1,
 					"theme": "light",
@@ -120,7 +126,7 @@
 				</script>
 				<style type="text/css">
 					#chartdiv {
-					width		: 800px;
+					width		: 100%;
 					height		: 400px;
 					font-size	: 10px;
 					}
@@ -359,8 +365,9 @@
 	<xsl:template name="pageHeader">
 
 		<h1>Chegg Test Report</h1>
+		<hr size="1"/>
 		<h2>Graphical Failure Analysis</h2>
-		<div id="chartdiv" width="200px"> test </div>
+		<div id="chartdiv" > test </div>
 		<hr size="1"/>
 	</xsl:template>
 
