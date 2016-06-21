@@ -81,7 +81,6 @@
 					var listSize = document.getElementsByClassName("graphSuiteTotal").length;
 					var result1 = document.getElementsByClassName("graphSuiteFailure")[1].innerHTML;
 
-					console.log("listSize : " + listSize);
 					var totalFailures=0;
 					var data=[];
 					for (var iterator=0;iterator<xsl:text disable-output-escaping="yes">&lt;</xsl:text>listSize;iterator++)
@@ -96,8 +95,8 @@
 							data.push(stat);
 						}
 					}
-					console.log("Data : " + JSON.stringify(data));
-					console.log("Data : " + data);
+					<!--console.log("Data : " + JSON.stringify(data));-->
+					<!--console.log("Data : " + data);-->
 
 					var chart = AmCharts.makeChart( "chartdiv", {
 					"type": "pie",
@@ -120,8 +119,7 @@
 					"enabled": true
 					}
 					} );
-					chart.setPiePosition(400,400);
-					chart.draw();
+
 					});
 				</script>
 				<style type="text/css">
@@ -181,6 +179,69 @@
 					.Properties {
 					text-align:right;
 					}
+					.tooltip {
+					transform: none;
+					margin: 5px;
+					}
+
+					.tooltip:hover <xsl:text disable-output-escaping="yes">&gt;</xsl:text> .tooltip-text {
+					pointer-events: auto;
+					opacity: 1.0;
+					}
+
+					.tooltip <xsl:text disable-output-escaping="yes">&gt;</xsl:text> .tooltip-text {
+					display: block;
+					position: absolute;
+					left: 640px;
+					z-index: 2000;
+					overflow: visible;
+					padding: 5px 8px;
+					margin-top: 10px;
+					line-height: 16px;
+					border-radius: 8px;
+					text-align: left;
+					color: #fff;
+					color: #a6caf0;
+					background: #a6caf0;
+					pointer-events: none;
+					opacity: 0.0;
+					-o-transition: all 1.5s ease-out;
+					-ms-transition: all 1.5s ease-out;
+					-moz-transition: all 1.5s ease-out;
+					-webkit-transition: all 1.5s ease-out;
+					transition: all 1.5s ease-out;
+					}
+
+					/* Arrow */
+					.tooltip <xsl:text disable-output-escaping="yes">&gt;</xsl:text> .tooltip-text:before {
+					display: inline;
+					top: -5px;
+					content: "";
+
+					position: absolute;
+					border: solid;
+					border-color: rgba(0, 0, 0, 1) transparent;
+					border-width: 1 .5em .5em .5em;
+					z-index: 6000;
+					left: 455px;
+					}
+
+					/* Invisible area so you can hover over tooltip */
+					.tooltip <xsl:text disable-output-escaping="yes">&gt;</xsl:text> .tooltip-text:after {
+					top: -20px;
+					content: " ";
+					display: block;
+					height: 20px;
+					position: absolute;
+					width: 150px;
+					left: 400px;
+					}
+
+					.tooltip-scroll {
+					overflow-y: auto;
+					max-height: 300px;
+					}
+
 				</style>
 
 			</HEAD>
@@ -215,6 +276,7 @@
 	<!-- ================================================================== -->
 	<xsl:template name="packagelist">
 		<h2>Test Suites</h2>
+
 		<table class="details" border="0" cellpadding="5" cellspacing="2" width="100%">
 			<xsl:call-template name="testsuite.test.header"/>
 			<!-- list all packages recursively -->
@@ -458,7 +520,21 @@
 						Error message:
 						<br/>
 						<xsl:apply-templates select="error"/>
-						<div style="float:right" title="Sourabh">Details</div>
+						<div style="float:right" class="tooltip">
+							<u>Stack trace</u>
+							<span class="tooltip-text">
+								<div class="tooltip-scroll">
+									<code>
+										<font size="3" class="failDetails">
+											<xsl:call-template name="br-replace" >
+												<xsl:with-param name="word" select="."/>
+											</xsl:call-template>
+										</font>
+									</code>
+								</div>
+							</span>
+						</div>
+
 					</td>
 
 				</xsl:when>
