@@ -444,11 +444,18 @@
 				<xsl:when test="failure">
 					<td>Failure</td>
 					<td><xsl:apply-templates select="failure"/></td>
+						<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+						<xsl:apply-templates select="error"/></td>
 				</xsl:when>
 				<xsl:when test="error">
 					<td>Failure</td>
 					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
-						<xsl:apply-templates select="error"/></td>
+						<br/><br/>
+						Error message:
+						<xsl:apply-templates select="error"/>
+						<div style="float:right" title="Sourabh">Detailed Error Message</div>
+					</td>
+
 				</xsl:when>
 				<xsl:otherwise>
 					<td>Success</td>
@@ -480,10 +487,11 @@
 				<!--<xsl:value-of select="text()"/>-->
 			</xsl:otherwise>
 		</xsl:choose>
+
 		<!-- display the stacktrace -->
 		<code>
 			<p/>
-			<xsl:call-template name="br-replace">
+			<xsl:call-template name="br-replace-error">
 				<xsl:with-param name="word" select="."/>
 			</xsl:call-template>
 		</code>
@@ -514,7 +522,44 @@
 	<!--
         template that will convert a carriage return into a br tag
         @param word the text from which to convert CR to BR tag
+        <xsl:choose>
+					<xsl:when test="contains(substring-before($word,'&#xA;'),Error)">
+
+						<xsl:value-of select="substring-before($word,'&#xA;')"/>
+						<br/>
+				</xsl:when>
+		</xsl:choose>
     -->
+	<xsl:template name="br-replace-error">
+		<xsl:param name="word"/>
+								<xsl:choose>
+									<xsl:when test="contains($word,'&#xA;')">
+										<xsl:call-template name="br-replace-error">
+											<xsl:with-param name="word" select="substring-after($word,'&#xA;')"/>
+										</xsl:call-template>
+									</xsl:when>
+
+								</xsl:choose>
+			<xsl:choose>
+			<xsl:when test="contains($word,'ERROR')">
+
+				<xsl:choose>
+					<xsl:when test="contains(substring-before($word,'&#xA;'),'ERROR')">
+
+						<xsl:choose>
+							<xsl:when test="not(contains(substring-after($word,'&#xA;'),'ERROR'))">
+								<xsl:value-of select="substring-before($word,'&#xA;')"/>
+							</xsl:when>
+						</xsl:choose>
+					</xsl:when>
+
+				</xsl:choose>
+
+			</xsl:when>
+		</xsl:choose>
+
+	</xsl:template>
+
 	<xsl:template name="br-replace">
 		<xsl:param name="word"/>
 
