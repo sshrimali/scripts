@@ -174,6 +174,10 @@
 					.Failure {
 					font-weight:bold; color:purple;
 					}
+					.FailDetails {
+					font-weight:normal;
+					color:purple;
+					}
 					.Properties {
 					text-align:right;
 					}
@@ -449,17 +453,20 @@
 				</xsl:when>
 				<xsl:when test="error">
 					<td>Failure</td>
-					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+					<td class="FailureDetails"> Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
 						<br/><br/>
 						Error message:
+						<br/>
 						<xsl:apply-templates select="error"/>
-						<div style="float:right" title="Sourabh">Detailed Error Message</div>
+						<div style="float:right" title="Sourabh">Details</div>
 					</td>
 
 				</xsl:when>
 				<xsl:otherwise>
 					<td>Success</td>
-					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a></td>
+					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+					</td>
+
 				</xsl:otherwise>
 			</xsl:choose>
 			<td>
@@ -490,10 +497,11 @@
 
 		<!-- display the stacktrace -->
 		<code>
-			<p/>
-			<xsl:call-template name="br-replace-error">
+			<font size="3" class="failDetails">
+			<xsl:call-template name="br-replace-error" >
 				<xsl:with-param name="word" select="."/>
 			</xsl:call-template>
+			</font>
 		</code>
 		<!--the later is better but might be problematic for non-21" monitors... -->
 		<!--pre><xsl:value-of select="."/></pre-->
