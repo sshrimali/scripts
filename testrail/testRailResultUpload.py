@@ -29,14 +29,11 @@ def updateResults(filename):
     client.user = userName
     client.password = password
     # Get Run ID
-    #case = client.send_get('get_case/5714')
-    #runs = client.send_get('get_runs/' + projectId)
-    #lastRun=runs[-1]
-    #testRunID=str(lastRun["id"])
-    testRunID="126"
-    testcaseID="5713"
+    runs = client.send_get('get_runs/' + projectId)
+    lastRun=runs[-1]
+    testRunID=str(lastRun["id"])
+    #testRunID="126"
     print("add_results_for_cases/" + testRunID, {"results " : resultset})
-    exit
     client.send_post("add_results_for_cases/" + testRunID, {"results" : resultset})
 
 
