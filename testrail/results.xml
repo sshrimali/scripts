@@ -1049,7 +1049,8 @@ Console Output:
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.study page" name="6042 search TBS" time="20.544"><info>
+</info></testcase>
+<testcase classname="freshen.noseplugin.study page" name="6042 search TBS" time="20.544"><info>
 Console Output:
 
 2016-06-21 12:05:13,967 INFO screenshot: '6042 search TBS (before).png'
@@ -1077,7 +1078,8 @@ Console Output:
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.study page" name="6043 search Q&amp;A" time="38.193"><error type="cheggtest.exceptions.CheggTestException">
+</info>
+</testcase><testcase classname="freshen.noseplugin.study page" name="6043 search Q&amp;A" time="38.193"><error type="cheggtest.exceptions.CheggTestException">
 Console Output:
 
 2016-06-21 12:05:35,321 INFO screenshot: '6043 search Q&amp;A (before).png'
