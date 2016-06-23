@@ -1,36 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
-<testsuite errors="3" failures="0" name="nosetests" skip="0" tests="15"><testcase classname="freshen.noseplugin.mdot signup" name="5895 Search by subject and validate auto-suggest shows up" time="40.508"><error type="cheggtest.exceptions.CheggTestException">
+<testsuite errors="6" failures="0" name="nosetests" skip="0" tests="15"><testcase classname="freshen.noseplugin.mdot signup" name="5895 Search by subject and validate auto-suggest shows up" time="41.098"><error type="cheggtest.exceptions.CheggTestException">
 Console Output:
 
-2016-06-16 16:20:37,368 INFO 
-2016-06-16 16:20:37,369 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:20:47,273 INFO wait_for_ready_state
-2016-06-16 16:20:47,291 INFO chegg_wait_for_spinners
-2016-06-16 16:20:47,334 INFO chegg_xdebug_checks
-2016-06-16 16:20:47,344 INFO chegg_pixel_check
-2016-06-16 16:20:47,465 INFO chegg_check_links
-2016-06-16 16:20:47,531 INFO click: '.input.open-search' index=0
-2016-06-16 16:21:17,813 INFO 
-2016-06-16 16:21:17,813 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
-2016-06-16 16:21:17,813 ERROR     return func(*_process_args(args), **kwargs)
-2016-06-16 16:21:17,813 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 504, in when_i_click
-2016-06-16 16:21:17,813 ERROR     websteps.when_i_click(_on, _the, which, name)
-2016-06-16 16:21:17,814 ERROR   File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 59, in __call__
-2016-06-16 16:21:17,814 ERROR     return self.func(*args, **kwargs)
-2016-06-16 16:21:17,814 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 70, in subwrapper
-2016-06-16 16:21:17,814 ERROR     return func(*_process_args(args), **kwargs)
-2016-06-16 16:21:17,814 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 152, in when_i_click
-2016-06-16 16:21:17,814 ERROR     __i_click(name, which)
-2016-06-16 16:21:17,815 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 137, in __i_click
-2016-06-16 16:21:17,815 ERROR     webtest.click(name, index=which)
-2016-06-16 16:21:17,815 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
-2016-06-16 16:21:17,816 ERROR     return func(*args, **kwargs)
-2016-06-16 16:21:17,816 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 501, in click
-2016-06-16 16:21:17,816 ERROR     elems = find_elements(name)
-2016-06-16 16:21:17,816 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 137, in find_elements
-2016-06-16 16:21:17,817 ERROR     raise CheggTestException("Can't find the element %s" % search_string)
-2016-06-16 16:21:17,825 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466119222/5895 Search by subject and validate auto-suggest shows up_browser_cookies.json
-2016-06-16 16:21:17,841 INFO AJAX API Stacktrace: none
+2016-06-21 09:49:44,609 INFO 
+2016-06-21 09:49:44,609 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 09:49:53,927 INFO wait_for_ready_state
+2016-06-21 09:49:53,935 INFO chegg_wait_for_spinners
+2016-06-21 09:49:54,012 INFO chegg_xdebug_checks
+2016-06-21 09:49:54,025 INFO chegg_pixel_check
+2016-06-21 09:49:54,114 INFO chegg_check_links
+2016-06-21 09:49:55,628 INFO click: '.input.open-search' index=0
+2016-06-21 09:50:25,646 INFO 
+2016-06-21 09:50:25,646 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 09:50:25,646 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 09:50:25,646 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 504, in when_i_click
+2016-06-21 09:50:25,646 ERROR     websteps.when_i_click(_on, _the, which, name)
+2016-06-21 09:50:25,647 ERROR   File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 59, in __call__
+2016-06-21 09:50:25,647 ERROR     return self.func(*args, **kwargs)
+2016-06-21 09:50:25,647 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 70, in subwrapper
+2016-06-21 09:50:25,647 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 09:50:25,647 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 152, in when_i_click
+2016-06-21 09:50:25,647 ERROR     __i_click(name, which)
+2016-06-21 09:50:25,648 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 137, in __i_click
+2016-06-21 09:50:25,648 ERROR     webtest.click(name, index=which)
+2016-06-21 09:50:25,648 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 09:50:25,648 ERROR     return func(*args, **kwargs)
+2016-06-21 09:50:25,648 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 501, in click
+2016-06-21 09:50:25,649 ERROR     elems = find_elements(name)
+2016-06-21 09:50:25,649 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 137, in find_elements
+2016-06-21 09:50:25,649 ERROR     raise CheggTestException("Can't find the element %s" % search_string)
+2016-06-21 09:50:25,655 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466527772/5895 Search by subject and validate auto-suggest shows up_browser_cookies.json
+2016-06-21 09:50:56,143 INFO AJAX API Stacktrace: none
 
   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
     return func(*_process_args(args), **kwargs)
@@ -50,1008 +50,927 @@ Console Output:
     elems = find_elements(name)
   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 137, in find_elements
     raise CheggTestException("Can't find the element %s" % search_string)
-"Can't find the element .input.open-search\n\nFeature: mdot signup\n  @mdot_smoke @smoke_new\n  Scenario: 5895 Search by subject and validate auto-suggest shows up\n    Given I go to the url: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment# fesite/mdot.search.feature:5 , PASSED\n     Then I click .input.open-search                                            # fesite/mdot.search.feature:6 , FAILED\n     Then I sleep for 2 seconds                                                 # fesite/mdot.search.feature:7 \n     Then I type physics into Search by title, author or ISBN                   # fesite/mdot.search.feature:8 \n     Then I sleep for 2 seconds                                                 # fesite/mdot.search.feature:9 \n     Then I should see the text physics                                         # fesite/mdot.search.feature:10 \n     Then I click All matches                                                   # fesite/mdot.search.feature:11 \n     Then I check search all tab                                                # fesite/mdot.search.feature:12 \n     Then I click Find Books                                                    # fesite/mdot.search.feature:13 \n     Then I check search books tab                                              # fesite/mdot.search.feature:14 \n     Then I click Textbook solutions                                            # fesite/mdot.search.feature:15 \n     Then I check search tbs tab                                                # fesite/mdot.search.feature:16 \n     Then I click Expert Q&amp;A                                                    # fesite/mdot.search.feature:17 \n     Then I check search qna tab                                                # fesite/mdot.search.feature:18 \n     Then I click Online Tutors                                                 # fesite/mdot.search.feature:19 \n     Then I check search tutors tab                                             # fesite/mdot.search.feature:20 \n     Then I click .cancel                                                       # fesite/mdot.search.feature:21 "
+"Can't find the element .input.open-search\n\nFeature: mdot signup\n  @mdot_smoke @smoke_new\n  Scenario: 5895 Search by subject and validate auto-suggest shows up\n    Given I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/mdot.search.feature:5 , PASSED\n     Then I click .input.open-search                                            # fesite/mdot.search.feature:6 , FAILED\n     Then I sleep for 2 seconds                                                 # fesite/mdot.search.feature:7 \n     Then I type physics into Search by title, author or ISBN                   # fesite/mdot.search.feature:8 \n     Then I sleep for 2 seconds                                                 # fesite/mdot.search.feature:9 \n     Then I should see the text physics                                         # fesite/mdot.search.feature:10 \n     Then I click All matches                                                   # fesite/mdot.search.feature:11 \n     Then I check search all tab                                                # fesite/mdot.search.feature:12 \n     Then I click Find Books                                                    # fesite/mdot.search.feature:13 \n     Then I check search books tab                                              # fesite/mdot.search.feature:14 \n     Then I click Textbook solutions                                            # fesite/mdot.search.feature:15 \n     Then I check search tbs tab                                                # fesite/mdot.search.feature:16 \n     Then I click Expert Q&amp;A                                                    # fesite/mdot.search.feature:17 \n     Then I check search qna tab                                                # fesite/mdot.search.feature:18 \n     Then I click Online Tutors                                                 # fesite/mdot.search.feature:19 \n     Then I check search tutors tab                                             # fesite/mdot.search.feature:20 \n     Then I click .cancel                                                       # fesite/mdot.search.feature:21 "
 
 
-</error></testcase><testcase classname="freshen.noseplugin.rentbuy page" name="5961 Search by ISBN and validate auto-suggest shows up" time="33.581"><info>
+</error></testcase><testcase classname="freshen.noseplugin.rentbuy page" name="5961 Search by ISBN and validate auto-suggest shows up" time="663.680"><error type="selenium.common.exceptions.TimeoutException">
 Console Output:
 
-2016-06-16 16:21:19,056 INFO screenshot: '5961 Search by ISBN and validate auto-suggest shows up (before).png'
-2016-06-16 16:21:20,103 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/rentbuy.page.feature
-2016-06-16 16:21:20,104 INFO Looking for book without a Guided Solution...
-2016-06-16 16:21:30,845 INFO 
-2016-06-16 16:21:30,846 INFO go_to: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment
-2016-06-16 16:21:32,313 INFO wait_for_ready_state
-2016-06-16 16:21:32,321 INFO chegg_wait_for_spinners
-2016-06-16 16:21:32,426 INFO chegg_xdebug_checks
-2016-06-16 16:21:32,434 INFO chegg_pixel_check
-2016-06-16 16:21:32,487 INFO chegg_check_links
-2016-06-16 16:21:32,500 INFO Deleting all cookies...
-2016-06-16 16:21:32,559 INFO Refreshing page...
-2016-06-16 16:21:34,493 INFO wait_for_page_to_load: 
-2016-06-16 16:21:34,518 INFO wait_for_ready_state
-2016-06-16 16:21:34,525 INFO chegg_wait_for_spinners
-2016-06-16 16:21:34,572 INFO chegg_xdebug_checks
-2016-06-16 16:21:34,584 INFO chegg_pixel_check
-2016-06-16 16:21:34,623 INFO chegg_check_links
-2016-06-16 16:21:34,640 INFO assert_images_loaded: 
-2016-06-16 16:21:34,655 INFO write_into: autosuggest-input,0077306295 index=0
-2016-06-16 16:21:35,651 INFO click: autosuggest-search-btn index=0
-2016-06-16 16:21:36,047 INFO wait_for_ready_state
-2016-06-16 16:21:36,054 INFO chegg_wait_for_spinners
-2016-06-16 16:21:36,077 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:36,666 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:37,177 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:37,822 INFO chegg_xdebug_checks
-2016-06-16 16:21:38,789 INFO chegg_pixel_check
-2016-06-16 16:21:38,873 INFO chegg_check_links
-2016-06-16 16:21:38,889 INFO 
-2016-06-16 16:21:38,889 INFO go_to: 'http://rc.live.test.cheggnet.com/books#rentbuy/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:21:42,454 INFO wait_for_ready_state
-2016-06-16 16:21:42,459 INFO chegg_wait_for_spinners
-2016-06-16 16:21:42,485 INFO chegg_xdebug_checks
-2016-06-16 16:21:42,495 INFO chegg_pixel_check
-2016-06-16 16:21:42,541 INFO chegg_check_links
-2016-06-16 16:21:42,557 INFO write_into: 'autosuggest-input','0077306295' index=0
-2016-06-16 16:21:43,530 INFO Element '.book-result' visible.
-2016-06-16 16:21:43,531 INFO assert_text_visible: '0077306295 in Books' case_sensitive=False
-2016-06-16 16:21:44,125 INFO assert_text_visible: '0077306295 in Textbook Solution' case_sensitive=False
-2016-06-16 16:21:44,641 INFO assert_text_visible: '0077306295 in Q&amp;A' case_sensitive=False
-2016-06-16 16:21:45,160 INFO assert_text_visible: '0077306295 in Tutors' case_sensitive=False
-2016-06-16 16:21:45,680 INFO assert_elements_visible: ['.book-result']
-2016-06-16 16:21:45,715 INFO click: '.img-wrapper' index=0
-2016-06-16 16:21:45,971 INFO wait_for_ready_state
-2016-06-16 16:21:45,979 INFO chegg_wait_for_spinners
-2016-06-16 16:21:45,998 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:46,512 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:47,426 INFO chegg_xdebug_checks
-2016-06-16 16:21:47,536 INFO chegg_pixel_check
-2016-06-16 16:21:47,630 INFO chegg_check_links
-2016-06-16 16:21:47,656 INFO assert_text_visible: 'ISBN:' case_sensitive=False
-2016-06-16 16:21:48,186 INFO assert_text_visible: '0077306295' case_sensitive=False
-
-
-
-</info></testcase><testcase classname="freshen.noseplugin.rentbuy page" name="5790 Search by subject and validate auto-suggest shows up" time="7.377"><info>
-Console Output:
-
-2016-06-16 16:21:52,926 INFO screenshot: '5790 Search by subject and validate auto-suggest shows up (before).png'
-2016-06-16 16:21:53,207 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/rentbuy.page.feature
-2016-06-16 16:21:53,214 INFO 
-2016-06-16 16:21:53,214 INFO go_to: 'http://rc.live.test.cheggnet.com/books#rentbuy/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:21:54,990 INFO wait_for_ready_state
-2016-06-16 16:21:54,994 INFO chegg_wait_for_spinners
-2016-06-16 16:21:55,015 INFO chegg_xdebug_checks
-2016-06-16 16:21:55,020 INFO chegg_pixel_check
-2016-06-16 16:21:55,066 INFO chegg_check_links
-2016-06-16 16:21:55,074 INFO write_into: 'autosuggest-input','Biology' index=0
-2016-06-16 16:21:55,766 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
-2016-06-16 16:21:56,356 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
-2016-06-16 16:21:56,877 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
-2016-06-16 16:21:57,395 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
-2016-06-16 16:21:57,911 INFO assert_elements_visible: ['.book-result']
-2016-06-16 16:21:57,943 INFO click: '.img-wrapper' index=0
-2016-06-16 16:21:58,250 INFO wait_for_ready_state
-2016-06-16 16:21:58,259 INFO chegg_wait_for_spinners
-2016-06-16 16:21:58,275 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:58,793 INFO waiting on div.chg-content to be visible
-2016-06-16 16:21:59,667 INFO chegg_xdebug_checks
-2016-06-16 16:21:59,675 INFO chegg_pixel_check
-2016-06-16 16:21:59,767 INFO chegg_check_links
-2016-06-16 16:21:59,778 INFO assert_text_visible: 'Biology' case_sensitive=False
-
-
-
-</info></testcase><testcase classname="freshen.noseplugin.search page" name="5929 validate search serp filter" time="31.717"><info>
-Console Output:
-
-2016-06-16 16:22:02,281 INFO screenshot: '5929 validate search serp filter (before).png'
-2016-06-16 16:22:02,595 INFO restarting selenium session
-2016-06-16 16:22:05,343 INFO 
-2016-06-16 16:22:05,343 INFO go_to: 'http://rc.live.test.cheggnet.com/search/Biology/federated/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:22:12,805 INFO wait_for_ready_state
-2016-06-16 16:22:12,952 INFO chegg_wait_for_spinners
-2016-06-16 16:22:13,012 INFO chegg_xdebug_checks
-2016-06-16 16:22:13,030 INFO chegg_pixel_check
-2016-06-16 16:22:13,257 INFO chegg_check_links
-2016-06-16 16:22:13,265 INFO click: 'All matches' index=0
-2016-06-16 16:22:13,592 INFO wait_for_ready_state
-2016-06-16 16:22:13,603 INFO chegg_wait_for_spinners
-2016-06-16 16:22:13,623 INFO waiting on div.chg-content to be visible
-2016-06-16 16:22:14,272 INFO chegg_xdebug_checks
-2016-06-16 16:22:14,296 INFO chegg_pixel_check
-2016-06-16 16:22:14,425 INFO chegg_check_links
-2016-06-16 16:22:14,442 INFO assert_elements_visible: ['.active[data-id="All matches"]']
-2016-06-16 16:22:14,676 INFO assert_elements_visible: set(['.vertical a'])
-2016-06-16 16:22:18,067 INFO Element '.vertical a' displays expected text: 'All'
-2016-06-16 16:22:18,067 INFO click: 'Textbook solutions' index=0
-2016-06-16 16:22:18,623 INFO wait_for_ready_state
-2016-06-16 16:22:18,631 INFO chegg_wait_for_spinners
-2016-06-16 16:22:18,651 INFO chegg_xdebug_checks
-2016-06-16 16:22:18,655 INFO chegg_pixel_check
-2016-06-16 16:22:19,148 INFO chegg_check_links
-2016-06-16 16:22:19,159 INFO assert_elements_visible: ['.active[data-id="Textbook solutions"]']
-2016-06-16 16:22:19,202 INFO assert_elements_visible: set(['.vertical strong'])
-2016-06-16 16:22:19,283 INFO Element '.vertical strong' displays expected text: 'Textbook solutions'
-2016-06-16 16:22:19,284 INFO click: 'Expert Q&amp;A' index=0
-2016-06-16 16:22:19,558 INFO wait_for_ready_state
-2016-06-16 16:22:19,567 INFO chegg_wait_for_spinners
-2016-06-16 16:22:19,577 INFO chegg_xdebug_checks
-2016-06-16 16:22:19,588 INFO chegg_pixel_check
-2016-06-16 16:22:20,028 INFO chegg_check_links
-2016-06-16 16:22:20,037 INFO assert_elements_visible: ['.active[data-id="Expert Q&amp;A"]']
-2016-06-16 16:22:20,074 INFO assert_elements_visible: set(['.vertical strong'])
-2016-06-16 16:22:20,150 INFO Element '.vertical strong' displays expected text: 'Expert Q&amp;A'
-2016-06-16 16:22:20,151 INFO click: 'Tutors' index=0
-2016-06-16 16:22:25,014 INFO wait_for_ready_state
-2016-06-16 16:22:25,149 INFO chegg_wait_for_spinners
-2016-06-16 16:22:25,183 INFO chegg_xdebug_checks
-2016-06-16 16:22:25,198 INFO chegg_pixel_check
-2016-06-16 16:22:25,275 INFO chegg_check_links
-2016-06-16 16:22:25,280 INFO assert_elements_visible: ['.active[data-id="Tutors"]']
-2016-06-16 16:22:25,328 INFO assert_elements_visible: set(['.vertical strong'])
-2016-06-16 16:22:25,429 INFO Element '.vertical strong' displays expected text: 'Tutors'
-2016-06-16 16:22:25,430 INFO click: 'Books' index=0
-2016-06-16 16:22:26,129 INFO wait_for_ready_state
-2016-06-16 16:22:26,139 INFO chegg_wait_for_spinners
-2016-06-16 16:22:26,161 INFO waiting on div.chg-content to be visible
-2016-06-16 16:22:26,753 INFO chegg_xdebug_checks
-2016-06-16 16:22:26,761 INFO chegg_pixel_check
-2016-06-16 16:22:26,820 INFO chegg_check_links
-2016-06-16 16:22:26,833 INFO assert_elements_visible: ['.active[data-id="Books"]']
-2016-06-16 16:22:26,899 INFO assert_elements_visible: set(['.vertical strong'])
-2016-06-16 16:22:30,028 INFO Element '.vertical strong' displays expected text: 'Books'
-2016-06-16 16:22:30,028 INFO click: 'book-img-3' index=0
-2016-06-16 16:22:30,407 INFO wait_for_ready_state
-2016-06-16 16:22:30,414 INFO chegg_wait_for_spinners
-2016-06-16 16:22:30,426 INFO waiting on div.chg-content to be visible
-2016-06-16 16:22:30,975 INFO waiting on div.chg-content to be visible
-2016-06-16 16:22:33,765 INFO chegg_xdebug_checks
-2016-06-16 16:22:33,769 INFO chegg_pixel_check
-2016-06-16 16:22:33,795 INFO chegg_check_links
-2016-06-16 16:22:33,807 INFO assert_elements_visible: ['.txt-hdr-dark']
-2016-06-16 16:22:33,847 INFO assert_elements_visible: ['.book-details-container']
-2016-06-16 16:22:33,920 INFO assert_elements_visible: ['.book-details-container']
-2016-06-16 16:22:33,958 INFO assert_elements_visible: ['.pricebox-col']
-
-
-
-</info></testcase><testcase classname="freshen.noseplugin.testing book pdp" name="5773 main info about book" time="33.944"><info>
-Console Output:
-
-2016-06-16 16:22:34,267 INFO screenshot: '5773 main info about book (before).png'
-2016-06-16 16:22:34,431 INFO restarting selenium session
-2016-06-16 16:22:37,023 INFO Looking for ebook without a Guided Solution...
-2016-06-16 16:22:52,043 INFO 
-2016-06-16 16:22:52,043 INFO go_to: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment
-2016-06-16 16:22:56,600 INFO wait_for_ready_state
-2016-06-16 16:22:56,609 INFO chegg_wait_for_spinners
-2016-06-16 16:22:56,634 INFO chegg_xdebug_checks
-2016-06-16 16:22:56,956 INFO chegg_pixel_check
-2016-06-16 16:22:57,016 INFO chegg_check_links
-2016-06-16 16:22:57,031 INFO Deleting all cookies...
-2016-06-16 16:22:57,092 INFO Refreshing page...
-2016-06-16 16:22:59,260 INFO wait_for_page_to_load: 
-2016-06-16 16:22:59,374 INFO wait_for_ready_state
-2016-06-16 16:22:59,379 INFO chegg_wait_for_spinners
-2016-06-16 16:22:59,415 INFO chegg_xdebug_checks
-2016-06-16 16:22:59,424 INFO chegg_pixel_check
-2016-06-16 16:22:59,528 INFO chegg_check_links
-2016-06-16 16:22:59,535 INFO assert_images_loaded: 
-2016-06-16 16:22:59,543 INFO write_into: autosuggest-input,0763792799 index=0
-2016-06-16 16:23:00,646 INFO click: autosuggest-search-btn index=0
-2016-06-16 16:23:01,061 INFO wait_for_ready_state
-2016-06-16 16:23:01,152 INFO chegg_wait_for_spinners
-2016-06-16 16:23:01,175 INFO waiting on div.chg-content to be visible
-2016-06-16 16:23:01,707 INFO chegg_xdebug_checks
-2016-06-16 16:23:01,731 INFO chegg_pixel_check
-2016-06-16 16:23:01,829 INFO chegg_check_links
-2016-06-16 16:23:01,836 INFO assert_elements_visible: ['.txt-hdr-dark']
-2016-06-16 16:23:04,176 INFO assert_elements_visible: ['pdpBookImage']
-2016-06-16 16:23:07,141 INFO assert_text_visible: 'ISBN' case_sensitive=False
-2016-06-16 16:23:07,659 INFO assert_text_visible: 'ISBN-13' case_sensitive=False
-2016-06-16 16:23:08,179 INFO assert_elements_visible: ['.author-container']
-
-
-
-</info></testcase><testcase classname="freshen.noseplugin.testing book pdp" name="5781 pricebox block" time="73.925"><error type="cheggtest.exceptions.CheggTestException">
-Console Output:
-
-2016-06-16 16:23:08,488 INFO screenshot: '5781 pricebox block (before).png'
-2016-06-16 16:23:08,632 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/site.bookpdp.feature
-2016-06-16 16:23:08,633 INFO Looking for book without a Guided Solution...
-2016-06-16 16:23:12,981 INFO 
-2016-06-16 16:23:12,981 INFO go_to: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment
-2016-06-16 16:23:14,310 INFO wait_for_ready_state
-2016-06-16 16:23:14,326 INFO chegg_wait_for_spinners
-2016-06-16 16:23:14,366 INFO chegg_xdebug_checks
-2016-06-16 16:23:14,382 INFO chegg_pixel_check
-2016-06-16 16:23:14,430 INFO chegg_check_links
-2016-06-16 16:23:14,439 INFO Deleting all cookies...
-2016-06-16 16:23:14,502 INFO Refreshing page...
-2016-06-16 16:23:16,614 INFO wait_for_page_to_load: 
-2016-06-16 16:23:16,628 INFO wait_for_ready_state
-2016-06-16 16:23:16,633 INFO chegg_wait_for_spinners
-2016-06-16 16:23:16,688 INFO chegg_xdebug_checks
-2016-06-16 16:23:16,698 INFO chegg_pixel_check
-2016-06-16 16:23:16,756 INFO chegg_check_links
-2016-06-16 16:23:16,769 INFO assert_images_loaded: 
-2016-06-16 16:23:16,779 INFO write_into: autosuggest-input,0205093817 index=0
-2016-06-16 16:23:17,881 INFO click: autosuggest-search-btn index=0
-2016-06-16 16:23:18,608 INFO wait_for_ready_state
-2016-06-16 16:23:18,661 INFO chegg_wait_for_spinners
-2016-06-16 16:23:18,703 INFO waiting on div.chg-content to be visible
-2016-06-16 16:23:19,317 INFO waiting on div.chg-content to be visible
-2016-06-16 16:23:19,839 INFO waiting on div.chg-content to be visible
-2016-06-16 16:23:20,612 INFO chegg_xdebug_checks
-2016-06-16 16:23:20,645 INFO chegg_pixel_check
-2016-06-16 16:23:20,725 INFO chegg_check_links
-2016-06-16 16:23:30,768 INFO Element 'eggshell-pricebox' visible.
-2016-06-16 16:23:30,769 INFO click: 'div.rent label.form-radio' index=0
-2016-06-16 16:23:30,918 INFO wait_for_ready_state
-2016-06-16 16:23:30,922 INFO chegg_wait_for_spinners
-2016-06-16 16:23:30,930 INFO chegg_xdebug_checks
-2016-06-16 16:23:30,935 INFO chegg_pixel_check
-2016-06-16 16:23:30,964 INFO chegg_check_links
-2016-06-16 16:23:30,970 INFO assert_elements_visible: ['bannerGuaranteeCompact21']
-2016-06-16 16:23:31,010 INFO assert_elements_visible: ['div.rent div.pricebox-description']
-2016-06-16 16:23:31,044 INFO Looking for book without a Guided Solution...
-2016-06-16 16:23:35,419 INFO 
-2016-06-16 16:23:35,419 INFO go_to: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment
-2016-06-16 16:23:37,044 INFO wait_for_ready_state
-2016-06-16 16:23:37,067 INFO chegg_wait_for_spinners
-2016-06-16 16:23:37,098 INFO chegg_xdebug_checks
-2016-06-16 16:23:37,114 INFO chegg_pixel_check
-2016-06-16 16:23:37,169 INFO chegg_check_links
-2016-06-16 16:23:37,183 INFO Deleting all cookies...
-2016-06-16 16:23:37,236 INFO Refreshing page...
-2016-06-16 16:23:38,981 INFO wait_for_page_to_load: 
-2016-06-16 16:23:38,997 INFO wait_for_ready_state
-2016-06-16 16:23:39,003 INFO chegg_wait_for_spinners
-2016-06-16 16:23:39,040 INFO chegg_xdebug_checks
-2016-06-16 16:23:39,045 INFO chegg_pixel_check
-2016-06-16 16:23:39,110 INFO chegg_check_links
-2016-06-16 16:23:39,116 INFO assert_images_loaded: 
-2016-06-16 16:23:39,123 INFO write_into: autosuggest-input,0736090398 index=0
-2016-06-16 16:23:40,217 INFO click: autosuggest-search-btn index=0
-2016-06-16 16:23:40,740 INFO wait_for_ready_state
-2016-06-16 16:23:40,764 INFO chegg_wait_for_spinners
-2016-06-16 16:23:40,788 INFO waiting on div.chg-content to be visible
-2016-06-16 16:23:41,323 INFO chegg_xdebug_checks
-2016-06-16 16:23:41,330 INFO chegg_pixel_check
-2016-06-16 16:23:41,384 INFO chegg_check_links
-2016-06-16 16:23:51,434 INFO Element 'eggshell-pricebox' visible.
-2016-06-16 16:23:51,435 INFO click: 'div.buy label.form-radio' index=0
-2016-06-16 16:23:51,598 INFO wait_for_ready_state
-2016-06-16 16:23:51,605 INFO chegg_wait_for_spinners
-2016-06-16 16:23:51,616 INFO chegg_xdebug_checks
-2016-06-16 16:23:51,621 INFO chegg_pixel_check
-2016-06-16 16:23:51,656 INFO chegg_check_links
-2016-06-16 16:23:51,665 INFO assert_elements_visible: ['bannerGuaranteeCompact21']
-2016-06-16 16:23:51,707 INFO assert_elements_visible: ['div.buy div.pricebox-description']
-2016-06-16 16:23:51,747 INFO Looking for ebook without a Guided Solution...
-2016-06-16 16:24:01,212 INFO 
-2016-06-16 16:24:01,212 INFO go_to: http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment
-2016-06-16 16:24:02,741 INFO wait_for_ready_state
-2016-06-16 16:24:02,747 INFO chegg_wait_for_spinners
-2016-06-16 16:24:02,785 INFO chegg_xdebug_checks
-2016-06-16 16:24:02,798 INFO chegg_pixel_check
-2016-06-16 16:24:02,879 INFO chegg_check_links
-2016-06-16 16:24:02,902 INFO Deleting all cookies...
-2016-06-16 16:24:02,990 INFO Refreshing page...
-2016-06-16 16:24:04,975 INFO wait_for_page_to_load: 
-2016-06-16 16:24:04,979 INFO wait_for_ready_state
-2016-06-16 16:24:05,003 INFO chegg_wait_for_spinners
-2016-06-16 16:24:05,070 INFO chegg_xdebug_checks
-2016-06-16 16:24:05,077 INFO chegg_pixel_check
-2016-06-16 16:24:05,117 INFO chegg_check_links
-2016-06-16 16:24:05,124 INFO assert_images_loaded: 
-2016-06-16 16:24:05,132 INFO write_into: autosuggest-input,113371174X index=0
-2016-06-16 16:24:10,521 INFO click: autosuggest-search-btn index=0
-2016-06-16 16:24:11,150 INFO wait_for_ready_state
-2016-06-16 16:24:11,156 INFO chegg_wait_for_spinners
-2016-06-16 16:24:11,238 INFO waiting on div.chg-content to be visible
-2016-06-16 16:24:11,793 INFO chegg_xdebug_checks
-2016-06-16 16:24:11,824 INFO chegg_pixel_check
-2016-06-16 16:24:11,972 INFO chegg_check_links
-2016-06-16 16:24:22,416 INFO 
-2016-06-16 16:24:22,416 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
-2016-06-16 16:24:22,416 ERROR     return func(*_process_args(args), **kwargs)
-2016-06-16 16:24:22,416 ERROR   File "build/bdist.linux-x86_64/egg/cheggfe/cheggfe.py", line 2916, in wait_for_elem_to_be_visible
-2016-06-16 16:24:22,417 ERROR     elem = find_element(element,which)
-2016-06-16 16:24:22,417 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 60, in find_element
-2016-06-16 16:24:22,417 ERROR     case_sensitive=case_sensitive)
-2016-06-16 16:24:22,417 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 137, in find_elements
-2016-06-16 16:24:22,417 ERROR     raise CheggTestException("Can't find the element %s" % search_string)
-2016-06-16 16:24:22,427 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466119222/5781 pricebox block_browser_cookies.json
-2016-06-16 16:24:22,449 INFO AJAX API Stacktrace: none
+2016-06-21 09:50:57,492 INFO screenshot: '5961 Search by ISBN and validate auto-suggest shows up (before).png'
+2016-06-21 09:50:58,684 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/rentbuy.page.feature
+2016-06-21 09:50:58,685 INFO Looking for book without a Guided Solution...
+2016-06-21 10:02:01,177 INFO 
+2016-06-21 10:02:01,177 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 10:02:01,177 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 10:02:01,177 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/steps.py", line 263, in i_take_random_ebook
+2016-06-21 10:02:01,177 ERROR     search_by_ISBN(isbn)
+2016-06-21 10:02:01,177 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/steps.py", line 271, in search_by_ISBN
+2016-06-21 10:02:01,178 ERROR     Then I click autosuggest-search-btn button''' % {'isbn': isbn})
+2016-06-21 10:02:01,178 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 16, in run_steps
+2016-06-21 10:02:01,178 ERROR     FRESHEN_RUN_STEPS(spec)
+2016-06-21 10:02:01,178 ERROR   File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/core.py", line 96, in run_steps
+2016-06-21 10:02:01,179 ERROR     return f_self.run_steps_from_string(spec, language)
+2016-06-21 10:02:01,179 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/hacks.py", line 118, in run_steps_from_string
+2016-06-21 10:02:01,179 ERROR     self.run_step(step)
+2016-06-21 10:02:01,179 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/hacks.py", line 152, in run_step
+2016-06-21 10:02:01,179 ERROR     return step_impl.run(*args)
+2016-06-21 10:02:01,180 ERROR   File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 56, in run
+2016-06-21 10:02:01,180 ERROR     return self.func(*args, **kwargs)
+2016-06-21 10:02:01,180 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 10:02:01,180 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 10:02:01,180 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 54, in given_i_am_the
+2016-06-21 10:02:01,181 ERROR     webtest.go_to(url)
+2016-06-21 10:02:01,181 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 177, in go_to
+2016-06-21 10:02:01,181 ERROR     sst.actions.browser.switch_to_default_content()
+2016-06-21 10:02:01,181 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 528, in switch_to_default_content
+2016-06-21 10:02:01,181 ERROR     self.execute(Command.SWITCH_TO_FRAME, {'id': None})
+2016-06-21 10:02:01,182 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+2016-06-21 10:02:01,182 ERROR     self.error_handler.check_response(response)
+2016-06-21 10:02:01,182 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+2016-06-21 10:02:01,182 ERROR     raise exception_class(message, screen, stacktrace)
+2016-06-21 10:12:01,188 WARNING unable to get browser cookies
+2016-06-21 10:32:01,213 INFO AJAX API Stacktrace: none
 
   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
     return func(*_process_args(args), **kwargs)
-  File "build/bdist.linux-x86_64/egg/cheggfe/cheggfe.py", line 2916, in wait_for_elem_to_be_visible
-    elem = find_element(element,which)
-  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 60, in find_element
-    case_sensitive=case_sensitive)
-  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 137, in find_elements
-    raise CheggTestException("Can't find the element %s" % search_string)
-Can't find the element eggshell-pricebox
+  File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/steps.py", line 263, in i_take_random_ebook
+    search_by_ISBN(isbn)
+  File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/steps.py", line 271, in search_by_ISBN
+    Then I click autosuggest-search-btn button''' % {'isbn': isbn})
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 16, in run_steps
+    FRESHEN_RUN_STEPS(spec)
+  File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/core.py", line 96, in run_steps
+    return f_self.run_steps_from_string(spec, language)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/hacks.py", line 118, in run_steps_from_string
+    self.run_step(step)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/hacks.py", line 152, in run_step
+    return step_impl.run(*args)
+  File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 56, in run
+    return self.func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+    return func(*_process_args(args), **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 54, in given_i_am_the
+    webtest.go_to(url)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 177, in go_to
+    sst.actions.browser.switch_to_default_content()
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 528, in switch_to_default_content
+    self.execute(Command.SWITCH_TO_FRAME, {'id': None})
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+Message: u'timeout: Timed out receiving message from renderer: 600.000\n  (Session info: chrome=51.0.2704.103)\n  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64)' 
 
-@fid=ab9f9f4
-Feature: testing book pdp
-  @smoke @regression @sid=6bde87f @bv=7 @run @pdpbuyback_smoke @smoke_new
-  Scenario: 5781 pricebox block
-     Then I take random book rental                                             # fesite/site.bookpdp.feature:28 , PASSED
-       \--&gt; Given I am at the chegg.com site                                    # /cheggtest/websteps/websteps.py:16 , PASSED
-       \--&gt;  Then I clear all the cookies                                       # /cheggtest/websteps/websteps.py:17 , PASSED
-       \--&gt;  Then I refresh the page                                            # /cheggtest/websteps/websteps.py:18 , PASSED
-       \--&gt;  Then I type 0205093817 into autosuggest-input                      # /cheggtest/websteps/websteps.py:19 , PASSED
-       \--&gt;  Then I click autosuggest-search-btn button                         # /cheggtest/websteps/websteps.py:20 , PASSED
-     Then I wait 10 second for the element: eggshell-pricebox to be visible     # fesite/site.bookpdp.feature:29 , PASSED
-     Then I click pdpBookRentRadio                                              # fesite/site.bookpdp.feature:30 , PASSED
-     Then I should see the element bannerGuaranteeCompact21                     # fesite/site.bookpdp.feature:32 , PASSED
-     Then I should see the element div.rent div.pricebox-description            # fesite/site.bookpdp.feature:39 , PASSED
-     Then I take random book purchase                                           # fesite/site.bookpdp.feature:41 , PASSED
-       \--&gt; Given I am at the chegg.com site                                    # /cheggtest/websteps/websteps.py:16 , PASSED
-       \--&gt;  Then I clear all the cookies                                       # /cheggtest/websteps/websteps.py:17 , PASSED
-       \--&gt;  Then I refresh the page                                            # /cheggtest/websteps/websteps.py:18 , PASSED
-       \--&gt;  Then I type 0736090398 into autosuggest-input                      # /cheggtest/websteps/websteps.py:19 , PASSED
-       \--&gt;  Then I click autosuggest-search-btn button                         # /cheggtest/websteps/websteps.py:20 , PASSED
-     Then I wait 10 second for the element: eggshell-pricebox to be visible     # fesite/site.bookpdp.feature:42 , PASSED
-     Then I click pdpBookBuyRadio                                               # fesite/site.bookpdp.feature:43 , PASSED
-     Then I should see the element bannerGuaranteeCompact21                     # fesite/site.bookpdp.feature:45 , PASSED
-     Then I should see the element div.buy div.pricebox-description             # fesite/site.bookpdp.feature:46 , PASSED
-     Then I take random ebook rental                                            # fesite/site.bookpdp.feature:48 , PASSED
-       \--&gt; Given I am at the chegg.com site                                    # /cheggtest/websteps/websteps.py:16 , PASSED
-       \--&gt;  Then I clear all the cookies                                       # /cheggtest/websteps/websteps.py:17 , PASSED
-       \--&gt;  Then I refresh the page                                            # /cheggtest/websteps/websteps.py:18 , PASSED
-       \--&gt;  Then I type 113371174X into autosuggest-input                      # /cheggtest/websteps/websteps.py:19 , PASSED
-       \--&gt;  Then I click autosuggest-search-btn button                         # /cheggtest/websteps/websteps.py:20 , PASSED
-     Then I wait 10 second for the element: eggshell-pricebox to be visible     # fesite/site.bookpdp.feature:49 , FAILED
-     Then I click pdpBookETextBookRadio                                         # fesite/site.bookpdp.feature:50 
-     Then I should see the element bannerGuaranteeCompact14                     # fesite/site.bookpdp.feature:52 
-     Then I click 2nd eTextbookPriceOption                                      # fesite/site.bookpdp.feature:53 
-     Then I should see the element div.etextbook div.pricebox-description       # fesite/site.bookpdp.feature:54 
+@smoke  @search_smoke
+Feature: rentbuy page
+  @smoke_new
+  Scenario: 5961 Search by ISBN and validate auto-suggest shows up
+     Then I take random book purchase                                           # fesite/rentbuy.page.feature:13 , FAILED
+       \--&gt; Given I am at the chegg.com site                                    # /cheggtest/websteps/websteps.py:16 , ERROR
+       \--&gt;  Then I clear all the cookies                                       # /cheggtest/websteps/websteps.py:17 
+       \--&gt;  Then I refresh the page                                            # /cheggtest/websteps/websteps.py:18 
+       \--&gt;  Then I type 0669417807 into autosuggest-input                      # /cheggtest/websteps/websteps.py:19 
+       \--&gt;  Then I click autosuggest-search-btn button                         # /cheggtest/websteps/websteps.py:20 
+    Given I go to the URL: books#rentbuy/?action=signup&amp;experiment=NONE0&amp;debug=experiment# fesite/rentbuy.page.feature:14 
+     Then I type 0669417807 into autosuggest-input                              # fesite/rentbuy.page.feature:15 
+     Then I wait up to 15 seconds for the element: .book-result to be visible   # fesite/rentbuy.page.feature:16 
+     Then I should see the text 0669417807 in Books                             # fesite/rentbuy.page.feature:17 
+     Then I should see the text 0669417807 in Textbook Solution                 # fesite/rentbuy.page.feature:18 
+     Then I should see the text 0669417807 in Q&amp;A                               # fesite/rentbuy.page.feature:19 
+     Then I should see the text 0669417807 in Tutors                            # fesite/rentbuy.page.feature:20 
+     Then I should see the elements .book-result                                # fesite/rentbuy.page.feature:21 
+     Then I click .img-wrapper                                                  # fesite/rentbuy.page.feature:22 
+     Then I should see the text ISBN:                                           # fesite/rentbuy.page.feature:23 
+     Then I should see the text 0669417807                                      # fesite/rentbuy.page.feature:24 
 
 
-</error></testcase><testcase classname="freshen.noseplugin.testing my account page" name="5713 testing popups" time="73.563"><info>
+</error></testcase><testcase classname="freshen.noseplugin.rentbuy page" name="5790 Search by subject and validate auto-suggest shows up" time="1200.014"><error type="selenium.common.exceptions.WebDriverException">
 Console Output:
 
-2016-06-16 16:24:22,744 INFO screenshot: '5713 testing popups (before).png'
-2016-06-16 16:24:23,030 INFO restarting selenium session
-2016-06-16 16:24:25,775 INFO generating new user...
-2016-06-16 16:24:25,775 INFO Creating user...
-2016-06-16 16:24:26,376 INFO New user id:51280087
-2016-06-16 16:24:27,352 INFO Created new user (51280087) with email (test_be_user_20160616162425774980@chegg.com) &amp; password (Testing1).
-2016-06-16 16:24:27,511 INFO 
-2016-06-16 16:24:27,511 INFO go_to: 'http://rc.live.test.cheggnet.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:24:32,944 INFO wait_for_ready_state
-2016-06-16 16:24:32,951 INFO chegg_wait_for_spinners
-2016-06-16 16:24:32,975 INFO chegg_xdebug_checks
-2016-06-16 16:24:32,989 INFO chegg_pixel_check
-2016-06-16 16:24:33,060 INFO chegg_check_links
-2016-06-16 16:24:33,066 INFO wait_for_page_to_load: 
-2016-06-16 16:24:33,071 INFO wait_for_ready_state
-2016-06-16 16:24:33,075 INFO chegg_wait_for_spinners
-2016-06-16 16:24:33,087 INFO chegg_xdebug_checks
-2016-06-16 16:24:33,092 INFO chegg_pixel_check
-2016-06-16 16:24:33,140 INFO chegg_check_links
-2016-06-16 16:24:33,147 INFO assert_images_loaded: 
-2016-06-16 16:24:33,434 INFO wait_for_page_to_load: 
-2016-06-16 16:24:33,438 INFO wait_for_ready_state
-2016-06-16 16:24:33,442 INFO chegg_wait_for_spinners
-2016-06-16 16:24:33,451 INFO chegg_xdebug_checks
-2016-06-16 16:24:33,455 INFO chegg_pixel_check
-2016-06-16 16:24:33,486 INFO chegg_check_links
-2016-06-16 16:24:33,495 INFO assert_images_loaded: 
-2016-06-16 16:24:33,528 INFO write_into: '.auth_collector_signin .email','test_be_user_20160616162425774980@chegg.com'
-2016-06-16 16:24:33,973 INFO write_into: '.auth_collector_signin .password','Testing1'
-2016-06-16 16:24:34,295 INFO click: 'submit'
-2016-06-16 16:24:34,471 INFO wait_for_ready_state
-2016-06-16 16:24:34,476 INFO chegg_wait_for_spinners
-2016-06-16 16:24:34,485 INFO chegg_xdebug_checks
-2016-06-16 16:24:34,489 INFO chegg_pixel_check
-2016-06-16 16:24:34,521 INFO chegg_check_links
-2016-06-16 16:24:34,531 INFO wait_for_page_to_load: 
-2016-06-16 16:24:34,539 INFO wait_for_ready_state
-2016-06-16 16:24:34,545 INFO chegg_wait_for_spinners
-2016-06-16 16:24:34,559 INFO chegg_xdebug_checks
-2016-06-16 16:24:34,567 INFO chegg_pixel_check
-2016-06-16 16:24:41,518 INFO chegg_check_links
-2016-06-16 16:24:41,525 INFO assert_images_loaded: 
-2016-06-16 16:24:41,546 INFO wait_for_page_to_load: 
-2016-06-16 16:24:41,648 INFO wait_for_ready_state
-2016-06-16 16:24:41,802 INFO chegg_wait_for_spinners
-2016-06-16 16:24:41,860 INFO chegg_xdebug_checks
-2016-06-16 16:24:41,881 INFO chegg_pixel_check
-2016-06-16 16:24:41,951 INFO chegg_check_links
-2016-06-16 16:24:41,958 INFO assert_images_loaded: 
-2016-06-16 16:24:42,581 INFO is_text_visible: 'My books &amp; solutions'
-2016-06-16 16:24:43,439 INFO wait_for_page_to_load: 
-2016-06-16 16:24:43,444 INFO wait_for_ready_state
-2016-06-16 16:24:43,449 INFO assert_images_loaded: 
-2016-06-16 16:24:43,453 INFO Checking for Terms of use dialog...
-2016-06-16 16:24:54,104 INFO Element 'cheggLogo' visible.
-2016-06-16 16:24:54,111 INFO 
-2016-06-16 16:24:54,111 INFO go_to: 'http://rc.live.test.cheggnet.com/my/account/?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:24:57,021 INFO wait_for_ready_state
-2016-06-16 16:24:57,031 INFO chegg_wait_for_spinners
-2016-06-16 16:24:57,147 INFO chegg_xdebug_checks
-2016-06-16 16:24:57,158 INFO chegg_pixel_check
-2016-06-16 16:24:57,208 INFO chegg_check_links
-2016-06-16 16:24:57,218 INFO assert_elements_visible: ['editUserInfoLink']
-2016-06-16 16:25:27,296 INFO Element 'editUserInfoLink' visible.
-2016-06-16 16:25:27,297 INFO assert_elements_visible: ['editUserInfoLink']
-2016-06-16 16:25:27,330 INFO click: 'Basic Info' index=0
-2016-06-16 16:25:27,543 INFO wait_for_ready_state
-2016-06-16 16:25:27,549 INFO chegg_wait_for_spinners
-2016-06-16 16:25:27,559 INFO chegg_xdebug_checks
-2016-06-16 16:25:27,564 INFO chegg_pixel_check
-2016-06-16 16:25:27,614 INFO chegg_check_links
-2016-06-16 16:25:27,619 INFO assert_elements_visible: ['userInfoDlgAccount']
-2016-06-16 16:25:27,683 INFO click: '.cancel-text' index=0
-2016-06-16 16:25:27,848 INFO wait_for_ready_state
-2016-06-16 16:25:27,855 INFO chegg_wait_for_spinners
-2016-06-16 16:25:27,866 INFO chegg_xdebug_checks
-2016-06-16 16:25:27,872 INFO chegg_pixel_check
-2016-06-16 16:25:27,923 INFO chegg_check_links
-2016-06-16 16:25:27,929 INFO assert_elements_visible: ['changePasswordLink']
-2016-06-16 16:25:27,971 INFO click: 'Change Password' index=0
-2016-06-16 16:25:28,170 INFO wait_for_ready_state
-2016-06-16 16:25:28,178 INFO chegg_wait_for_spinners
-2016-06-16 16:25:28,185 INFO chegg_xdebug_checks
-2016-06-16 16:25:28,189 INFO chegg_pixel_check
-2016-06-16 16:25:28,221 INFO chegg_check_links
-2016-06-16 16:25:28,227 INFO assert_elements_visible: ['changePasswordViewPopup']
-2016-06-16 16:25:28,273 INFO click: 'a.cancel' index=0
-2016-06-16 16:25:28,483 INFO wait_for_ready_state
-2016-06-16 16:25:28,488 INFO chegg_wait_for_spinners
-2016-06-16 16:25:28,498 INFO chegg_xdebug_checks
-2016-06-16 16:25:28,502 INFO chegg_pixel_check
-2016-06-16 16:25:28,534 INFO chegg_check_links
-2016-06-16 16:25:28,542 INFO assert_elements_visible: ['editNotificationLink']
-2016-06-16 16:25:28,577 INFO click: 'Notification Preferences' index=0
-2016-06-16 16:25:28,744 INFO wait_for_ready_state
-2016-06-16 16:25:28,750 INFO chegg_wait_for_spinners
-2016-06-16 16:25:28,760 INFO chegg_xdebug_checks
-2016-06-16 16:25:28,764 INFO chegg_pixel_check
-2016-06-16 16:25:28,793 INFO chegg_check_links
-2016-06-16 16:25:28,800 INFO assert_elements_visible: ['notificationDlg']
-2016-06-16 16:25:28,837 INFO click: 'div.cancel-text' index=0
-2016-06-16 16:25:29,803 INFO wait_for_ready_state
-2016-06-16 16:25:29,808 INFO chegg_wait_for_spinners
-2016-06-16 16:25:29,815 INFO chegg_xdebug_checks
-2016-06-16 16:25:29,826 INFO chegg_pixel_check
-2016-06-16 16:25:29,895 INFO chegg_check_links
-2016-06-16 16:25:29,900 INFO assert_elements_visible: ['editBillingInfo']
-2016-06-16 16:25:29,932 INFO click: 'Edit Payment Method' index=0
-2016-06-16 16:25:30,099 INFO wait_for_ready_state
-2016-06-16 16:25:30,107 INFO chegg_wait_for_spinners
-2016-06-16 16:25:30,115 INFO chegg_xdebug_checks
-2016-06-16 16:25:30,122 INFO chegg_pixel_check
-2016-06-16 16:25:30,154 INFO chegg_check_links
-2016-06-16 16:25:30,164 INFO assert_elements_visible: ['billingInfoDlgAccount']
-2016-06-16 16:25:30,201 INFO click: 'div.cancel-edit' index=0
-2016-06-16 16:25:31,218 INFO wait_for_ready_state
-2016-06-16 16:25:31,224 INFO chegg_wait_for_spinners
-2016-06-16 16:25:31,231 INFO chegg_xdebug_checks
-2016-06-16 16:25:31,236 INFO chegg_pixel_check
-2016-06-16 16:25:31,269 INFO chegg_check_links
-2016-06-16 16:25:31,277 INFO Checking to see if on Chegg...
-2016-06-16 16:25:32,263 INFO click: 'div.user-item.nav-item'
-2016-06-16 16:25:32,402 INFO wait_for_ready_state
-2016-06-16 16:25:32,411 INFO chegg_wait_for_spinners
-2016-06-16 16:25:32,419 INFO chegg_xdebug_checks
-2016-06-16 16:25:32,427 INFO chegg_pixel_check
-2016-06-16 16:25:32,471 INFO chegg_check_links
-2016-06-16 16:25:32,476 INFO click: 'a.track-signout'
-2016-06-16 16:25:36,117 INFO wait_for_ready_state
-2016-06-16 16:25:36,127 INFO chegg_wait_for_spinners
-2016-06-16 16:25:36,155 INFO chegg_xdebug_checks
-2016-06-16 16:25:36,169 INFO chegg_pixel_check
-2016-06-16 16:25:36,225 INFO chegg_check_links
-2016-06-16 16:25:36,231 INFO wait_for_page_to_load: 
-2016-06-16 16:25:36,236 INFO wait_for_ready_state
-2016-06-16 16:25:36,240 INFO chegg_wait_for_spinners
-2016-06-16 16:25:36,251 INFO chegg_xdebug_checks
-2016-06-16 16:25:36,255 INFO chegg_pixel_check
-2016-06-16 16:25:36,296 INFO chegg_check_links
-2016-06-16 16:25:36,301 INFO assert_images_loaded: 
+2016-06-21 10:42:01,225 INFO screenshot: '5790 Search by subject and validate auto-suggest shows up (before).png'
+2016-06-21 10:52:01,231 ERROR Traceback (most recent call last):
+2016-06-21 10:52:01,231 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/nosetestplugin.py", line 290, in beforeTest
+2016-06-21 10:52:01,231 ERROR     cheggtest.webtest.screenshot(filename)
+2016-06-21 10:52:01,232 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 10:52:01,232 ERROR     return func(*args, **kwargs)
+2016-06-21 10:52:01,232 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 1644, in screenshot
+2016-06-21 10:52:01,232 ERROR     sst.actions.take_screenshot(filename=filename)
+2016-06-21 10:52:01,232 ERROR   File "/usr/local/lib/python2.7/site-packages/sst-0.2.3k.dev-py2.7.egg/sst/actions.py", line 282, in take_screenshot
+2016-06-21 10:52:01,232 ERROR     browser.get_screenshot_as_file(screenshot_file)
+2016-06-21 10:52:01,232 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 715, in get_screenshot_as_file
+2016-06-21 10:52:01,233 ERROR     png = self.get_screenshot_as_png()
+2016-06-21 10:52:01,233 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 734, in get_screenshot_as_png
+2016-06-21 10:52:01,233 ERROR     return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+2016-06-21 10:52:01,233 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 744, in get_screenshot_as_base64
+2016-06-21 10:52:01,233 ERROR     return self.execute(Command.SCREENSHOT)['value']
+2016-06-21 10:52:01,233 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+2016-06-21 10:52:01,233 ERROR     self.error_handler.check_response(response)
+2016-06-21 10:52:01,233 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+2016-06-21 10:52:01,234 ERROR     raise exception_class(message, screen, stacktrace)
+2016-06-21 10:52:01,234 ERROR WebDriverException: Message: u'unknown error: cannot determine loading status\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: chrome=51.0.2704.103)\n  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64)'
+2016-06-21 10:52:01,234 WARNING Unable to get snapshot for 5790 Search by subject and validate auto-suggest shows up (freshen.noseplugin.rentbuy page@[/Users/sshrimali/git/core/Chegg.Site/test/fesite/rentbuy.page.feature])
+2016-06-21 10:52:01,234 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/rentbuy.page.feature
+2016-06-21 11:02:01,244 INFO 
+2016-06-21 11:02:01,244 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 11:02:01,244 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 11:02:01,244 ERROR   File "build/bdist.linux-x86_64/egg/cheggfe/cheggfe.py", line 2849, in go_to_url
+2016-06-21 11:02:01,245 ERROR     webtest.go_to(url)
+2016-06-21 11:02:01,245 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 177, in go_to
+2016-06-21 11:02:01,245 ERROR     sst.actions.browser.switch_to_default_content()
+2016-06-21 11:02:01,245 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 528, in switch_to_default_content
+2016-06-21 11:02:01,245 ERROR     self.execute(Command.SWITCH_TO_FRAME, {'id': None})
+2016-06-21 11:02:01,245 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+2016-06-21 11:02:01,246 ERROR     self.error_handler.check_response(response)
+2016-06-21 11:02:01,247 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+2016-06-21 11:02:01,247 ERROR     raise exception_class(message, screen, stacktrace)
+2016-06-21 11:12:01,251 WARNING unable to get browser cookies
+2016-06-21 11:32:01,262 INFO AJAX API Stacktrace: none
+
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+    return func(*_process_args(args), **kwargs)
+  File "build/bdist.linux-x86_64/egg/cheggfe/cheggfe.py", line 2849, in go_to_url
+    webtest.go_to(url)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 177, in go_to
+    sst.actions.browser.switch_to_default_content()
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 528, in switch_to_default_content
+    self.execute(Command.SWITCH_TO_FRAME, {'id': None})
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+"Message: u'unknown error: cannot determine loading status\\nfrom timeout: Timed out receiving message from renderer: 600.000\\n  (Session info: chrome=51.0.2704.103)\\n  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64)' \n\n@smoke  @search_smoke\nFeature: rentbuy page\n  @smoke_new\n  Scenario: 5790 Search by subject and validate auto-suggest shows up\n    Given I go to the URL: books#rentbuy/?action=signup&amp;experiment=NONE0&amp;debug=experiment# fesite/rentbuy.page.feature:35 , FAILED\n     Then I type Biology into autosuggest-input                                 # fesite/rentbuy.page.feature:36 \n     Then I should see the text Biology in Books                                # fesite/rentbuy.page.feature:37 \n     Then I should see the text Biology in Textbook Solution                    # fesite/rentbuy.page.feature:38 \n     Then I should see the text Biology in Q&amp;A                                  # fesite/rentbuy.page.feature:39 \n     Then I should see the text Biology in Tutors                               # fesite/rentbuy.page.feature:40 \n     Then I should see the elements .book-result                                # fesite/rentbuy.page.feature:41 \n     Then I click .img-wrapper                                                  # fesite/rentbuy.page.feature:42 \n     Then I should see the text Biology                                         # fesite/rentbuy.page.feature:43 "
 
 
-
-</info></testcase><testcase classname="freshen.noseplugin.testing psychic search" name="5879 check header navigation" time="173.266"><info>
+</error></testcase><testcase classname="freshen.noseplugin.search page" name="5929 validate search serp filter" time="642.409"><info>
 Console Output:
 
-2016-06-16 16:25:37,356 INFO screenshot: '5879 check header navigation (before).png'
-2016-06-16 16:25:38,169 INFO restarting selenium session
-2016-06-16 16:25:40,611 INFO 
-2016-06-16 16:25:40,612 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:25:44,306 INFO wait_for_ready_state
-2016-06-16 16:25:44,312 INFO chegg_wait_for_spinners
-2016-06-16 16:25:44,630 INFO chegg_xdebug_checks
-2016-06-16 16:25:44,636 INFO chegg_pixel_check
-2016-06-16 16:25:44,743 INFO chegg_check_links
-2016-06-16 16:25:44,759 INFO click: 'BOOKS' index=0
-2016-06-16 16:25:45,379 INFO wait_for_ready_state
-2016-06-16 16:25:45,403 INFO chegg_wait_for_spinners
-2016-06-16 16:25:45,492 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:46,018 INFO chegg_xdebug_checks
-2016-06-16 16:25:46,036 INFO chegg_pixel_check
-2016-06-16 16:25:46,129 INFO chegg_check_links
-2016-06-16 16:25:46,155 INFO assert_text_visible: 'Rent or buy textbooks or eTextbooks' case_sensitive=False
-2016-06-16 16:25:46,794 INFO click: 'Rent / Buy Books' index=0
-2016-06-16 16:25:47,036 INFO wait_for_ready_state
-2016-06-16 16:25:47,041 INFO chegg_wait_for_spinners
-2016-06-16 16:25:47,077 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:48,787 INFO chegg_xdebug_checks
-2016-06-16 16:25:48,791 INFO chegg_pixel_check
-2016-06-16 16:25:48,825 INFO chegg_check_links
-2016-06-16 16:25:48,835 INFO assert_text_visible: 'Rent or buy textbooks or eTextbooks' case_sensitive=False
-2016-06-16 16:25:49,360 INFO click: 'Sell Books' index=0
-2016-06-16 16:25:49,516 INFO wait_for_ready_state
-2016-06-16 16:25:49,525 INFO chegg_wait_for_spinners
-2016-06-16 16:25:49,536 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:50,061 INFO chegg_xdebug_checks
-2016-06-16 16:25:50,068 INFO chegg_pixel_check
-2016-06-16 16:25:50,106 INFO chegg_check_links
-2016-06-16 16:25:50,113 INFO assert_text_visible: 'Sell your used textbooks for money' case_sensitive=False
-2016-06-16 16:25:50,649 INFO 
-2016-06-16 16:25:50,649 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:25:52,409 INFO wait_for_ready_state
-2016-06-16 16:25:52,414 INFO chegg_wait_for_spinners
-2016-06-16 16:25:52,440 INFO chegg_xdebug_checks
-2016-06-16 16:25:52,450 INFO chegg_pixel_check
-2016-06-16 16:25:52,511 INFO chegg_check_links
-2016-06-16 16:25:52,521 INFO click: 'STUDY' index=0
-2016-06-16 16:25:52,885 INFO wait_for_ready_state
-2016-06-16 16:25:52,890 INFO chegg_wait_for_spinners
-2016-06-16 16:25:52,902 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:55,121 INFO chegg_xdebug_checks
-2016-06-16 16:25:55,126 INFO chegg_pixel_check
-2016-06-16 16:25:55,178 INFO chegg_check_links
-2016-06-16 16:25:55,186 INFO assert_text_visible: 'Unlock better grades with Chegg StudySM' case_sensitive=False
-2016-06-16 16:25:55,716 INFO click: 'Textbook Solutions' index=0
-2016-06-16 16:25:56,003 INFO wait_for_ready_state
-2016-06-16 16:25:56,020 INFO chegg_wait_for_spinners
-2016-06-16 16:25:56,034 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:56,569 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:57,116 INFO chegg_xdebug_checks
-2016-06-16 16:25:57,134 INFO chegg_pixel_check
-2016-06-16 16:25:57,248 INFO chegg_check_links
-2016-06-16 16:25:57,258 INFO assert_elements_visible: ['.find-TBS.selected']
-2016-06-16 16:25:57,340 INFO click: 'Expert Q&amp;A' index=0
-2016-06-16 16:25:57,549 INFO wait_for_ready_state
-2016-06-16 16:25:57,556 INFO chegg_wait_for_spinners
-2016-06-16 16:25:57,566 INFO waiting on div.chg-content to be visible
-2016-06-16 16:25:58,098 INFO chegg_xdebug_checks
-2016-06-16 16:25:58,110 INFO chegg_pixel_check
-2016-06-16 16:25:58,207 INFO chegg_check_links
-2016-06-16 16:25:58,215 INFO assert_elements_visible: ['.ask-question.selected']
-2016-06-16 16:25:58,277 INFO 
-2016-06-16 16:25:58,278 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:25:59,645 INFO wait_for_ready_state
-2016-06-16 16:25:59,652 INFO chegg_wait_for_spinners
-2016-06-16 16:25:59,685 INFO chegg_xdebug_checks
-2016-06-16 16:25:59,693 INFO chegg_pixel_check
-2016-06-16 16:25:59,759 INFO chegg_check_links
-2016-06-16 16:25:59,769 INFO click: 'TUTORS' index=0
-2016-06-16 16:26:03,055 INFO wait_for_ready_state
-2016-06-16 16:26:03,163 INFO chegg_wait_for_spinners
-2016-06-16 16:26:03,388 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:03,900 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:04,413 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:04,926 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:05,442 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:05,960 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:06,475 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:06,992 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:07,502 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:08,017 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:08,535 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:09,048 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:09,563 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:10,077 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:10,588 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:11,101 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:11,612 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:12,126 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:12,636 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:13,146 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:13,659 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:14,171 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:14,681 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:15,192 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:15,703 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:16,213 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:16,724 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:17,235 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:17,749 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:18,261 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:18,775 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:19,286 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:19,799 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:20,311 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:20,820 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:21,331 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:21,842 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:22,353 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:22,864 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:23,378 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:23,889 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:24,400 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:24,914 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:25,425 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:25,933 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:26,445 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:26,955 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:27,469 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:27,985 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:28,500 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:29,010 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:29,521 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:30,036 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:30,546 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:31,058 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:31,574 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:32,085 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:32,597 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:33,112 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:33,831 WARNING page redirection detected.
-2016-06-16 16:26:33,832 INFO assert_url_contains: '/tutors'
-2016-06-16 16:26:33,838 INFO assert_elements_visible: ['.find-tutor-now-btn']
-2016-06-16 16:26:33,885 INFO 
-2016-06-16 16:26:33,885 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:26:35,381 INFO wait_for_ready_state
-2016-06-16 16:26:35,396 INFO chegg_wait_for_spinners
-2016-06-16 16:26:35,436 INFO chegg_xdebug_checks
-2016-06-16 16:26:35,444 INFO chegg_pixel_check
-2016-06-16 16:26:35,503 INFO chegg_check_links
-2016-06-16 16:26:35,513 INFO click: 'TEST PREP' index=0
-2016-06-16 16:26:35,744 INFO wait_for_ready_state
-2016-06-16 16:26:35,752 INFO chegg_wait_for_spinners
-2016-06-16 16:26:35,767 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:36,280 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:36,793 INFO chegg_xdebug_checks
-2016-06-16 16:26:36,801 INFO chegg_pixel_check
-2016-06-16 16:26:36,845 INFO chegg_check_links
-2016-06-16 16:26:36,853 INFO assert_text_visible: 'Chegg Test Prep' case_sensitive=False
-2016-06-16 16:26:37,379 INFO click: 'SAT' index=0
-2016-06-16 16:26:37,590 INFO wait_for_ready_state
-2016-06-16 16:26:37,600 INFO chegg_wait_for_spinners
-2016-06-16 16:26:37,614 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:38,127 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:38,646 INFO chegg_xdebug_checks
-2016-06-16 16:26:38,651 INFO chegg_pixel_check
-2016-06-16 16:26:38,717 INFO chegg_check_links
-2016-06-16 16:26:38,725 INFO assert_text_visible: 'Rock your SAT' case_sensitive=False
-2016-06-16 16:26:39,286 INFO click: 'ACT' index=0
-2016-06-16 16:26:39,656 INFO wait_for_ready_state
-2016-06-16 16:26:39,664 INFO chegg_wait_for_spinners
-2016-06-16 16:26:39,680 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:40,219 INFO chegg_xdebug_checks
-2016-06-16 16:26:40,232 INFO chegg_pixel_check
-2016-06-16 16:26:40,358 INFO chegg_check_links
-2016-06-16 16:26:40,366 INFO assert_text_visible: 'Rock your ACT' case_sensitive=False
-2016-06-16 16:26:40,918 INFO 
-2016-06-16 16:26:40,918 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:26:42,471 INFO wait_for_ready_state
-2016-06-16 16:26:42,531 INFO chegg_wait_for_spinners
-2016-06-16 16:26:42,565 INFO chegg_xdebug_checks
-2016-06-16 16:26:42,578 INFO chegg_pixel_check
-2016-06-16 16:26:42,626 INFO chegg_check_links
-2016-06-16 16:26:42,636 INFO click: 'COLLEGES' index=0
-2016-06-16 16:26:42,857 INFO wait_for_ready_state
-2016-06-16 16:26:42,864 INFO chegg_wait_for_spinners
-2016-06-16 16:26:42,879 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:47,110 INFO chegg_xdebug_checks
-2016-06-16 16:26:47,122 INFO chegg_pixel_check
-2016-06-16 16:26:47,182 INFO chegg_check_links
-2016-06-16 16:26:47,192 INFO assert_text_visible: 'Which college is right for me?' case_sensitive=False
-2016-06-16 16:26:47,722 INFO click: 'Explore' index=0
-2016-06-16 16:26:48,009 INFO wait_for_ready_state
-2016-06-16 16:26:48,018 INFO chegg_wait_for_spinners
-2016-06-16 16:26:48,031 INFO waiting on div.chg-content to be visible
-2016-06-16 16:26:48,766 INFO chegg_xdebug_checks
-2016-06-16 16:26:49,008 INFO chegg_pixel_check
-2016-06-16 16:26:49,116 INFO chegg_check_links
-2016-06-16 16:26:49,132 INFO assert_elements_visible: ['.chgsec_header-explorecolleges.selected']
-2016-06-16 16:26:49,220 INFO generating new user...
-2016-06-16 16:26:49,220 INFO Creating user...
-2016-06-16 16:26:49,395 INFO New user id:51280093
-2016-06-16 16:27:50,333 INFO Created new user (51280093) with email (test_be_user_20160616162649220487@chegg.com) &amp; password (Testing1).
-2016-06-16 16:27:50,730 INFO 
-2016-06-16 16:27:50,730 INFO go_to: 'http://rc.live.test.cheggnet.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:27:54,946 INFO wait_for_ready_state
-2016-06-16 16:27:54,951 INFO chegg_wait_for_spinners
-2016-06-16 16:27:54,977 INFO chegg_xdebug_checks
-2016-06-16 16:27:54,982 INFO chegg_pixel_check
-2016-06-16 16:27:55,019 INFO chegg_check_links
-2016-06-16 16:27:55,024 INFO wait_for_page_to_load: 
-2016-06-16 16:27:55,029 INFO wait_for_ready_state
-2016-06-16 16:27:55,034 INFO chegg_wait_for_spinners
-2016-06-16 16:27:55,042 INFO chegg_xdebug_checks
-2016-06-16 16:27:55,048 INFO chegg_pixel_check
-2016-06-16 16:27:55,084 INFO chegg_check_links
-2016-06-16 16:27:55,090 INFO assert_images_loaded: 
-2016-06-16 16:27:55,297 INFO wait_for_page_to_load: 
-2016-06-16 16:27:55,301 INFO wait_for_ready_state
-2016-06-16 16:27:55,304 INFO chegg_wait_for_spinners
-2016-06-16 16:27:55,313 INFO chegg_xdebug_checks
-2016-06-16 16:27:55,317 INFO chegg_pixel_check
-2016-06-16 16:27:55,339 INFO chegg_check_links
-2016-06-16 16:27:55,343 INFO assert_images_loaded: 
-2016-06-16 16:27:55,373 INFO write_into: '.auth_collector_signin .email','test_be_user_20160616162649220487@chegg.com'
-2016-06-16 16:27:55,841 INFO write_into: '.auth_collector_signin .password','Testing1'
-2016-06-16 16:27:56,191 INFO click: 'submit'
-2016-06-16 16:27:56,358 INFO wait_for_ready_state
-2016-06-16 16:27:56,363 INFO chegg_wait_for_spinners
-2016-06-16 16:27:56,372 INFO chegg_xdebug_checks
-2016-06-16 16:27:56,377 INFO chegg_pixel_check
-2016-06-16 16:27:56,408 INFO chegg_check_links
-2016-06-16 16:27:56,413 INFO wait_for_page_to_load: 
-2016-06-16 16:27:56,417 INFO wait_for_ready_state
-2016-06-16 16:27:56,426 INFO chegg_wait_for_spinners
-2016-06-16 16:27:56,437 INFO chegg_xdebug_checks
-2016-06-16 16:27:56,442 INFO chegg_pixel_check
-2016-06-16 16:27:56,481 INFO chegg_check_links
-2016-06-16 16:27:56,490 INFO assert_images_loaded: 
-2016-06-16 16:27:58,208 INFO wait_for_page_to_load: 
-2016-06-16 16:27:58,295 INFO wait_for_ready_state
-2016-06-16 16:27:58,316 INFO chegg_wait_for_spinners
-2016-06-16 16:27:58,370 INFO chegg_xdebug_checks
-2016-06-16 16:27:58,383 INFO chegg_pixel_check
-2016-06-16 16:27:58,480 INFO chegg_check_links
-2016-06-16 16:27:58,484 INFO assert_images_loaded: 
-2016-06-16 16:27:58,641 INFO is_text_visible: 'My books &amp; solutions'
-2016-06-16 16:27:59,260 INFO wait_for_page_to_load: 
-2016-06-16 16:27:59,264 INFO wait_for_ready_state
-2016-06-16 16:27:59,267 INFO chegg_wait_for_spinners
-2016-06-16 16:27:59,277 INFO chegg_xdebug_checks
-2016-06-16 16:27:59,282 INFO chegg_pixel_check
-2016-06-16 16:27:59,315 INFO chegg_check_links
-2016-06-16 16:27:59,324 INFO assert_images_loaded: 
-2016-06-16 16:27:59,328 INFO Checking for Terms of use dialog...
-2016-06-16 16:27:59,599 INFO 
-2016-06-16 16:27:59,599 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:28:04,206 INFO wait_for_ready_state
-2016-06-16 16:28:04,210 INFO chegg_wait_for_spinners
-2016-06-16 16:28:04,327 INFO chegg_xdebug_checks
-2016-06-16 16:28:04,348 INFO chegg_pixel_check
-2016-06-16 16:28:04,397 INFO chegg_check_links
-2016-06-16 16:28:04,415 INFO click: 'My List' index=0
-2016-06-16 16:28:04,663 INFO wait_for_ready_state
-2016-06-16 16:28:04,668 INFO chegg_wait_for_spinners
-2016-06-16 16:28:04,678 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:05,190 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:05,920 INFO chegg_xdebug_checks
-2016-06-16 16:28:05,936 INFO chegg_pixel_check
-2016-06-16 16:28:06,077 INFO chegg_check_links
-2016-06-16 16:28:06,098 INFO assert_elements_visible: ['.chgsec_header-mylist.selected']
-2016-06-16 16:28:06,216 INFO click: 'Advice' index=0
-2016-06-16 16:28:06,467 INFO wait_for_ready_state
-2016-06-16 16:28:06,475 INFO chegg_wait_for_spinners
-2016-06-16 16:28:06,486 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:06,996 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:07,509 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:08,023 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:08,539 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:09,051 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:09,563 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:10,075 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:10,589 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:11,104 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:11,614 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:12,125 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:12,636 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:13,147 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:13,657 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:14,171 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:14,686 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:15,196 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:15,707 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:16,221 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:16,732 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:17,247 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:17,760 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:18,275 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:18,788 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:19,301 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:19,814 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:20,328 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:20,843 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:21,357 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:21,867 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:22,379 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:22,893 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:23,404 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:23,917 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:24,428 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:24,939 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:25,592 INFO chegg_xdebug_checks
-2016-06-16 16:28:25,596 INFO chegg_pixel_check
-2016-06-16 16:28:25,681 INFO chegg_check_links
-2016-06-16 16:28:25,699 INFO assert_text_visible: 'Advice' case_sensitive=False
-2016-06-16 16:28:26,235 INFO assert_elements_visible: ['.chgsec_header-advice.selected']
-2016-06-16 16:28:28,857 INFO click: 'Scholarships' index=0
-2016-06-16 16:28:29,132 INFO wait_for_ready_state
-2016-06-16 16:28:29,144 INFO chegg_wait_for_spinners
-2016-06-16 16:28:29,195 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:29,709 INFO waiting on div.chg-content to be visible
-2016-06-16 16:28:30,301 INFO chegg_xdebug_checks
-2016-06-16 16:28:30,309 INFO chegg_pixel_check
-2016-06-16 16:28:30,532 INFO chegg_check_links
-2016-06-16 16:28:30,563 INFO assert_elements_visible: ['#scholarships.selected']
+2016-06-21 11:42:01,274 INFO screenshot: '5929 validate search serp filter (before).png'
+2016-06-21 11:52:01,279 ERROR Traceback (most recent call last):
+2016-06-21 11:52:01,279 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/util/nosetestplugin.py", line 290, in beforeTest
+2016-06-21 11:52:01,279 ERROR     cheggtest.webtest.screenshot(filename)
+2016-06-21 11:52:01,279 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 11:52:01,279 ERROR     return func(*args, **kwargs)
+2016-06-21 11:52:01,279 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 1644, in screenshot
+2016-06-21 11:52:01,279 ERROR     sst.actions.take_screenshot(filename=filename)
+2016-06-21 11:52:01,280 ERROR   File "/usr/local/lib/python2.7/site-packages/sst-0.2.3k.dev-py2.7.egg/sst/actions.py", line 282, in take_screenshot
+2016-06-21 11:52:01,280 ERROR     browser.get_screenshot_as_file(screenshot_file)
+2016-06-21 11:52:01,280 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 715, in get_screenshot_as_file
+2016-06-21 11:52:01,294 ERROR     png = self.get_screenshot_as_png()
+2016-06-21 11:52:01,294 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 734, in get_screenshot_as_png
+2016-06-21 11:52:01,294 ERROR     return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+2016-06-21 11:52:01,294 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 744, in get_screenshot_as_base64
+2016-06-21 11:52:01,294 ERROR     return self.execute(Command.SCREENSHOT)['value']
+2016-06-21 11:52:01,294 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 164, in execute
+2016-06-21 11:52:01,295 ERROR     self.error_handler.check_response(response)
+2016-06-21 11:52:01,295 ERROR   File "/usr/local/lib/python2.7/site-packages/selenium-2.39.0-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+2016-06-21 11:52:01,295 ERROR     raise exception_class(message, screen, stacktrace)
+2016-06-21 11:52:01,295 ERROR WebDriverException: Message: u'unknown error: cannot determine loading status\nfrom timeout: Timed out receiving message from renderer: 600.000\n  (Session info: chrome=51.0.2704.103)\n  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64)'
+2016-06-21 11:52:01,295 WARNING Unable to get snapshot for 5929 validate search serp filter (freshen.noseplugin.search page@[/Users/sshrimali/git/core/Chegg.Site/test/fesite/search.page.feature])
+2016-06-21 11:52:01,295 INFO restarting selenium session
+2016-06-21 11:52:04,451 INFO 
+2016-06-21 11:52:04,451 INFO go_to: 'http://www.chegg.com/search/Biology/federated/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 11:52:12,799 INFO wait_for_ready_state
+2016-06-21 11:52:12,831 INFO chegg_wait_for_spinners
+2016-06-21 11:52:12,902 INFO chegg_xdebug_checks
+2016-06-21 11:52:12,912 INFO chegg_pixel_check
+2016-06-21 11:52:13,851 INFO chegg_check_links
+2016-06-21 11:52:13,859 INFO click: 'All matches' index=0
+2016-06-21 11:52:14,227 INFO wait_for_ready_state
+2016-06-21 11:52:14,318 INFO chegg_wait_for_spinners
+2016-06-21 11:52:14,335 INFO waiting on div.chg-content to be visible
+2016-06-21 11:52:15,100 INFO chegg_xdebug_checks
+2016-06-21 11:52:15,215 INFO chegg_pixel_check
+2016-06-21 11:52:15,328 INFO chegg_check_links
+2016-06-21 11:52:15,339 INFO assert_elements_visible: ['.active[data-id="All matches"]']
+2016-06-21 11:52:15,431 INFO assert_elements_visible: set(['.vertical a'])
+2016-06-21 11:52:15,570 INFO Element '.vertical a' displays expected text: 'All'
+2016-06-21 11:52:15,571 INFO click: 'Textbook solutions' index=0
+2016-06-21 11:52:18,064 INFO wait_for_ready_state
+2016-06-21 11:52:18,075 INFO chegg_wait_for_spinners
+2016-06-21 11:52:18,161 INFO chegg_xdebug_checks
+2016-06-21 11:52:18,166 INFO chegg_pixel_check
+2016-06-21 11:52:18,233 INFO chegg_check_links
+2016-06-21 11:52:18,242 INFO assert_elements_visible: ['.active[data-id="Textbook solutions"]']
+2016-06-21 11:52:22,955 INFO assert_elements_visible: set(['.vertical strong'])
+2016-06-21 11:52:23,067 INFO Element '.vertical strong' displays expected text: 'Textbook solutions'
+2016-06-21 11:52:23,068 INFO click: 'Expert Q&amp;A' index=0
+2016-06-21 11:52:23,433 INFO wait_for_ready_state
+2016-06-21 11:52:23,439 INFO chegg_wait_for_spinners
+2016-06-21 11:52:23,457 INFO chegg_xdebug_checks
+2016-06-21 11:52:23,486 INFO chegg_pixel_check
+2016-06-21 11:52:23,559 INFO chegg_check_links
+2016-06-21 11:52:23,575 INFO assert_elements_visible: ['.active[data-id="Expert Q&amp;A"]']
+2016-06-21 11:52:25,249 INFO assert_elements_visible: set(['.vertical strong'])
+2016-06-21 11:52:25,351 INFO Element '.vertical strong' displays expected text: 'Expert Q&amp;A'
+2016-06-21 11:52:25,352 INFO click: 'Tutors' index=0
+2016-06-21 11:52:33,990 INFO wait_for_ready_state
+2016-06-21 11:52:33,997 INFO chegg_wait_for_spinners
+2016-06-21 11:52:34,103 INFO chegg_xdebug_checks
+2016-06-21 11:52:34,117 INFO chegg_pixel_check
+2016-06-21 11:52:34,679 INFO chegg_check_links
+2016-06-21 11:52:34,692 INFO assert_elements_visible: ['.active[data-id="Tutors"]']
+2016-06-21 11:52:34,848 INFO assert_elements_visible: set(['.vertical strong'])
+2016-06-21 11:52:35,094 INFO Element '.vertical strong' displays expected text: 'Tutors'
+2016-06-21 11:52:35,095 INFO click: 'Books' index=0
+2016-06-21 11:52:36,211 INFO wait_for_ready_state
+2016-06-21 11:52:36,222 INFO chegg_wait_for_spinners
+2016-06-21 11:52:36,238 INFO waiting on div.chg-content to be visible
+2016-06-21 11:52:38,305 INFO chegg_xdebug_checks
+2016-06-21 11:52:38,311 INFO chegg_pixel_check
+2016-06-21 11:52:38,379 INFO chegg_check_links
+2016-06-21 11:52:38,390 INFO assert_elements_visible: ['.active[data-id="Books"]']
+2016-06-21 11:52:38,447 INFO assert_elements_visible: set(['.vertical strong'])
+2016-06-21 11:52:38,546 INFO Element '.vertical strong' displays expected text: 'Books'
+2016-06-21 11:52:38,546 INFO click: 'book-img-3' index=0
+2016-06-21 11:52:39,021 INFO wait_for_ready_state
+2016-06-21 11:52:39,033 INFO chegg_wait_for_spinners
+2016-06-21 11:52:39,058 INFO waiting on div.chg-content to be visible
+2016-06-21 11:52:39,570 INFO waiting on div.chg-content to be visible
+2016-06-21 11:52:40,081 INFO waiting on div.chg-content to be visible
+2016-06-21 11:52:43,392 INFO chegg_xdebug_checks
+2016-06-21 11:52:43,398 INFO chegg_pixel_check
+2016-06-21 11:52:43,440 INFO chegg_check_links
+2016-06-21 11:52:43,449 INFO assert_elements_visible: ['.txt-hdr-dark']
+2016-06-21 11:52:43,508 INFO assert_elements_visible: ['.book-details-container']
+2016-06-21 11:52:43,562 INFO assert_elements_visible: ['.book-details-container']
+2016-06-21 11:52:43,623 INFO assert_elements_visible: ['.pricebox-col']
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.test the Sign In page and feature." name="5865 automation test for SU cookie check" time="157.204"><info>
+</info></testcase><testcase classname="freshen.noseplugin.testing book pdp" name="5773 main info about book" time="269.880"><info>
 Console Output:
 
-2016-06-16 16:28:31,012 INFO screenshot: '5865 automation test for SU cookie check (before).png'
-2016-06-16 16:28:31,255 INFO restarting selenium session
-2016-06-16 16:28:33,828 INFO generating new user...
-2016-06-16 16:28:33,828 INFO Creating user...
-2016-06-16 16:28:33,992 INFO New user id:51280097
-2016-06-16 16:29:34,871 INFO Created new user (51280097) with email (test_be_user_20160616162833828066@chegg.com) &amp; password (Testing1).
-2016-06-16 16:29:34,931 INFO 
-2016-06-16 16:29:34,931 INFO go_to: 'http://rc.live.test.cheggnet.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:29:40,899 INFO wait_for_ready_state
-2016-06-16 16:29:40,908 INFO chegg_wait_for_spinners
-2016-06-16 16:29:40,978 INFO chegg_xdebug_checks
-2016-06-16 16:29:41,001 INFO chegg_pixel_check
-2016-06-16 16:29:41,085 INFO chegg_check_links
-2016-06-16 16:29:41,090 INFO wait_for_page_to_load: 
-2016-06-16 16:29:41,096 INFO wait_for_ready_state
-2016-06-16 16:29:41,101 INFO chegg_wait_for_spinners
-2016-06-16 16:29:41,111 INFO chegg_xdebug_checks
-2016-06-16 16:29:41,116 INFO chegg_pixel_check
-2016-06-16 16:29:41,167 INFO chegg_check_links
-2016-06-16 16:29:41,173 INFO assert_images_loaded: 
-2016-06-16 16:29:41,425 INFO wait_for_page_to_load: 
-2016-06-16 16:29:41,429 INFO wait_for_ready_state
-2016-06-16 16:29:41,435 INFO chegg_wait_for_spinners
-2016-06-16 16:29:41,443 INFO chegg_xdebug_checks
-2016-06-16 16:29:41,447 INFO chegg_pixel_check
-2016-06-16 16:29:41,479 INFO chegg_check_links
-2016-06-16 16:29:41,487 INFO assert_images_loaded: 
-2016-06-16 16:29:41,511 INFO write_into: '.auth_collector_signin .email','test_be_user_20160616162833828066@chegg.com'
-2016-06-16 16:29:41,967 INFO write_into: '.auth_collector_signin .password','Testing1'
-2016-06-16 16:29:42,275 INFO click: 'submit'
-2016-06-16 16:29:42,440 INFO wait_for_ready_state
-2016-06-16 16:29:42,444 INFO chegg_wait_for_spinners
-2016-06-16 16:29:42,454 INFO chegg_xdebug_checks
-2016-06-16 16:29:42,459 INFO chegg_pixel_check
-2016-06-16 16:29:42,489 INFO chegg_check_links
-2016-06-16 16:29:42,496 INFO wait_for_page_to_load: 
-2016-06-16 16:29:42,504 INFO wait_for_ready_state
-2016-06-16 16:29:42,509 INFO chegg_wait_for_spinners
-2016-06-16 16:29:42,517 INFO chegg_xdebug_checks
-2016-06-16 16:29:42,521 INFO chegg_pixel_check
-2016-06-16 16:29:42,560 INFO chegg_check_links
-2016-06-16 16:29:42,565 INFO assert_images_loaded: 
-2016-06-16 16:29:42,569 INFO wait_for_page_to_load: 
-2016-06-16 16:29:42,572 INFO wait_for_ready_state
-2016-06-16 16:29:42,576 INFO chegg_wait_for_spinners
-2016-06-16 16:29:42,584 INFO chegg_xdebug_checks
-2016-06-16 16:29:42,588 INFO chegg_pixel_check
-2016-06-16 16:29:42,618 INFO chegg_check_links
-2016-06-16 16:29:42,622 INFO assert_images_loaded: 
-2016-06-16 16:29:48,491 INFO is_text_visible: 'My books &amp; solutions'
-2016-06-16 16:29:49,446 INFO wait_for_page_to_load: 
-2016-06-16 16:29:49,451 INFO wait_for_ready_state
-2016-06-16 16:29:49,456 INFO assert_images_loaded: 
-2016-06-16 16:29:49,461 INFO Checking for Terms of use dialog...
-2016-06-16 16:29:50,050 INFO assert_elements_visible: ['cheggHeaderAvatar']
-2016-06-16 16:29:50,080 INFO Checking to see if on Chegg...
-2016-06-16 16:29:51,418 INFO click: 'div.user-item.nav-item'
-2016-06-16 16:29:51,595 INFO wait_for_ready_state
-2016-06-16 16:29:51,600 INFO chegg_wait_for_spinners
-2016-06-16 16:29:51,610 INFO chegg_xdebug_checks
-2016-06-16 16:29:51,616 INFO chegg_pixel_check
-2016-06-16 16:29:51,666 INFO chegg_check_links
-2016-06-16 16:29:51,674 INFO click: 'a.track-signout'
-2016-06-16 16:29:53,441 INFO wait_for_ready_state
-2016-06-16 16:29:53,448 INFO chegg_wait_for_spinners
-2016-06-16 16:29:53,582 INFO chegg_xdebug_checks
-2016-06-16 16:29:53,591 INFO chegg_pixel_check
-2016-06-16 16:29:53,698 INFO chegg_check_links
-2016-06-16 16:29:53,707 INFO wait_for_page_to_load: 
-2016-06-16 16:29:53,711 INFO wait_for_ready_state
-2016-06-16 16:29:53,718 INFO chegg_wait_for_spinners
-2016-06-16 16:29:53,736 INFO chegg_xdebug_checks
-2016-06-16 16:29:53,744 INFO chegg_pixel_check
-2016-06-16 16:29:53,790 INFO chegg_check_links
-2016-06-16 16:29:53,798 INFO assert_images_loaded: 
-2016-06-16 16:29:53,810 INFO assert_elements_not_visible: ['cheggHeaderAvatar']
-2016-06-16 16:29:54,581 INFO generating new user...
-2016-06-16 16:29:54,582 INFO Creating user...
-2016-06-16 16:29:54,725 INFO New user id:51280107
-2016-06-16 16:30:55,662 INFO Created new user (51280107) with email (test_be_user_20160616162954581824@chegg.com) &amp; password (Testing1).
-2016-06-16 16:30:55,858 INFO 
-2016-06-16 16:30:55,858 INFO go_to: 'http://rc.live.test.cheggnet.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:30:58,325 INFO wait_for_ready_state
-2016-06-16 16:30:58,330 INFO chegg_wait_for_spinners
-2016-06-16 16:30:58,357 INFO chegg_xdebug_checks
-2016-06-16 16:30:58,367 INFO chegg_pixel_check
-2016-06-16 16:30:58,420 INFO chegg_check_links
-2016-06-16 16:30:58,427 INFO wait_for_page_to_load: 
-2016-06-16 16:30:58,439 INFO wait_for_ready_state
-2016-06-16 16:30:58,446 INFO chegg_wait_for_spinners
-2016-06-16 16:30:58,460 INFO chegg_xdebug_checks
-2016-06-16 16:30:58,467 INFO chegg_pixel_check
-2016-06-16 16:30:58,517 INFO chegg_check_links
-2016-06-16 16:30:58,527 INFO assert_images_loaded: 
-2016-06-16 16:30:58,795 INFO wait_for_page_to_load: 
-2016-06-16 16:30:58,799 INFO wait_for_ready_state
-2016-06-16 16:30:58,803 INFO chegg_wait_for_spinners
-2016-06-16 16:30:58,811 INFO chegg_xdebug_checks
-2016-06-16 16:30:58,816 INFO chegg_pixel_check
-2016-06-16 16:30:58,848 INFO chegg_check_links
-2016-06-16 16:30:58,857 INFO assert_images_loaded: 
-2016-06-16 16:30:58,885 INFO write_into: '.auth_collector_signin .email','test_be_user_20160616162954581824@chegg.com'
-2016-06-16 16:30:59,317 INFO write_into: '.auth_collector_signin .password','Testing1'
-2016-06-16 16:30:59,638 INFO click: 'submit'
-2016-06-16 16:30:59,797 INFO wait_for_ready_state
-2016-06-16 16:30:59,802 INFO chegg_wait_for_spinners
-2016-06-16 16:30:59,811 INFO chegg_xdebug_checks
-2016-06-16 16:30:59,816 INFO chegg_pixel_check
-2016-06-16 16:30:59,846 INFO chegg_check_links
-2016-06-16 16:30:59,851 INFO wait_for_page_to_load: 
-2016-06-16 16:30:59,854 INFO wait_for_ready_state
-2016-06-16 16:30:59,861 INFO chegg_wait_for_spinners
-2016-06-16 16:30:59,875 INFO chegg_xdebug_checks
-2016-06-16 16:30:59,880 INFO chegg_pixel_check
-2016-06-16 16:30:59,914 INFO chegg_check_links
-2016-06-16 16:31:02,510 INFO assert_images_loaded: 
-2016-06-16 16:31:02,644 INFO wait_for_page_to_load: 
-2016-06-16 16:31:02,671 INFO wait_for_ready_state
-2016-06-16 16:31:02,675 INFO chegg_wait_for_spinners
-2016-06-16 16:31:02,715 INFO chegg_xdebug_checks
-2016-06-16 16:31:02,720 INFO chegg_pixel_check
-2016-06-16 16:31:02,768 INFO chegg_check_links
-2016-06-16 16:31:02,773 INFO assert_images_loaded: 
-2016-06-16 16:31:03,327 INFO is_text_visible: 'My books &amp; solutions'
-2016-06-16 16:31:04,255 INFO wait_for_page_to_load: 
-2016-06-16 16:31:04,259 INFO wait_for_ready_state
-2016-06-16 16:31:04,263 INFO assert_images_loaded: 
-2016-06-16 16:31:04,267 INFO Checking for Terms of use dialog...
-2016-06-16 16:31:04,857 INFO assert_elements_visible: ['cheggHeaderAvatar']
-2016-06-16 16:31:04,904 INFO Refreshing page...
-2016-06-16 16:31:07,962 INFO wait_for_page_to_load: 
-2016-06-16 16:31:08,054 INFO wait_for_ready_state
-2016-06-16 16:31:08,059 INFO chegg_wait_for_spinners
-2016-06-16 16:31:08,086 INFO chegg_xdebug_checks
-2016-06-16 16:31:08,094 INFO chegg_pixel_check
-2016-06-16 16:31:08,146 INFO chegg_check_links
-2016-06-16 16:31:08,152 INFO assert_images_loaded: 
-2016-06-16 16:31:08,158 INFO assert_elements_visible: ['cheggHeaderAvatar']
+2016-06-21 11:52:44,021 INFO screenshot: '5773 main info about book (before).png'
+2016-06-21 11:52:44,180 INFO restarting selenium session
+2016-06-21 11:52:47,030 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:53:27,126 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:53:36,176 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:54:06,820 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:55:14,056 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:55:22,259 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:56:32,738 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:56:48,953 INFO 
+2016-06-21 11:56:48,953 INFO go_to: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment
+2016-06-21 11:56:56,757 INFO wait_for_ready_state
+2016-06-21 11:56:56,764 INFO chegg_wait_for_spinners
+2016-06-21 11:56:56,805 INFO chegg_xdebug_checks
+2016-06-21 11:56:56,814 INFO chegg_pixel_check
+2016-06-21 11:56:58,080 INFO chegg_check_links
+2016-06-21 11:56:58,092 INFO Deleting all cookies...
+2016-06-21 11:56:58,217 INFO Refreshing page...
+2016-06-21 11:57:01,464 INFO wait_for_page_to_load: 
+2016-06-21 11:57:01,471 INFO wait_for_ready_state
+2016-06-21 11:57:01,481 INFO chegg_wait_for_spinners
+2016-06-21 11:57:01,537 INFO chegg_xdebug_checks
+2016-06-21 11:57:01,551 INFO chegg_pixel_check
+2016-06-21 11:57:02,395 INFO chegg_check_links
+2016-06-21 11:57:02,401 INFO assert_images_loaded: 
+2016-06-21 11:57:02,409 INFO write_into: autosuggest-input,0203851366 index=0
+2016-06-21 11:57:03,696 INFO click: autosuggest-search-btn index=0
+2016-06-21 11:57:04,196 INFO wait_for_ready_state
+2016-06-21 11:57:04,205 INFO chegg_wait_for_spinners
+2016-06-21 11:57:04,217 INFO waiting on div.chg-content to be visible
+2016-06-21 11:57:04,896 INFO chegg_xdebug_checks
+2016-06-21 11:57:04,905 INFO chegg_pixel_check
+2016-06-21 11:57:05,101 INFO chegg_check_links
+2016-06-21 11:57:05,109 INFO assert_elements_visible: ['.txt-hdr-dark']
+2016-06-21 11:57:12,699 INFO assert_elements_visible: ['pdpBookImage']
+2016-06-21 11:57:12,749 INFO assert_text_visible: 'ISBN' case_sensitive=False
+2016-06-21 11:57:13,280 INFO assert_text_visible: 'ISBN-13' case_sensitive=False
+2016-06-21 11:57:13,815 INFO assert_elements_visible: ['.author-container']
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.test SIHP" name="5793 test search field, click send button" time="38.026"><error type="cheggtest.exceptions.CheggTestException">
+</info></testcase><testcase classname="freshen.noseplugin.testing book pdp" name="5781 pricebox block" time="118.977"><info>
 Console Output:
 
-2016-06-16 16:31:09,180 INFO screenshot: '5793 test search field, click send button (before).png'
-2016-06-16 16:31:09,928 INFO restarting selenium session
-2016-06-16 16:31:12,416 INFO 
-2016-06-16 16:31:12,416 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=A433B&amp;debug=experiment'
-2016-06-16 16:31:16,740 INFO wait_for_ready_state
-2016-06-16 16:31:16,746 INFO chegg_wait_for_spinners
-2016-06-16 16:31:16,782 INFO chegg_xdebug_checks
-2016-06-16 16:31:16,791 INFO chegg_pixel_check
-2016-06-16 16:31:16,891 INFO chegg_check_links
-2016-06-16 16:31:16,900 INFO assert_elements_visible: ['sihpHeaderSearchField']
-2016-06-16 16:31:47,206 INFO 
-2016-06-16 16:31:47,206 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
-2016-06-16 16:31:47,207 ERROR     return func(*_process_args(args), **kwargs)
-2016-06-16 16:31:47,207 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 490, in then_should_see_elements
-2016-06-16 16:31:47,207 ERROR     webtest.assert_elements_visible(elements)
-2016-06-16 16:31:47,208 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
-2016-06-16 16:31:47,208 ERROR     return func(*args, **kwargs)
-2016-06-16 16:31:47,208 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 709, in assert_elements_visible
-2016-06-16 16:31:47,208 ERROR     search_string)
-2016-06-16 16:31:47,215 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466119222/5793 test search field, click send button_browser_cookies.json
-2016-06-16 16:31:47,229 INFO AJAX API Stacktrace: none
+2016-06-21 11:57:14,242 INFO screenshot: '5781 pricebox block (before).png'
+2016-06-21 11:57:14,424 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/site.bookpdp.feature
+2016-06-21 11:57:14,425 INFO Looking for book without a Guided Solution...
+2016-06-21 11:57:21,078 INFO 
+2016-06-21 11:57:21,079 INFO go_to: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment
+2016-06-21 11:57:23,375 INFO wait_for_ready_state
+2016-06-21 11:57:23,382 INFO chegg_wait_for_spinners
+2016-06-21 11:57:23,405 INFO chegg_xdebug_checks
+2016-06-21 11:57:23,417 INFO chegg_pixel_check
+2016-06-21 11:57:23,513 INFO chegg_check_links
+2016-06-21 11:57:23,622 INFO Deleting all cookies...
+2016-06-21 11:57:23,725 INFO Refreshing page...
+2016-06-21 11:57:26,685 INFO wait_for_page_to_load: 
+2016-06-21 11:57:26,714 INFO wait_for_ready_state
+2016-06-21 11:57:26,723 INFO chegg_wait_for_spinners
+2016-06-21 11:57:26,763 INFO chegg_xdebug_checks
+2016-06-21 11:57:26,768 INFO chegg_pixel_check
+2016-06-21 11:57:27,572 INFO chegg_check_links
+2016-06-21 11:57:27,578 INFO assert_images_loaded: 
+2016-06-21 11:57:27,585 INFO write_into: autosuggest-input,1429215976 index=0
+2016-06-21 11:57:28,963 INFO click: autosuggest-search-btn index=0
+2016-06-21 11:57:29,474 INFO wait_for_ready_state
+2016-06-21 11:57:29,496 INFO chegg_wait_for_spinners
+2016-06-21 11:57:29,505 INFO waiting on div.chg-content to be visible
+2016-06-21 11:57:30,268 INFO waiting on div.chg-content to be visible
+2016-06-21 11:57:31,571 INFO chegg_xdebug_checks
+2016-06-21 11:57:31,586 INFO chegg_pixel_check
+2016-06-21 11:57:32,308 INFO chegg_check_links
+2016-06-21 11:57:42,355 INFO Element 'eggshell-pricebox' visible.
+2016-06-21 11:57:42,356 INFO click: 'div.rent label.form-radio' index=0
+2016-06-21 11:57:42,545 INFO wait_for_ready_state
+2016-06-21 11:57:42,550 INFO chegg_wait_for_spinners
+2016-06-21 11:57:42,559 INFO chegg_xdebug_checks
+2016-06-21 11:57:42,563 INFO chegg_pixel_check
+2016-06-21 11:57:42,612 INFO chegg_check_links
+2016-06-21 11:57:42,620 INFO assert_elements_visible: ['bannerGuaranteeCompact21']
+2016-06-21 11:57:42,686 INFO assert_elements_visible: ['div.rent div.pricebox-description']
+2016-06-21 11:57:42,739 INFO Looking for book without a Guided Solution...
+2016-06-21 11:57:55,601 INFO 
+2016-06-21 11:57:55,602 INFO go_to: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment
+2016-06-21 11:57:57,705 INFO wait_for_ready_state
+2016-06-21 11:57:57,710 INFO chegg_wait_for_spinners
+2016-06-21 11:57:57,749 INFO chegg_xdebug_checks
+2016-06-21 11:57:57,762 INFO chegg_pixel_check
+2016-06-21 11:57:57,871 INFO chegg_check_links
+2016-06-21 11:57:57,882 INFO Deleting all cookies...
+2016-06-21 11:57:58,010 INFO Refreshing page...
+2016-06-21 11:58:00,650 INFO wait_for_page_to_load: 
+2016-06-21 11:58:00,658 INFO wait_for_ready_state
+2016-06-21 11:58:00,663 INFO chegg_wait_for_spinners
+2016-06-21 11:58:00,689 INFO chegg_xdebug_checks
+2016-06-21 11:58:00,702 INFO chegg_pixel_check
+2016-06-21 11:58:00,783 INFO chegg_check_links
+2016-06-21 11:58:00,794 INFO assert_images_loaded: 
+2016-06-21 11:58:00,807 INFO write_into: autosuggest-input,0495097268 index=0
+2016-06-21 11:58:02,720 INFO click: autosuggest-search-btn index=0
+2016-06-21 11:58:03,350 INFO wait_for_ready_state
+2016-06-21 11:58:03,361 INFO chegg_wait_for_spinners
+2016-06-21 11:58:03,371 INFO waiting on div.chg-content to be visible
+2016-06-21 11:58:04,408 INFO chegg_xdebug_checks
+2016-06-21 11:58:04,413 INFO chegg_pixel_check
+2016-06-21 11:58:04,474 INFO chegg_check_links
+2016-06-21 11:58:23,360 INFO Element 'eggshell-pricebox' visible.
+2016-06-21 11:58:23,361 INFO click: 'div.buy label.form-radio' index=0
+2016-06-21 11:58:23,667 INFO wait_for_ready_state
+2016-06-21 11:58:23,676 INFO chegg_wait_for_spinners
+2016-06-21 11:58:23,725 INFO chegg_xdebug_checks
+2016-06-21 11:58:23,749 INFO chegg_pixel_check
+2016-06-21 11:58:23,847 INFO chegg_check_links
+2016-06-21 11:58:23,852 INFO assert_elements_visible: ['bannerGuaranteeCompact21']
+2016-06-21 11:58:23,950 INFO assert_elements_visible: ['div.buy div.pricebox-description']
+2016-06-21 11:58:24,055 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:58:36,385 INFO Looking for ebook without a Guided Solution...
+2016-06-21 11:58:46,165 INFO 
+2016-06-21 11:58:46,166 INFO go_to: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment
+2016-06-21 11:58:48,893 INFO wait_for_ready_state
+2016-06-21 11:58:48,902 INFO chegg_wait_for_spinners
+2016-06-21 11:58:48,939 INFO chegg_xdebug_checks
+2016-06-21 11:58:48,948 INFO chegg_pixel_check
+2016-06-21 11:58:49,073 INFO chegg_check_links
+2016-06-21 11:58:49,092 INFO Deleting all cookies...
+2016-06-21 11:58:49,225 INFO Refreshing page...
+2016-06-21 11:58:52,132 INFO wait_for_page_to_load: 
+2016-06-21 11:58:52,139 INFO wait_for_ready_state
+2016-06-21 11:58:52,145 INFO chegg_wait_for_spinners
+2016-06-21 11:58:52,191 INFO chegg_xdebug_checks
+2016-06-21 11:58:52,206 INFO chegg_pixel_check
+2016-06-21 11:58:52,318 INFO chegg_check_links
+2016-06-21 11:58:52,330 INFO assert_images_loaded: 
+2016-06-21 11:58:52,338 INFO write_into: autosuggest-input,0763781436 index=0
+2016-06-21 11:58:54,301 INFO click: autosuggest-search-btn index=0
+2016-06-21 11:58:54,970 INFO wait_for_ready_state
+2016-06-21 11:58:55,018 INFO chegg_wait_for_spinners
+2016-06-21 11:58:55,154 INFO waiting on div.chg-content to be visible
+2016-06-21 11:58:56,271 INFO waiting on div.chg-content to be visible
+2016-06-21 11:59:01,258 INFO chegg_xdebug_checks
+2016-06-21 11:59:01,264 INFO chegg_pixel_check
+2016-06-21 11:59:01,428 INFO chegg_check_links
+2016-06-21 11:59:11,771 INFO Element 'eggshell-pricebox' visible.
+2016-06-21 11:59:11,772 INFO click: 'div.etextbook label.form-radio' index=0
+2016-06-21 11:59:12,222 INFO wait_for_ready_state
+2016-06-21 11:59:12,227 INFO chegg_wait_for_spinners
+2016-06-21 11:59:12,255 INFO chegg_xdebug_checks
+2016-06-21 11:59:12,269 INFO chegg_pixel_check
+2016-06-21 11:59:12,372 INFO chegg_check_links
+2016-06-21 11:59:12,402 INFO assert_elements_visible: ['bannerGuaranteeCompact14']
+2016-06-21 11:59:12,500 INFO click: 'div.etextbook div.pricebox-price-option label.form-radio' index=1
+2016-06-21 11:59:12,864 INFO wait_for_ready_state
+2016-06-21 11:59:12,869 INFO chegg_wait_for_spinners
+2016-06-21 11:59:12,878 INFO chegg_xdebug_checks
+2016-06-21 11:59:12,914 INFO chegg_pixel_check
+2016-06-21 11:59:13,072 INFO chegg_check_links
+2016-06-21 11:59:13,077 INFO assert_elements_visible: ['div.etextbook div.pricebox-description']
+
+
+
+</info></testcase><testcase classname="freshen.noseplugin.testing my account page" name="5713 testing popups" time="91.951"><info>
+Console Output:
+
+2016-06-21 11:59:13,434 INFO screenshot: '5713 testing popups (before).png'
+2016-06-21 11:59:13,643 INFO restarting selenium session
+2016-06-21 11:59:16,780 INFO generating new user...
+2016-06-21 11:59:16,780 INFO Creating user...
+2016-06-21 11:59:18,064 INFO New user id:56995139
+2016-06-21 11:59:19,084 INFO Created new user (56995139) with email (test_be_user_20160621115916780340@chegg.com) &amp; password (Testing1).
+2016-06-21 11:59:19,209 INFO 
+2016-06-21 11:59:19,209 INFO go_to: 'http://www.chegg.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 11:59:26,570 INFO wait_for_ready_state
+2016-06-21 11:59:26,584 INFO chegg_wait_for_spinners
+2016-06-21 11:59:26,676 INFO chegg_xdebug_checks
+2016-06-21 11:59:28,413 INFO chegg_pixel_check
+2016-06-21 11:59:28,531 INFO chegg_check_links
+2016-06-21 11:59:28,539 INFO wait_for_page_to_load: 
+2016-06-21 11:59:28,547 INFO wait_for_ready_state
+2016-06-21 11:59:28,554 INFO chegg_wait_for_spinners
+2016-06-21 11:59:28,566 INFO chegg_xdebug_checks
+2016-06-21 11:59:28,592 INFO chegg_pixel_check
+2016-06-21 11:59:28,700 INFO chegg_check_links
+2016-06-21 11:59:28,712 INFO assert_images_loaded: 
+2016-06-21 11:59:29,277 INFO wait_for_page_to_load: 
+2016-06-21 11:59:29,283 INFO wait_for_ready_state
+2016-06-21 11:59:29,289 INFO chegg_wait_for_spinners
+2016-06-21 11:59:29,300 INFO chegg_xdebug_checks
+2016-06-21 11:59:29,305 INFO chegg_pixel_check
+2016-06-21 11:59:29,361 INFO chegg_check_links
+2016-06-21 11:59:29,377 INFO assert_images_loaded: 
+2016-06-21 11:59:29,453 INFO write_into: '.auth_collector_signin .email','test_be_user_20160621115916780340@chegg.com'
+2016-06-21 11:59:30,043 INFO write_into: '.auth_collector_signin .password','Testing1'
+2016-06-21 11:59:30,435 INFO click: 'submit'
+2016-06-21 11:59:30,675 INFO wait_for_ready_state
+2016-06-21 11:59:30,681 INFO chegg_wait_for_spinners
+2016-06-21 11:59:30,691 INFO chegg_xdebug_checks
+2016-06-21 11:59:30,696 INFO chegg_pixel_check
+2016-06-21 11:59:30,736 INFO chegg_check_links
+2016-06-21 11:59:30,746 INFO wait_for_page_to_load: 
+2016-06-21 11:59:30,756 INFO wait_for_ready_state
+2016-06-21 11:59:37,995 INFO chegg_wait_for_spinners
+2016-06-21 11:59:38,043 INFO chegg_xdebug_checks
+2016-06-21 11:59:38,074 INFO chegg_pixel_check
+2016-06-21 11:59:39,058 INFO chegg_check_links
+2016-06-21 11:59:39,066 INFO assert_images_loaded: 
+2016-06-21 11:59:39,106 INFO wait_for_page_to_load: 
+2016-06-21 11:59:39,134 INFO wait_for_ready_state
+2016-06-21 11:59:39,172 INFO chegg_wait_for_spinners
+2016-06-21 11:59:39,193 INFO chegg_xdebug_checks
+2016-06-21 11:59:39,246 INFO chegg_pixel_check
+2016-06-21 11:59:39,351 INFO chegg_check_links
+2016-06-21 11:59:39,364 INFO assert_images_loaded: 
+2016-06-21 11:59:40,160 INFO is_text_visible: 'My books &amp; solutions'
+2016-06-21 11:59:41,331 INFO wait_for_page_to_load: 
+2016-06-21 11:59:41,338 INFO wait_for_ready_state
+2016-06-21 11:59:41,344 INFO chegg_wait_for_spinners
+2016-06-21 11:59:41,354 INFO chegg_xdebug_checks
+2016-06-21 11:59:41,360 INFO chegg_pixel_check
+2016-06-21 11:59:41,408 INFO chegg_check_links
+2016-06-21 11:59:41,422 INFO assert_images_loaded: 
+2016-06-21 11:59:41,438 INFO Checking for Terms of use dialog...
+2016-06-21 11:59:52,533 INFO Element 'cheggLogo' visible.
+2016-06-21 11:59:52,543 INFO 
+2016-06-21 11:59:52,543 INFO go_to: 'http://www.chegg.com/my/account/?experiment=NONE0&amp;debug=experiment'
+2016-06-21 11:59:55,472 INFO wait_for_ready_state
+2016-06-21 11:59:55,480 INFO chegg_wait_for_spinners
+2016-06-21 11:59:56,894 INFO chegg_xdebug_checks
+2016-06-21 11:59:56,901 INFO chegg_pixel_check
+2016-06-21 11:59:56,954 INFO chegg_check_links
+2016-06-21 11:59:56,968 INFO assert_elements_visible: ['editUserInfoLink']
+2016-06-21 12:00:27,092 INFO Element 'editUserInfoLink' visible.
+2016-06-21 12:00:27,092 INFO assert_elements_visible: ['editUserInfoLink']
+2016-06-21 12:00:27,131 INFO click: 'Basic Info' index=0
+2016-06-21 12:00:27,552 INFO wait_for_ready_state
+2016-06-21 12:00:27,563 INFO chegg_wait_for_spinners
+2016-06-21 12:00:27,573 INFO chegg_xdebug_checks
+2016-06-21 12:00:27,634 INFO chegg_pixel_check
+2016-06-21 12:00:27,771 INFO chegg_check_links
+2016-06-21 12:00:27,783 INFO assert_elements_visible: ['userInfoDlgAccount']
+2016-06-21 12:00:27,881 INFO click: '.cancel-text' index=0
+2016-06-21 12:00:28,192 INFO wait_for_ready_state
+2016-06-21 12:00:28,201 INFO chegg_wait_for_spinners
+2016-06-21 12:00:28,227 INFO chegg_xdebug_checks
+2016-06-21 12:00:28,245 INFO chegg_pixel_check
+2016-06-21 12:00:28,403 INFO chegg_check_links
+2016-06-21 12:00:28,417 INFO assert_elements_visible: ['changePasswordLink']
+2016-06-21 12:00:28,484 INFO click: 'Change Password' index=0
+2016-06-21 12:00:28,806 INFO wait_for_ready_state
+2016-06-21 12:00:28,824 INFO chegg_wait_for_spinners
+2016-06-21 12:00:28,836 INFO chegg_xdebug_checks
+2016-06-21 12:00:28,854 INFO chegg_pixel_check
+2016-06-21 12:00:28,939 INFO chegg_check_links
+2016-06-21 12:00:28,951 INFO assert_elements_visible: ['changePasswordViewPopup']
+2016-06-21 12:00:29,063 INFO click: 'a.cancel' index=0
+2016-06-21 12:00:29,377 INFO wait_for_ready_state
+2016-06-21 12:00:29,384 INFO chegg_wait_for_spinners
+2016-06-21 12:00:29,398 INFO chegg_xdebug_checks
+2016-06-21 12:00:29,404 INFO chegg_pixel_check
+2016-06-21 12:00:29,497 INFO chegg_check_links
+2016-06-21 12:00:29,504 INFO assert_elements_visible: ['editNotificationLink']
+2016-06-21 12:00:29,598 INFO click: 'Notification Preferences' index=0
+2016-06-21 12:00:29,874 INFO wait_for_ready_state
+2016-06-21 12:00:29,879 INFO chegg_wait_for_spinners
+2016-06-21 12:00:29,889 INFO chegg_xdebug_checks
+2016-06-21 12:00:29,895 INFO chegg_pixel_check
+2016-06-21 12:00:29,952 INFO chegg_check_links
+2016-06-21 12:00:29,977 INFO assert_elements_visible: ['notificationDlg']
+2016-06-21 12:00:30,044 INFO click: 'div.cancel-text' index=0
+2016-06-21 12:00:30,469 INFO wait_for_ready_state
+2016-06-21 12:00:30,474 INFO chegg_wait_for_spinners
+2016-06-21 12:00:30,485 INFO chegg_xdebug_checks
+2016-06-21 12:00:30,491 INFO chegg_pixel_check
+2016-06-21 12:00:30,553 INFO chegg_check_links
+2016-06-21 12:00:30,575 INFO assert_elements_visible: ['editBillingInfo']
+2016-06-21 12:00:30,692 INFO click: 'Edit Payment Method' index=0
+2016-06-21 12:00:30,929 INFO wait_for_ready_state
+2016-06-21 12:00:30,935 INFO chegg_wait_for_spinners
+2016-06-21 12:00:30,946 INFO chegg_xdebug_checks
+2016-06-21 12:00:30,954 INFO chegg_pixel_check
+2016-06-21 12:00:31,021 INFO chegg_check_links
+2016-06-21 12:00:31,035 INFO assert_elements_visible: ['billingInfoDlgAccount']
+2016-06-21 12:00:31,251 INFO click: 'div.cancel-edit' index=0
+2016-06-21 12:00:31,966 INFO wait_for_ready_state
+2016-06-21 12:00:32,017 INFO chegg_wait_for_spinners
+2016-06-21 12:00:32,159 INFO chegg_xdebug_checks
+2016-06-21 12:00:32,166 INFO chegg_pixel_check
+2016-06-21 12:00:32,304 INFO chegg_check_links
+2016-06-21 12:00:32,315 INFO Checking to see if on Chegg...
+2016-06-21 12:00:36,075 INFO click: 'div.user-item.nav-item'
+2016-06-21 12:00:36,363 INFO wait_for_ready_state
+2016-06-21 12:00:36,368 INFO chegg_wait_for_spinners
+2016-06-21 12:00:36,381 INFO chegg_xdebug_checks
+2016-06-21 12:00:36,387 INFO chegg_pixel_check
+2016-06-21 12:00:36,450 INFO chegg_check_links
+2016-06-21 12:00:36,469 INFO click: 'a.track-signout'
+2016-06-21 12:00:44,383 INFO wait_for_ready_state
+2016-06-21 12:00:44,390 INFO chegg_wait_for_spinners
+2016-06-21 12:00:44,506 INFO chegg_xdebug_checks
+2016-06-21 12:00:44,521 INFO chegg_pixel_check
+2016-06-21 12:00:45,164 INFO chegg_check_links
+2016-06-21 12:00:45,171 INFO wait_for_page_to_load: 
+2016-06-21 12:00:45,181 INFO wait_for_ready_state
+2016-06-21 12:00:45,192 INFO chegg_wait_for_spinners
+2016-06-21 12:00:45,216 INFO chegg_xdebug_checks
+2016-06-21 12:00:45,230 INFO chegg_pixel_check
+2016-06-21 12:00:45,363 INFO chegg_check_links
+2016-06-21 12:00:45,376 INFO assert_images_loaded: 
+
+
+
+</info></testcase><testcase classname="freshen.noseplugin.testing psychic search" name="5879 check header navigation" time="78.182"><error type="cheggtest.exceptions.CheggTestException">
+Console Output:
+
+2016-06-21 12:00:45,842 INFO screenshot: '5879 check header navigation (before).png'
+2016-06-21 12:00:46,091 INFO restarting selenium session
+2016-06-21 12:00:49,146 INFO 
+2016-06-21 12:00:49,147 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:00:56,390 INFO wait_for_ready_state
+2016-06-21 12:00:56,398 INFO chegg_wait_for_spinners
+2016-06-21 12:00:56,430 INFO chegg_xdebug_checks
+2016-06-21 12:00:56,445 INFO chegg_pixel_check
+2016-06-21 12:00:56,571 INFO chegg_check_links
+2016-06-21 12:00:57,818 INFO click: 'BOOKS' index=0
+2016-06-21 12:00:58,579 INFO wait_for_ready_state
+2016-06-21 12:00:58,691 INFO chegg_wait_for_spinners
+2016-06-21 12:00:58,720 INFO waiting on div.chg-content to be visible
+2016-06-21 12:00:59,310 INFO chegg_xdebug_checks
+2016-06-21 12:00:59,328 INFO chegg_pixel_check
+2016-06-21 12:00:59,497 INFO chegg_check_links
+2016-06-21 12:00:59,514 INFO assert_text_visible: 'Rent or buy textbooks or eTextbooks' case_sensitive=False
+2016-06-21 12:01:01,192 INFO click: 'Rent / Buy Books' index=0
+2016-06-21 12:01:01,441 INFO wait_for_ready_state
+2016-06-21 12:01:01,453 INFO chegg_wait_for_spinners
+2016-06-21 12:01:01,490 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:02,048 INFO chegg_xdebug_checks
+2016-06-21 12:01:02,068 INFO chegg_pixel_check
+2016-06-21 12:01:02,180 INFO chegg_check_links
+2016-06-21 12:01:02,187 INFO assert_text_visible: 'Rent or buy textbooks or eTextbooks' case_sensitive=False
+2016-06-21 12:01:02,852 INFO click: 'Sell Books' index=0
+2016-06-21 12:01:03,195 INFO wait_for_ready_state
+2016-06-21 12:01:03,202 INFO chegg_wait_for_spinners
+2016-06-21 12:01:03,217 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:04,068 INFO chegg_xdebug_checks
+2016-06-21 12:01:04,077 INFO chegg_pixel_check
+2016-06-21 12:01:04,175 INFO chegg_check_links
+2016-06-21 12:01:04,191 INFO assert_text_visible: 'Sell your used textbooks for money' case_sensitive=False
+2016-06-21 12:01:04,770 INFO 
+2016-06-21 12:01:04,770 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:01:07,266 INFO wait_for_ready_state
+2016-06-21 12:01:07,272 INFO chegg_wait_for_spinners
+2016-06-21 12:01:07,321 INFO chegg_xdebug_checks
+2016-06-21 12:01:07,338 INFO chegg_pixel_check
+2016-06-21 12:01:08,181 INFO chegg_check_links
+2016-06-21 12:01:08,189 INFO click: 'STUDY' index=0
+2016-06-21 12:01:08,760 INFO wait_for_ready_state
+2016-06-21 12:01:08,773 INFO chegg_wait_for_spinners
+2016-06-21 12:01:14,661 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:16,260 INFO chegg_xdebug_checks
+2016-06-21 12:01:16,274 INFO chegg_pixel_check
+2016-06-21 12:01:16,397 INFO chegg_check_links
+2016-06-21 12:01:16,413 INFO assert_text_visible: 'Unlock better grades with Chegg StudySM' case_sensitive=False
+2016-06-21 12:01:16,983 INFO click: 'Textbook Solutions' index=0
+2016-06-21 12:01:17,347 INFO wait_for_ready_state
+2016-06-21 12:01:17,355 INFO chegg_wait_for_spinners
+2016-06-21 12:01:17,368 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:17,989 INFO chegg_xdebug_checks
+2016-06-21 12:01:18,006 INFO chegg_pixel_check
+2016-06-21 12:01:18,180 INFO chegg_check_links
+2016-06-21 12:01:18,187 INFO assert_elements_visible: ['.find-TBS.selected']
+2016-06-21 12:01:18,312 INFO click: 'Expert Q&amp;A' index=0
+2016-06-21 12:01:19,244 INFO wait_for_ready_state
+2016-06-21 12:01:19,249 INFO chegg_wait_for_spinners
+2016-06-21 12:01:19,260 INFO chegg_xdebug_checks
+2016-06-21 12:01:19,265 INFO chegg_pixel_check
+2016-06-21 12:01:19,347 INFO chegg_check_links
+2016-06-21 12:01:19,357 INFO assert_elements_visible: ['.ask-question.selected']
+2016-06-21 12:01:20,003 INFO 
+2016-06-21 12:01:20,003 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:01:22,857 INFO wait_for_ready_state
+2016-06-21 12:01:22,862 INFO chegg_wait_for_spinners
+2016-06-21 12:01:22,888 INFO chegg_xdebug_checks
+2016-06-21 12:01:22,919 INFO chegg_pixel_check
+2016-06-21 12:01:23,065 INFO chegg_check_links
+2016-06-21 12:01:23,074 INFO click: 'TUTORS' index=0
+2016-06-21 12:01:33,191 INFO wait_for_ready_state
+2016-06-21 12:01:33,225 INFO chegg_wait_for_spinners
+2016-06-21 12:01:33,339 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:33,849 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:34,367 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:34,880 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:35,393 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:35,902 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:36,413 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:36,925 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:37,460 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:37,970 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:38,507 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:39,020 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:39,560 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:40,075 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:40,589 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:41,099 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:41,612 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:42,128 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:42,641 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:43,167 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:43,677 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:44,197 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:44,714 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:45,227 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:45,762 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:46,274 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:46,787 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:47,298 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:47,810 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:48,322 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:48,859 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:49,371 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:49,882 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:50,392 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:50,913 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:51,423 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:51,962 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:52,473 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:53,011 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:53,524 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:54,063 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:54,575 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:55,088 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:55,600 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:56,112 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:56,624 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:57,163 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:57,676 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:58,191 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:58,718 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:59,231 INFO waiting on div.chg-content to be visible
+2016-06-21 12:01:59,743 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:00,257 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:00,774 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:01,290 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:01,803 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:02,316 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:02,830 INFO waiting on div.chg-content to be visible
+2016-06-21 12:02:04,026 INFO 
+2016-06-21 12:02:04,026 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 12:02:04,026 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 12:02:04,026 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 504, in when_i_click
+2016-06-21 12:02:04,027 ERROR     websteps.when_i_click(_on, _the, which, name)
+2016-06-21 12:02:04,027 ERROR   File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 59, in __call__
+2016-06-21 12:02:04,027 ERROR     return self.func(*args, **kwargs)
+2016-06-21 12:02:04,027 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 70, in subwrapper
+2016-06-21 12:02:04,027 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 12:02:04,027 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 152, in when_i_click
+2016-06-21 12:02:04,028 ERROR     __i_click(name, which)
+2016-06-21 12:02:04,028 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 137, in __i_click
+2016-06-21 12:02:04,028 ERROR     webtest.click(name, index=which)
+2016-06-21 12:02:04,028 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 12:02:04,028 ERROR     return func(*args, **kwargs)
+2016-06-21 12:02:04,028 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 549, in click
+2016-06-21 12:02:04,028 ERROR     __wait_for()
+2016-06-21 12:02:04,028 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 333, in __wait_for
+2016-06-21 12:02:04,028 ERROR     callback()
+2016-06-21 12:02:04,029 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/cheggchecks.py", line 103, in chegg_wait_for_spinners
+2016-06-21 12:02:04,029 ERROR     failed_message='timed out waiting for page to load')
+2016-06-21 12:02:04,029 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/cheggchecks.py", line 56, in __run_with_timeout
+2016-06-21 12:02:04,029 ERROR     raise CheggTestException(failed_message + php_issue)
+2016-06-21 12:02:04,039 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466527772/5879 check header navigation_browser_cookies.json
+2016-06-21 12:02:04,071 INFO AJAX API Stacktrace: none
+
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+    return func(*_process_args(args), **kwargs)
+  File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 504, in when_i_click
+    websteps.when_i_click(_on, _the, which, name)
+  File "/usr/local/lib/python2.7/site-packages/freshen-0.3.1.33-py2.7.egg/freshen/stepregistry.py", line 59, in __call__
+    return self.func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 70, in subwrapper
+    return func(*_process_args(args), **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 152, in when_i_click
+    __i_click(name, which)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 137, in __i_click
+    webtest.click(name, index=which)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 549, in click
+    __wait_for()
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 333, in __wait_for
+    callback()
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/cheggchecks.py", line 103, in chegg_wait_for_spinners
+    failed_message='timed out waiting for page to load')
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/cheggchecks.py", line 56, in __run_with_timeout
+    raise CheggTestException(failed_message + php_issue)
+'timed out waiting for page to load\n\n@fid=02bdb94  @skip_chg_content_validation  @skip_internships_load\nFeature: testing psychic search\n  @smoke_hp @regression @scenario_id=87fa309 @bv=3 @smoke_new\n  Scenario: 5879 check header navigation\n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:22 , PASSED\n     Then I click BOOKS                                                         # fesite/site.psychicsearch.feature:23 , PASSED\n     Then I should see the text Rent or buy textbooks or eTextbooks             # fesite/site.psychicsearch.feature:24 , PASSED\n     When I display .books-item .hover-box elements                             # fesite/site.psychicsearch.feature:26 , PASSED\n     Then I click Rent / Buy Books                                              # fesite/site.psychicsearch.feature:27 , PASSED\n     Then I should see the text Rent or buy textbooks or eTextbooks             # fesite/site.psychicsearch.feature:28 , PASSED\n     When I display .books-item .hover-box elements                             # fesite/site.psychicsearch.feature:30 , PASSED\n     Then I click Sell Books                                                    # fesite/site.psychicsearch.feature:31 , PASSED\n     Then I should see the text Sell your used textbooks for money              # fesite/site.psychicsearch.feature:32 , PASSED\n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:35 , PASSED\n     Then I click STUDY                                                         # fesite/site.psychicsearch.feature:36 , PASSED\n     Then I should see the text Unlock better grades with Chegg StudySM         # fesite/site.psychicsearch.feature:37 , PASSED\n     When I display .study-item .hover-box elements                             # fesite/site.psychicsearch.feature:39 , PASSED\n     Then I click Textbook Solutions                                            # fesite/site.psychicsearch.feature:40 , PASSED\n     Then I should see the element .find-TBS.selected                           # fesite/site.psychicsearch.feature:41 , PASSED\n     When I display .study-item .hover-box elements                             # fesite/site.psychicsearch.feature:43 , PASSED\n     Then I click Expert Q&amp;A                                                    # fesite/site.psychicsearch.feature:44 , PASSED\n     Then I should see the element .ask-question.selected                       # fesite/site.psychicsearch.feature:45 , PASSED\n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:48 , PASSED\n     Then I click TUTORS                                                        # fesite/site.psychicsearch.feature:49 , FAILED\n     Then I should see the url contains /tutors                                 # fesite/site.psychicsearch.feature:50 \n     Then I should see the element .find-tutor-now-btn                          # fesite/site.psychicsearch.feature:51 \n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:54 \n     Then I click TEST PREP                                                     # fesite/site.psychicsearch.feature:55 \n     Then I should see the text Chegg Test Prep                                 # fesite/site.psychicsearch.feature:56 \n     When I display .test-prep-item .hover-box elements                         # fesite/site.psychicsearch.feature:58 \n     Then I click SAT                                                           # fesite/site.psychicsearch.feature:59 \n     Then I should see the text Rock your SAT                                   # fesite/site.psychicsearch.feature:60 \n     When I display .test-prep-item .hover-box elements                         # fesite/site.psychicsearch.feature:62 \n     Then I click ACT                                                           # fesite/site.psychicsearch.feature:63 \n     Then I should see the text Rock your ACT                                   # fesite/site.psychicsearch.feature:64 \n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:84 \n     Then I click COLLEGES                                                      # fesite/site.psychicsearch.feature:85 \n     Then I should see the text Which college is right for me?                  # fesite/site.psychicsearch.feature:86 \n     When I display .colleges-item .hover-box elements                          # fesite/site.psychicsearch.feature:88 \n     Then I click Explore                                                       # fesite/site.psychicsearch.feature:89 \n     Then I should see the element .chgsec_header-explorecolleges.selected      # fesite/site.psychicsearch.feature:90 \n     Then I generate a new user and log in                                      # fesite/site.psychicsearch.feature:92 \n     Then I go to the url: http://www.chegg.com//?experiment=NONE0&amp;debug=experiment# fesite/site.psychicsearch.feature:93 \n     When I display .colleges-item .hover-box elements                          # fesite/site.psychicsearch.feature:94 \n     Then I click My List                                                       # fesite/site.psychicsearch.feature:95 \n     Then I should see the element .chgsec_header-mylist.selected               # fesite/site.psychicsearch.feature:96 \n     When I display .colleges-item .hover-box elements                          # fesite/site.psychicsearch.feature:98 \n     Then I click Advice                                                        # fesite/site.psychicsearch.feature:99 \n     Then I should see the text Advice                                          # fesite/site.psychicsearch.feature:100 \n     Then I should see the element .chgsec_header-advice.selected               # fesite/site.psychicsearch.feature:101 \n     When I display .colleges-item .hover-box elements                          # fesite/site.psychicsearch.feature:103 \n     Then I click Scholarships                                                  # fesite/site.psychicsearch.feature:104 \n     Then I should see the element #scholarships.selected                       # fesite/site.psychicsearch.feature:105 '
+
+
+</error></testcase><testcase classname="freshen.noseplugin.test the Sign In page and feature." name="5865 automation test for SU cookie check" time="64.168"><info>
+Console Output:
+
+2016-06-21 12:02:04,702 INFO screenshot: '5865 automation test for SU cookie check (before).png'
+2016-06-21 12:02:05,080 INFO restarting selenium session
+2016-06-21 12:02:08,239 INFO generating new user...
+2016-06-21 12:02:08,240 INFO Creating user...
+2016-06-21 12:02:08,453 INFO New user id:56995189
+2016-06-21 12:02:09,501 INFO Created new user (56995189) with email (test_be_user_20160621120208239720@chegg.com) &amp; password (Testing1).
+2016-06-21 12:02:09,648 INFO 
+2016-06-21 12:02:09,648 INFO go_to: 'http://www.chegg.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:02:19,109 INFO wait_for_ready_state
+2016-06-21 12:02:19,115 INFO chegg_wait_for_spinners
+2016-06-21 12:02:19,155 INFO chegg_xdebug_checks
+2016-06-21 12:02:19,166 INFO chegg_pixel_check
+2016-06-21 12:02:19,282 INFO chegg_check_links
+2016-06-21 12:02:19,291 INFO wait_for_page_to_load: 
+2016-06-21 12:02:19,299 INFO wait_for_ready_state
+2016-06-21 12:02:19,305 INFO chegg_wait_for_spinners
+2016-06-21 12:02:19,315 INFO chegg_xdebug_checks
+2016-06-21 12:02:19,329 INFO chegg_pixel_check
+2016-06-21 12:02:19,405 INFO chegg_check_links
+2016-06-21 12:02:19,415 INFO assert_images_loaded: 
+2016-06-21 12:02:19,976 INFO wait_for_page_to_load: 
+2016-06-21 12:02:19,981 INFO wait_for_ready_state
+2016-06-21 12:02:19,986 INFO chegg_wait_for_spinners
+2016-06-21 12:02:19,996 INFO chegg_xdebug_checks
+2016-06-21 12:02:20,001 INFO chegg_pixel_check
+2016-06-21 12:02:20,049 INFO chegg_check_links
+2016-06-21 12:02:20,054 INFO assert_images_loaded: 
+2016-06-21 12:02:20,194 INFO write_into: '.auth_collector_signin .email','test_be_user_20160621120208239720@chegg.com'
+2016-06-21 12:02:20,782 INFO write_into: '.auth_collector_signin .password','Testing1'
+2016-06-21 12:02:21,152 INFO click: 'submit'
+2016-06-21 12:02:21,405 INFO wait_for_ready_state
+2016-06-21 12:02:21,415 INFO chegg_wait_for_spinners
+2016-06-21 12:02:21,424 INFO chegg_xdebug_checks
+2016-06-21 12:02:21,435 INFO chegg_pixel_check
+2016-06-21 12:02:21,486 INFO chegg_check_links
+2016-06-21 12:02:21,491 INFO wait_for_page_to_load: 
+2016-06-21 12:02:21,496 INFO wait_for_ready_state
+2016-06-21 12:02:21,502 INFO chegg_wait_for_spinners
+2016-06-21 12:02:21,510 INFO chegg_xdebug_checks
+2016-06-21 12:02:21,516 INFO chegg_pixel_check
+2016-06-21 12:02:28,797 INFO chegg_check_links
+2016-06-21 12:02:28,809 INFO assert_images_loaded: 
+2016-06-21 12:02:28,816 INFO wait_for_page_to_load: 
+2016-06-21 12:02:28,822 INFO wait_for_ready_state
+2016-06-21 12:02:28,843 INFO chegg_wait_for_spinners
+2016-06-21 12:02:28,949 INFO chegg_xdebug_checks
+2016-06-21 12:02:29,885 INFO chegg_pixel_check
+2016-06-21 12:02:29,950 INFO chegg_check_links
+2016-06-21 12:02:29,965 INFO assert_images_loaded: 
+2016-06-21 12:02:30,878 INFO is_text_visible: 'My books &amp; solutions'
+2016-06-21 12:02:31,935 INFO wait_for_page_to_load: 
+2016-06-21 12:02:31,940 INFO wait_for_ready_state
+2016-06-21 12:02:31,945 INFO chegg_wait_for_spinners
+2016-06-21 12:02:31,954 INFO chegg_xdebug_checks
+2016-06-21 12:02:31,960 INFO chegg_pixel_check
+2016-06-21 12:02:32,006 INFO chegg_check_links
+2016-06-21 12:02:32,012 INFO assert_images_loaded: 
+2016-06-21 12:02:32,017 INFO Checking for Terms of use dialog...
+2016-06-21 12:02:32,999 INFO assert_elements_visible: ['cheggHeaderAvatar']
+2016-06-21 12:02:33,045 INFO Checking to see if on Chegg...
+2016-06-21 12:02:35,642 INFO click: 'div.user-item.nav-item'
+2016-06-21 12:02:35,913 INFO wait_for_ready_state
+2016-06-21 12:02:35,921 INFO chegg_wait_for_spinners
+2016-06-21 12:02:35,933 INFO chegg_xdebug_checks
+2016-06-21 12:02:35,944 INFO chegg_pixel_check
+2016-06-21 12:02:36,005 INFO chegg_check_links
+2016-06-21 12:02:36,011 INFO click: 'a.track-signout'
+2016-06-21 12:02:43,221 INFO wait_for_ready_state
+2016-06-21 12:02:43,229 INFO chegg_wait_for_spinners
+2016-06-21 12:02:43,314 INFO chegg_xdebug_checks
+2016-06-21 12:02:43,327 INFO chegg_pixel_check
+2016-06-21 12:02:43,417 INFO chegg_check_links
+2016-06-21 12:02:44,063 INFO wait_for_page_to_load: 
+2016-06-21 12:02:44,068 INFO wait_for_ready_state
+2016-06-21 12:02:44,074 INFO chegg_wait_for_spinners
+2016-06-21 12:02:44,083 INFO chegg_xdebug_checks
+2016-06-21 12:02:44,089 INFO chegg_pixel_check
+2016-06-21 12:02:44,137 INFO chegg_check_links
+2016-06-21 12:02:44,144 INFO assert_images_loaded: 
+2016-06-21 12:02:44,153 INFO assert_elements_not_visible: ['cheggHeaderAvatar']
+2016-06-21 12:02:45,184 INFO generating new user...
+2016-06-21 12:02:45,184 INFO Creating user...
+2016-06-21 12:02:45,329 INFO New user id:56995207
+2016-06-21 12:02:46,533 INFO Created new user (56995207) with email (test_be_user_20160621120245184259@chegg.com) &amp; password (Testing1).
+2016-06-21 12:02:46,997 INFO 
+2016-06-21 12:02:46,997 INFO go_to: 'http://www.chegg.com//auth?action=login&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:02:51,360 INFO wait_for_ready_state
+2016-06-21 12:02:51,367 INFO chegg_wait_for_spinners
+2016-06-21 12:02:51,394 INFO chegg_xdebug_checks
+2016-06-21 12:02:51,413 INFO chegg_pixel_check
+2016-06-21 12:02:51,469 INFO chegg_check_links
+2016-06-21 12:02:51,477 INFO wait_for_page_to_load: 
+2016-06-21 12:02:51,484 INFO wait_for_ready_state
+2016-06-21 12:02:51,492 INFO chegg_wait_for_spinners
+2016-06-21 12:02:51,503 INFO chegg_xdebug_checks
+2016-06-21 12:02:51,519 INFO chegg_pixel_check
+2016-06-21 12:02:51,566 INFO chegg_check_links
+2016-06-21 12:02:52,277 INFO assert_images_loaded: 
+2016-06-21 12:02:52,656 INFO wait_for_page_to_load: 
+2016-06-21 12:02:52,661 INFO wait_for_ready_state
+2016-06-21 12:02:52,667 INFO chegg_wait_for_spinners
+2016-06-21 12:02:52,677 INFO chegg_xdebug_checks
+2016-06-21 12:02:52,682 INFO chegg_pixel_check
+2016-06-21 12:02:52,722 INFO chegg_check_links
+2016-06-21 12:02:52,727 INFO assert_images_loaded: 
+2016-06-21 12:02:52,768 INFO write_into: '.auth_collector_signin .email','test_be_user_20160621120245184259@chegg.com'
+2016-06-21 12:02:53,392 INFO write_into: '.auth_collector_signin .password','Testing1'
+2016-06-21 12:02:53,795 INFO click: 'submit'
+2016-06-21 12:02:53,990 INFO wait_for_ready_state
+2016-06-21 12:02:53,996 INFO chegg_wait_for_spinners
+2016-06-21 12:02:54,005 INFO chegg_xdebug_checks
+2016-06-21 12:02:54,012 INFO chegg_pixel_check
+2016-06-21 12:02:54,054 INFO chegg_check_links
+2016-06-21 12:02:54,059 INFO wait_for_page_to_load: 
+2016-06-21 12:02:54,064 INFO wait_for_ready_state
+2016-06-21 12:02:54,069 INFO chegg_wait_for_spinners
+2016-06-21 12:02:54,078 INFO chegg_xdebug_checks
+2016-06-21 12:02:54,083 INFO chegg_pixel_check
+2016-06-21 12:02:54,130 INFO chegg_check_links
+2016-06-21 12:02:54,135 INFO assert_images_loaded: 
+2016-06-21 12:02:58,270 INFO wait_for_page_to_load: 
+2016-06-21 12:02:58,372 INFO wait_for_ready_state
+2016-06-21 12:02:58,378 INFO chegg_wait_for_spinners
+2016-06-21 12:02:58,464 INFO chegg_xdebug_checks
+2016-06-21 12:02:58,469 INFO chegg_pixel_check
+2016-06-21 12:02:58,565 INFO chegg_check_links
+2016-06-21 12:02:58,571 INFO assert_images_loaded: 
+2016-06-21 12:02:59,872 INFO is_text_visible: 'My books &amp; solutions'
+2016-06-21 12:03:01,473 INFO wait_for_page_to_load: 
+2016-06-21 12:03:01,477 INFO wait_for_ready_state
+2016-06-21 12:03:01,510 INFO chegg_wait_for_spinners
+2016-06-21 12:03:01,525 INFO chegg_xdebug_checks
+2016-06-21 12:03:01,566 INFO chegg_pixel_check
+2016-06-21 12:03:01,663 INFO chegg_check_links
+2016-06-21 12:03:01,669 INFO assert_images_loaded: 
+2016-06-21 12:03:01,673 INFO Checking for Terms of use dialog...
+2016-06-21 12:03:03,618 INFO assert_elements_visible: ['cheggHeaderAvatar']
+2016-06-21 12:03:03,716 INFO Refreshing page...
+2016-06-21 12:03:07,657 INFO wait_for_page_to_load: 
+2016-06-21 12:03:07,677 INFO wait_for_ready_state
+2016-06-21 12:03:07,714 INFO chegg_wait_for_spinners
+2016-06-21 12:03:07,818 INFO chegg_xdebug_checks
+2016-06-21 12:03:08,657 INFO chegg_pixel_check
+2016-06-21 12:03:08,762 INFO chegg_check_links
+2016-06-21 12:03:08,768 INFO assert_images_loaded: 
+2016-06-21 12:03:08,774 INFO assert_elements_visible: ['cheggHeaderAvatar']
+
+
+
+</info></testcase><testcase classname="freshen.noseplugin.test SIHP" name="5793 test search field, click send button" time="44.571"><error type="cheggtest.exceptions.CheggTestException">
+Console Output:
+
+2016-06-21 12:03:16,589 INFO screenshot: '5793 test search field, click send button (before).png'
+2016-06-21 12:03:16,835 INFO restarting selenium session
+2016-06-21 12:03:19,694 INFO 
+2016-06-21 12:03:19,694 INFO go_to: 'http://www.chegg.com//?experiment=A433B&amp;debug=experiment'
+2016-06-21 12:03:28,131 INFO wait_for_ready_state
+2016-06-21 12:03:28,136 INFO chegg_wait_for_spinners
+2016-06-21 12:03:28,162 INFO chegg_xdebug_checks
+2016-06-21 12:03:28,167 INFO chegg_pixel_check
+2016-06-21 12:03:30,719 INFO chegg_check_links
+2016-06-21 12:03:30,726 INFO assert_elements_visible: ['sihpHeaderSearchField']
+2016-06-21 12:04:01,159 INFO 
+2016-06-21 12:04:01,159 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
+2016-06-21 12:04:01,160 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 12:04:01,160 ERROR   File "/Users/sshrimali/git/core/Chegg.Site/test/fesite/site_steps.py", line 490, in then_should_see_elements
+2016-06-21 12:04:01,160 ERROR     webtest.assert_elements_visible(elements)
+2016-06-21 12:04:01,160 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 12:04:01,161 ERROR     return func(*args, **kwargs)
+2016-06-21 12:04:01,161 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 709, in assert_elements_visible
+2016-06-21 12:04:01,161 ERROR     search_string)
+2016-06-21 12:04:01,168 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466527772/5793 test search field, click send button_browser_cookies.json
+2016-06-21 12:04:31,378 INFO AJAX API Stacktrace: none
 
   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 45, in subwrapper
     return func(*_process_args(args), **kwargs)
@@ -1061,224 +980,232 @@ Console Output:
     return func(*args, **kwargs)
   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 709, in assert_elements_visible
     search_string)
-'unable to find element sihpHeaderSearchField\n\n@fid=8d0f78e\nFeature: test SIHP\n  @smoke_hp @regression @sid=3579d54 @bv=5 @smoke_new\n  Scenario: 5793 test search field, click send button\n     Then I go to chegg.com and set the experiment: A433B                       # fesite/site.sihp.feature:132 , PASSED\n       \\--&gt; Given I am at the http://rc.live.test.cheggnet.com//?experiment=A433B&amp;debug=experiment site# /cheggtest/websteps/websteps.py:16 , PASSED\n     Then I should see the element sihpHeaderSearchField                        # fesite/site.sihp.feature:134 , FAILED\n     Then I type Math into sihpHeaderSearchField                                # fesite/site.sihp.feature:135 \n     Then I click sihpHeaderSearchSendButton                                    # fesite/site.sihp.feature:137 \n     Then I should see the url contains /search/Math/federated?trackid=         # fesite/site.sihp.feature:138 '
+'unable to find element sihpHeaderSearchField\n\n@fid=8d0f78e\nFeature: test SIHP\n  @smoke_hp @regression @sid=3579d54 @bv=5 @smoke_new\n  Scenario: 5793 test search field, click send button\n     Then I go to chegg.com and set the experiment: A433B                       # fesite/site.sihp.feature:132 , PASSED\n       \\--&gt; Given I am at the http://www.chegg.com//?experiment=A433B&amp;debug=experiment site# /cheggtest/websteps/websteps.py:16 , PASSED\n     Then I should see the element sihpHeaderSearchField                        # fesite/site.sihp.feature:134 , FAILED\n     Then I type Math into sihpHeaderSearchField                                # fesite/site.sihp.feature:135 \n     Then I click sihpHeaderSearchSendButton                                    # fesite/site.sihp.feature:137 \n     Then I should see the url contains /search/Math/federated?trackid=         # fesite/site.sihp.feature:138 '
 
 
-</error></testcase><testcase classname="freshen.noseplugin.test the SOHP" name="5797 Test search on SOHP" time="58.781"><info>
+</error></testcase><testcase classname="freshen.noseplugin.test the SOHP" name="5797 Test search on SOHP" time="40.183"><info>
 Console Output:
 
-2016-06-16 16:31:48,521 INFO screenshot: '5797 Test search on SOHP (before).png'
-2016-06-16 16:31:49,531 INFO restarting selenium session
-2016-06-16 16:31:52,005 INFO 
-2016-06-16 16:31:52,005 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:31:56,426 INFO wait_for_ready_state
-2016-06-16 16:31:56,433 INFO chegg_wait_for_spinners
-2016-06-16 16:31:56,468 INFO chegg_xdebug_checks
-2016-06-16 16:31:56,480 INFO chegg_pixel_check
-2016-06-16 16:31:56,595 INFO chegg_check_links
-2016-06-16 16:31:56,610 INFO Sleeping for 5 second(s)...
-2016-06-16 16:32:01,725 INFO assert_elements_visible: ['div.chg-hdr-right-section .C-global-header-rightsection-usermenu a.signin-item.nav-item']
-2016-06-16 16:32:32,222 INFO assert_text_visible: 'More' case_sensitive=False
-2016-06-16 16:32:32,743 INFO click: 'div.more-item.nav-item' index=0
-2016-06-16 16:32:32,885 INFO wait_for_ready_state
-2016-06-16 16:32:32,892 INFO chegg_wait_for_spinners
-2016-06-16 16:32:32,900 INFO chegg_xdebug_checks
-2016-06-16 16:32:32,906 INFO chegg_pixel_check
-2016-06-16 16:32:32,963 INFO chegg_check_links
-2016-06-16 16:32:32,969 INFO assert_elements_visible: ['div.more-hover-content a.track-signin']
-2016-06-16 16:32:32,997 INFO assert_text_visible: 'Find books, solutions, tutors and more...' case_sensitive=False
-2016-06-16 16:32:33,559 INFO write_into: '#autosuggest-input','chemistry' index=0
-2016-06-16 16:32:34,402 INFO assert_text_visible: 'Chemistry in Books' case_sensitive=False
-2016-06-16 16:32:36,225 INFO assert_text_visible: 'Chemistry in TextBook Solutions' case_sensitive=False
-2016-06-16 16:32:36,746 INFO assert_text_visible: 'Chemistry in Q&amp;A' case_sensitive=False
-2016-06-16 16:32:37,267 INFO assert_text_visible: 'Chemistry in Tutors' case_sensitive=False
-2016-06-16 16:32:37,786 INFO assert_elements_visible: ['div.C-common-search-result-category']
-2016-06-16 16:32:37,817 INFO click: 'Find textbook solutions' index=0
-2016-06-16 16:32:37,981 INFO wait_for_ready_state
-2016-06-16 16:32:37,986 INFO chegg_wait_for_spinners
-2016-06-16 16:32:38,003 INFO chegg_xdebug_checks
-2016-06-16 16:32:38,010 INFO chegg_pixel_check
-2016-06-16 16:32:38,058 INFO chegg_check_links
-2016-06-16 16:32:38,103 INFO assert_text_visible: 'Chemistry in TextBook Solutions' case_sensitive=False
-2016-06-16 16:32:38,644 INFO assert_elements_visible: ['div.C-common-search-result-category']
-2016-06-16 16:32:38,674 INFO click: 'Ask a study question' index=0
-2016-06-16 16:32:38,821 INFO wait_for_ready_state
-2016-06-16 16:32:38,831 INFO chegg_wait_for_spinners
-2016-06-16 16:32:38,839 INFO chegg_xdebug_checks
-2016-06-16 16:32:38,845 INFO chegg_pixel_check
-2016-06-16 16:32:38,882 INFO chegg_check_links
-2016-06-16 16:32:38,891 INFO assert_text_visible: 'Chemistry in Q&amp;A' case_sensitive=False
-2016-06-16 16:32:40,603 INFO assert_elements_visible: ['div.C-common-search-result-category']
-2016-06-16 16:32:40,633 INFO click: 'Find an online tutor' index=0
-2016-06-16 16:32:40,787 INFO wait_for_ready_state
-2016-06-16 16:32:40,796 INFO chegg_wait_for_spinners
-2016-06-16 16:32:40,806 INFO chegg_xdebug_checks
-2016-06-16 16:32:40,812 INFO chegg_pixel_check
-2016-06-16 16:32:40,856 INFO chegg_check_links
-2016-06-16 16:32:40,866 INFO assert_text_visible: 'Chemistry in Tutors' case_sensitive=False
-2016-06-16 16:32:42,540 INFO assert_elements_visible: ['div.C-common-search-result-tutor']
-2016-06-16 16:32:42,571 INFO click: 'Rent or buy books' index=0
-2016-06-16 16:32:42,738 INFO wait_for_ready_state
-2016-06-16 16:32:42,744 INFO chegg_wait_for_spinners
-2016-06-16 16:32:42,758 INFO chegg_xdebug_checks
-2016-06-16 16:32:42,764 INFO chegg_pixel_check
-2016-06-16 16:32:42,808 INFO chegg_check_links
-2016-06-16 16:32:42,819 INFO assert_text_visible: 'Chemistry in Books' case_sensitive=False
-2016-06-16 16:32:44,487 INFO assert_elements_visible: ['div.C-common-search-result-category']
-2016-06-16 16:32:44,514 INFO click: 'div.result-info' index=0
-2016-06-16 16:32:44,804 INFO wait_for_ready_state
-2016-06-16 16:32:44,808 INFO chegg_wait_for_spinners
-2016-06-16 16:32:44,823 INFO waiting on div.chg-content to be visible
-2016-06-16 16:32:45,338 INFO waiting on div.chg-content to be visible
-2016-06-16 16:32:45,912 INFO chegg_xdebug_checks
-2016-06-16 16:32:45,992 INFO chegg_pixel_check
-2016-06-16 16:32:46,772 INFO chegg_check_links
-2016-06-16 16:32:46,777 INFO assert_url_contains: 'textbooks/chemistry'
-2016-06-16 16:32:46,786 INFO assert_text_visible: 'Add to cart' case_sensitive=False
+2016-06-21 12:04:33,121 INFO screenshot: '5797 Test search on SOHP (before).png'
+2016-06-21 12:04:34,512 INFO restarting selenium session
+2016-06-21 12:04:37,640 INFO 
+2016-06-21 12:04:37,640 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:04:53,774 INFO wait_for_ready_state
+2016-06-21 12:04:53,781 INFO chegg_wait_for_spinners
+2016-06-21 12:04:53,813 INFO chegg_xdebug_checks
+2016-06-21 12:04:53,819 INFO chegg_pixel_check
+2016-06-21 12:04:53,874 INFO chegg_check_links
+2016-06-21 12:04:53,882 INFO Sleeping for 5 second(s)...
+2016-06-21 12:04:59,006 INFO assert_elements_visible: ['div.chg-hdr-right-section .C-global-header-rightsection-usermenu a.signin-item.nav-item']
+2016-06-21 12:04:59,053 INFO assert_text_visible: 'Find books, solutions, tutors and more...' case_sensitive=False
+2016-06-21 12:04:59,633 INFO write_into: '#autosuggest-input','chemistry' index=0
+2016-06-21 12:05:01,299 INFO assert_text_visible: 'Chemistry in Books' case_sensitive=False
+2016-06-21 12:05:01,975 INFO assert_text_visible: 'Chemistry in TextBook Solutions' case_sensitive=False
+2016-06-21 12:05:02,497 INFO assert_text_visible: 'Chemistry in Q&amp;A' case_sensitive=False
+2016-06-21 12:05:03,017 INFO assert_text_visible: 'Chemistry in Tutors' case_sensitive=False
+2016-06-21 12:05:03,540 INFO assert_elements_visible: ['div.C-common-search-result-category']
+2016-06-21 12:05:03,640 INFO click: 'Find textbook solutions' index=0
+2016-06-21 12:05:03,935 INFO wait_for_ready_state
+2016-06-21 12:05:03,960 INFO chegg_wait_for_spinners
+2016-06-21 12:05:03,998 INFO chegg_xdebug_checks
+2016-06-21 12:05:04,013 INFO chegg_pixel_check
+2016-06-21 12:05:04,177 INFO chegg_check_links
+2016-06-21 12:05:04,256 INFO assert_text_visible: 'Chemistry in TextBook Solutions' case_sensitive=False
+2016-06-21 12:05:04,793 INFO assert_elements_visible: ['div.C-common-search-result-category']
+2016-06-21 12:05:04,838 INFO click: 'Ask a study question' index=0
+2016-06-21 12:05:05,046 INFO wait_for_ready_state
+2016-06-21 12:05:05,058 INFO chegg_wait_for_spinners
+2016-06-21 12:05:05,076 INFO chegg_xdebug_checks
+2016-06-21 12:05:05,087 INFO chegg_pixel_check
+2016-06-21 12:05:05,128 INFO chegg_check_links
+2016-06-21 12:05:05,139 INFO assert_text_visible: 'Chemistry in Q&amp;A' case_sensitive=False
+2016-06-21 12:05:07,100 INFO assert_elements_visible: ['div.C-common-search-result-category']
+2016-06-21 12:05:07,141 INFO click: 'Find an online tutor' index=0
+2016-06-21 12:05:07,336 INFO wait_for_ready_state
+2016-06-21 12:05:07,347 INFO chegg_wait_for_spinners
+2016-06-21 12:05:07,360 INFO chegg_xdebug_checks
+2016-06-21 12:05:07,368 INFO chegg_pixel_check
+2016-06-21 12:05:07,410 INFO chegg_check_links
+2016-06-21 12:05:07,419 INFO assert_text_visible: 'Chemistry in Tutors' case_sensitive=False
+2016-06-21 12:05:08,024 INFO assert_elements_visible: ['div.C-common-search-result-tutor']
+2016-06-21 12:05:08,064 INFO click: 'Rent or buy books' index=0
+2016-06-21 12:05:08,275 INFO wait_for_ready_state
+2016-06-21 12:05:08,291 INFO chegg_wait_for_spinners
+2016-06-21 12:05:08,337 INFO chegg_xdebug_checks
+2016-06-21 12:05:08,408 INFO chegg_pixel_check
+2016-06-21 12:05:08,545 INFO chegg_check_links
+2016-06-21 12:05:08,558 INFO assert_text_visible: 'Chemistry in Books' case_sensitive=False
+2016-06-21 12:05:09,101 INFO assert_elements_visible: ['div.C-common-search-result-category']
+2016-06-21 12:05:09,143 INFO click: 'div.result-info' index=0
+2016-06-21 12:05:09,664 INFO wait_for_ready_state
+2016-06-21 12:05:09,678 INFO chegg_wait_for_spinners
+2016-06-21 12:05:09,695 INFO waiting on div.chg-content to be visible
+2016-06-21 12:05:10,209 INFO waiting on div.chg-content to be visible
+2016-06-21 12:05:10,731 INFO chegg_xdebug_checks
+2016-06-21 12:05:10,757 INFO chegg_pixel_check
+2016-06-21 12:05:12,740 INFO chegg_check_links
+2016-06-21 12:05:12,747 INFO assert_url_contains: 'textbooks/chemistry'
+2016-06-21 12:05:12,760 INFO assert_text_visible: 'Add to cart' case_sensitive=False
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.study page" name="6042 search TBS" time="11.096"><info>
+</info></testcase><testcase classname="freshen.noseplugin.study page" name="6042 search TBS" time="20.544"><info>
 Console Output:
 
-2016-06-16 16:32:47,820 INFO screenshot: '6042 search TBS (before).png'
-2016-06-16 16:32:48,143 INFO restarting selenium session
-2016-06-16 16:32:50,593 INFO 
-2016-06-16 16:32:50,593 INFO go_to: 'http://rc.live.test.cheggnet.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:32:54,469 INFO wait_for_ready_state
-2016-06-16 16:32:54,474 INFO chegg_wait_for_spinners
-2016-06-16 16:32:54,759 INFO chegg_xdebug_checks
-2016-06-16 16:32:54,790 INFO chegg_pixel_check
-2016-06-16 16:32:54,855 INFO chegg_check_links
-2016-06-16 16:32:54,861 INFO click: '.find-TBS' index=0
-2016-06-16 16:32:55,052 INFO wait_for_ready_state
-2016-06-16 16:32:55,057 INFO chegg_wait_for_spinners
-2016-06-16 16:32:55,068 INFO chegg_xdebug_checks
-2016-06-16 16:32:55,073 INFO chegg_pixel_check
-2016-06-16 16:32:55,121 INFO chegg_check_links
-2016-06-16 16:32:55,131 INFO write_into: 'autosuggest-input','Biology' index=0
-2016-06-16 16:32:55,585 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
-2016-06-16 16:32:57,283 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
-2016-06-16 16:32:57,802 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
-2016-06-16 16:32:58,320 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
-2016-06-16 16:32:58,838 INFO assert_elements_visible: set(['.category-name span'])
-2016-06-16 16:32:58,915 INFO Element '.category-name span' displays expected text: 'Textbook Solution'
+2016-06-21 12:05:13,967 INFO screenshot: '6042 search TBS (before).png'
+2016-06-21 12:05:17,211 INFO restarting selenium session
+2016-06-21 12:05:20,089 INFO 
+2016-06-21 12:05:20,089 INFO go_to: 'http://www.chegg.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:05:26,908 INFO wait_for_ready_state
+2016-06-21 12:05:26,921 INFO chegg_wait_for_spinners
+2016-06-21 12:05:29,197 INFO chegg_xdebug_checks
+2016-06-21 12:05:29,443 INFO chegg_pixel_check
+2016-06-21 12:05:29,520 INFO chegg_check_links
+2016-06-21 12:05:29,528 INFO click: '.find-TBS' index=0
+2016-06-21 12:05:29,772 INFO wait_for_ready_state
+2016-06-21 12:05:29,781 INFO chegg_wait_for_spinners
+2016-06-21 12:05:29,791 INFO chegg_xdebug_checks
+2016-06-21 12:05:29,798 INFO chegg_pixel_check
+2016-06-21 12:05:29,878 INFO chegg_check_links
+2016-06-21 12:05:29,889 INFO write_into: 'autosuggest-input','Biology' index=0
+2016-06-21 12:05:30,818 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
+2016-06-21 12:05:32,821 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
+2016-06-21 12:05:33,341 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
+2016-06-21 12:05:33,863 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
+2016-06-21 12:05:34,388 INFO assert_elements_visible: set(['.category-name span'])
+2016-06-21 12:05:34,510 INFO Element '.category-name span' displays expected text: 'Textbook Solution'
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.study page" name="6043 search Q&amp;A" time="6.360"><info>
+</info></testcase><testcase classname="freshen.noseplugin.study page" name="6043 search Q&amp;A" time="38.193"><error type="cheggtest.exceptions.CheggTestException">
 Console Output:
 
-2016-06-16 16:32:59,606 INFO screenshot: '6043 search Q&amp;A (before).png'
-2016-06-16 16:33:00,099 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/study.page.feature
-2016-06-16 16:33:00,107 INFO 
-2016-06-16 16:33:00,107 INFO go_to: 'http://rc.live.test.cheggnet.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:33:01,632 INFO wait_for_ready_state
-2016-06-16 16:33:01,659 INFO chegg_wait_for_spinners
-2016-06-16 16:33:01,743 INFO chegg_xdebug_checks
-2016-06-16 16:33:01,756 INFO chegg_pixel_check
-2016-06-16 16:33:01,821 INFO chegg_check_links
-2016-06-16 16:33:01,826 INFO click: '.ask-question' index=0
-2016-06-16 16:33:02,010 INFO wait_for_ready_state
-2016-06-16 16:33:02,017 INFO chegg_wait_for_spinners
-2016-06-16 16:33:02,030 INFO chegg_xdebug_checks
-2016-06-16 16:33:02,036 INFO chegg_pixel_check
-2016-06-16 16:33:02,094 INFO chegg_check_links
-2016-06-16 16:33:02,099 INFO write_into: 'autosuggest-input','Biology' index=0
-2016-06-16 16:33:02,572 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
-2016-06-16 16:33:04,324 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
-2016-06-16 16:33:04,844 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
-2016-06-16 16:33:05,365 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
-2016-06-16 16:33:05,883 INFO assert_elements_visible: set(['.category-name span'])
-2016-06-16 16:33:05,965 INFO Element '.category-name span' displays expected text: 'Expert Q&amp;A'
+2016-06-21 12:05:35,321 INFO screenshot: '6043 search Q&amp;A (before).png'
+2016-06-21 12:05:35,944 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/study.page.feature
+2016-06-21 12:05:35,959 INFO 
+2016-06-21 12:05:35,960 INFO go_to: 'http://www.chegg.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:05:39,566 INFO wait_for_ready_state
+2016-06-21 12:05:39,598 INFO chegg_wait_for_spinners
+2016-06-21 12:05:39,649 INFO chegg_xdebug_checks
+2016-06-21 12:05:39,658 INFO chegg_pixel_check
+2016-06-21 12:05:39,727 INFO chegg_check_links
+2016-06-21 12:05:40,584 INFO click: '.ask-question' index=0
+2016-06-21 12:05:40,916 INFO wait_for_ready_state
+2016-06-21 12:05:40,953 INFO chegg_wait_for_spinners
+2016-06-21 12:05:41,025 INFO chegg_xdebug_checks
+2016-06-21 12:05:41,046 INFO chegg_pixel_check
+2016-06-21 12:05:41,173 INFO chegg_check_links
+2016-06-21 12:05:41,194 INFO write_into: 'autosuggest-input','Biology' index=0
+2016-06-21 12:05:42,236 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
+2016-06-21 12:05:42,934 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
+2016-06-21 12:06:13,513 INFO 
+2016-06-21 12:06:13,514 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 94, in subwrapper
+2016-06-21 12:06:13,514 ERROR     return func(*_process_args(args), **kwargs)
+2016-06-21 12:06:13,514 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 426, in should_see_the_text
+2016-06-21 12:06:13,514 ERROR     webtest.assert_text_visible(text, case_sensitive=bool(exact))
+2016-06-21 12:06:13,514 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+2016-06-21 12:06:13,515 ERROR     return func(*args, **kwargs)
+2016-06-21 12:06:13,515 ERROR   File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 1171, in assert_text_visible
+2016-06-21 12:06:13,515 ERROR     raise CheggTestException("Unable to see '%s'\n%s" % (text, php_issue))
+2016-06-21 12:06:13,523 INFO Current browser cookies at /Users/sshrimali/git/core/Chegg.Site/test/results/result-1466527772/6043 search Q&amp;A_browser_cookies.json
+2016-06-21 12:06:44,022 INFO AJAX API Stacktrace: none
+
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/steps.py", line 94, in subwrapper
+    return func(*_process_args(args), **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/websteps/websteps.py", line 426, in should_see_the_text
+    webtest.assert_text_visible(text, case_sensitive=bool(exact))
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/logger.py", line 51, in wrap
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/cheggtest-0.2.1462906634-py2.7.egg/cheggtest/webtest/webtest.py", line 1171, in assert_text_visible
+    raise CheggTestException("Unable to see '%s'\n%s" % (text, php_issue))
+"Unable to see 'Biology in Textbook Solution'\n\n\n@smoke  @search_smoke\nFeature: study page\n  @smoke_new\n  Scenario: 6043 search Q&amp;A\n    Given I go to the URL: study/?action=signup&amp;experiment=NONE0&amp;debug=experiment# fesite/study.page.feature:17 , PASSED\n     Then I click .ask-question                                                 # fesite/study.page.feature:18 , PASSED\n     Then I type Biology into autosuggest-input                                 # fesite/study.page.feature:19 , PASSED\n     Then I should see the text Biology in Books                                # fesite/study.page.feature:20 , PASSED\n     Then I should see the text Biology in Textbook Solution                    # fesite/study.page.feature:21 , FAILED\n     Then I should see the text Biology in Q&amp;A                                  # fesite/study.page.feature:22 \n     Then I should see the text Biology in Tutors                               # fesite/study.page.feature:23 \n     When I confirm the element: .category-name span displays the text: Expert Q&amp;A# fesite/study.page.feature:24 "
 
 
-
-</info></testcase><testcase classname="freshen.noseplugin.study page" name="6044 search Tutors" time="6.091"><info>
+</error></testcase><testcase classname="freshen.noseplugin.study page" name="6044 search Tutors" time="8.621"><info>
 Console Output:
 
-2016-06-16 16:33:06,426 INFO screenshot: '6044 search Tutors (before).png'
-2016-06-16 16:33:06,872 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/study.page.feature
-2016-06-16 16:33:06,882 INFO 
-2016-06-16 16:33:06,882 INFO go_to: 'http://rc.live.test.cheggnet.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:33:08,346 INFO wait_for_ready_state
-2016-06-16 16:33:08,350 INFO chegg_wait_for_spinners
-2016-06-16 16:33:08,375 INFO chegg_xdebug_checks
-2016-06-16 16:33:08,383 INFO chegg_pixel_check
-2016-06-16 16:33:08,428 INFO chegg_check_links
-2016-06-16 16:33:08,438 INFO click: '.find-tutors' index=0
-2016-06-16 16:33:08,619 INFO wait_for_ready_state
-2016-06-16 16:33:08,629 INFO chegg_wait_for_spinners
-2016-06-16 16:33:08,642 INFO chegg_xdebug_checks
-2016-06-16 16:33:08,647 INFO chegg_pixel_check
-2016-06-16 16:33:08,697 INFO chegg_check_links
-2016-06-16 16:33:08,702 INFO write_into: 'autosuggest-input','Biology' index=0
-2016-06-16 16:33:09,184 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
-2016-06-16 16:33:10,884 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
-2016-06-16 16:33:11,401 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
-2016-06-16 16:33:11,924 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
-2016-06-16 16:33:12,444 INFO assert_elements_visible: set(['.category-name span'])
-2016-06-16 16:33:12,516 INFO Element '.category-name span' displays expected text: 'Tutors'
+2016-06-21 12:06:44,690 INFO screenshot: '6044 search Tutors (before).png'
+2016-06-21 12:06:45,303 INFO not restaring selenium session, suite still /Users/sshrimali/git/core/Chegg.Site/test/fesite/study.page.feature
+2016-06-21 12:06:45,313 INFO 
+2016-06-21 12:06:45,313 INFO go_to: 'http://www.chegg.com/study/?action=signup&amp;experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:06:48,939 INFO wait_for_ready_state
+2016-06-21 12:06:48,950 INFO chegg_wait_for_spinners
+2016-06-21 12:06:49,007 INFO chegg_xdebug_checks
+2016-06-21 12:06:49,015 INFO chegg_pixel_check
+2016-06-21 12:06:49,085 INFO chegg_check_links
+2016-06-21 12:06:49,102 INFO click: '.find-tutors' index=0
+2016-06-21 12:06:49,344 INFO wait_for_ready_state
+2016-06-21 12:06:49,356 INFO chegg_wait_for_spinners
+2016-06-21 12:06:49,379 INFO chegg_xdebug_checks
+2016-06-21 12:06:49,407 INFO chegg_pixel_check
+2016-06-21 12:06:49,520 INFO chegg_check_links
+2016-06-21 12:06:49,538 INFO write_into: 'autosuggest-input','Biology' index=0
+2016-06-21 12:06:50,996 INFO assert_text_visible: 'Biology in Books' case_sensitive=False
+2016-06-21 12:06:51,653 INFO assert_text_visible: 'Biology in Textbook Solution' case_sensitive=False
+2016-06-21 12:06:52,179 INFO assert_text_visible: 'Biology in Q&amp;A' case_sensitive=False
+2016-06-21 12:06:52,702 INFO assert_text_visible: 'Biology in Tutors' case_sensitive=False
+2016-06-21 12:06:53,222 INFO assert_elements_visible: set(['.category-name span'])
+2016-06-21 12:06:53,310 INFO Element '.category-name span' displays expected text: 'Tutors'
 
 
 
-</info></testcase><testcase classname="freshen.noseplugin.ISBN Searching" name="5750 ISBN Searching" time="25.158"><info>
+</info></testcase><testcase classname="freshen.noseplugin.ISBN Searching" name="5750 ISBN Searching" time="41.348"><info>
 Console Output:
 
-2016-06-16 16:33:12,962 INFO screenshot: '5750 ISBN Searching (before).png'
-2016-06-16 16:33:13,425 INFO restarting selenium session
-2016-06-16 16:33:15,818 INFO 
-2016-06-16 16:33:15,818 INFO go_to: 'http://rc.live.test.cheggnet.com//?experiment=NONE0&amp;debug=experiment'
-2016-06-16 16:33:20,499 INFO wait_for_ready_state
-2016-06-16 16:33:20,506 INFO chegg_wait_for_spinners
-2016-06-16 16:33:20,548 INFO chegg_xdebug_checks
-2016-06-16 16:33:20,863 INFO chegg_pixel_check
-2016-06-16 16:33:20,928 INFO chegg_check_links
-2016-06-16 16:33:20,957 INFO 
-2016-06-16 16:33:20,958 INFO go_to: 'http://rc.live.test.cheggnet.com/books#sell'
-2016-06-16 16:33:23,222 INFO wait_for_ready_state
-2016-06-16 16:33:23,228 INFO chegg_wait_for_spinners
-2016-06-16 16:33:23,257 INFO chegg_xdebug_checks
-2016-06-16 16:33:23,350 INFO chegg_pixel_check
-2016-06-16 16:33:23,404 INFO chegg_check_links
-2016-06-16 16:33:23,412 INFO write_into: '#autosuggest-input','0073383074' index=0
-2016-06-16 16:33:23,958 INFO click: 'a.buyback-search-btn' index=0
-2016-06-16 16:33:25,699 INFO wait_for_ready_state
-2016-06-16 16:33:25,713 INFO chegg_wait_for_spinners
-2016-06-16 16:33:25,790 INFO chegg_xdebug_checks
-2016-06-16 16:33:25,794 INFO chegg_pixel_check
-2016-06-16 16:33:25,842 INFO chegg_check_links
-2016-06-16 16:33:25,849 INFO assert_text_visible: '0073383074' case_sensitive=False
-2016-06-16 16:33:26,370 INFO click: 'Sell book' index=0
-2016-06-16 16:33:30,374 INFO wait_for_ready_state
-2016-06-16 16:33:30,379 INFO chegg_wait_for_spinners
-2016-06-16 16:33:30,399 INFO chegg_xdebug_checks
-2016-06-16 16:33:30,404 INFO chegg_pixel_check
-2016-06-16 16:33:30,448 INFO chegg_check_links
-2016-06-16 16:33:30,454 INFO assert_text_visible: 'Sign in' case_sensitive=False
-2016-06-16 16:33:30,977 INFO 
-2016-06-16 16:33:30,977 INFO go_to: 'http://rc.live.test.cheggnet.com/sell-textbooks'
-2016-06-16 16:33:32,160 INFO wait_for_ready_state
-2016-06-16 16:33:32,169 INFO chegg_wait_for_spinners
-2016-06-16 16:33:32,217 INFO chegg_xdebug_checks
-2016-06-16 16:33:32,240 INFO chegg_pixel_check
-2016-06-16 16:33:32,316 INFO chegg_check_links
-2016-06-16 16:33:32,321 INFO write_into: input[name='buyback_search'],'9780321782281' index=0
-2016-06-16 16:33:32,620 INFO click: 'Get another quote' index=0
-2016-06-16 16:33:34,252 INFO wait_for_ready_state
-2016-06-16 16:33:34,258 INFO chegg_wait_for_spinners
-2016-06-16 16:33:34,316 INFO chegg_xdebug_checks
-2016-06-16 16:33:34,337 INFO chegg_pixel_check
-2016-06-16 16:33:34,407 INFO chegg_check_links
-2016-06-16 16:33:34,413 INFO assert_text_visible: '0073383074' case_sensitive=False
-2016-06-16 16:33:34,935 INFO assert_text_visible: '9780321782281' case_sensitive=False
-2016-06-16 16:33:35,451 INFO click: 'Sell books' index=0
-2016-06-16 16:33:37,523 INFO wait_for_ready_state
-2016-06-16 16:33:37,532 INFO chegg_wait_for_spinners
-2016-06-16 16:33:37,552 INFO chegg_xdebug_checks
-2016-06-16 16:33:37,557 INFO chegg_pixel_check
-2016-06-16 16:33:37,597 INFO chegg_check_links
-2016-06-16 16:33:37,603 INFO assert_text_visible: 'Sign in' case_sensitive=False
+2016-06-21 12:06:54,024 INFO screenshot: '5750 ISBN Searching (before).png'
+2016-06-21 12:06:54,640 INFO restarting selenium session
+2016-06-21 12:06:57,635 INFO 
+2016-06-21 12:06:57,635 INFO go_to: 'http://www.chegg.com//?experiment=NONE0&amp;debug=experiment'
+2016-06-21 12:07:04,707 INFO wait_for_ready_state
+2016-06-21 12:07:04,714 INFO chegg_wait_for_spinners
+2016-06-21 12:07:04,769 INFO chegg_xdebug_checks
+2016-06-21 12:07:04,779 INFO chegg_pixel_check
+2016-06-21 12:07:04,877 INFO chegg_check_links
+2016-06-21 12:07:06,127 INFO 
+2016-06-21 12:07:06,127 INFO go_to: 'http://www.chegg.com/books#sell'
+2016-06-21 12:07:12,227 INFO wait_for_ready_state
+2016-06-21 12:07:12,238 INFO chegg_wait_for_spinners
+2016-06-21 12:07:12,320 INFO chegg_xdebug_checks
+2016-06-21 12:07:12,337 INFO chegg_pixel_check
+2016-06-21 12:07:13,128 INFO chegg_check_links
+2016-06-21 12:07:13,135 INFO write_into: '#autosuggest-input','0073383074' index=0
+2016-06-21 12:07:13,816 INFO click: 'a.buyback-search-btn' index=0
+2016-06-21 12:07:16,500 INFO wait_for_ready_state
+2016-06-21 12:07:16,507 INFO chegg_wait_for_spinners
+2016-06-21 12:07:16,568 INFO chegg_xdebug_checks
+2016-06-21 12:07:16,616 INFO chegg_pixel_check
+2016-06-21 12:07:16,698 INFO chegg_check_links
+2016-06-21 12:07:16,707 INFO assert_text_visible: '0073383074' case_sensitive=False
+2016-06-21 12:07:17,230 INFO click: 'Sell book' index=0
+2016-06-21 12:07:23,394 INFO wait_for_ready_state
+2016-06-21 12:07:23,399 INFO chegg_wait_for_spinners
+2016-06-21 12:07:23,462 INFO chegg_xdebug_checks
+2016-06-21 12:07:23,476 INFO chegg_pixel_check
+2016-06-21 12:07:24,486 INFO chegg_check_links
+2016-06-21 12:07:24,495 INFO assert_text_visible: 'Sign in' case_sensitive=False
+2016-06-21 12:07:25,037 INFO 
+2016-06-21 12:07:25,037 INFO go_to: 'http://www.chegg.com/sell-textbooks'
+2016-06-21 12:07:27,052 INFO wait_for_ready_state
+2016-06-21 12:07:27,061 INFO chegg_wait_for_spinners
+2016-06-21 12:07:27,136 INFO chegg_xdebug_checks
+2016-06-21 12:07:27,145 INFO chegg_pixel_check
+2016-06-21 12:07:27,216 INFO chegg_check_links
+2016-06-21 12:07:27,224 INFO write_into: input[name='buyback_search'],'9780321782281' index=0
+2016-06-21 12:07:27,696 INFO click: 'Get another quote' index=0
+2016-06-21 12:07:29,713 INFO wait_for_ready_state
+2016-06-21 12:07:29,719 INFO chegg_wait_for_spinners
+2016-06-21 12:07:29,743 INFO chegg_xdebug_checks
+2016-06-21 12:07:29,751 INFO chegg_pixel_check
+2016-06-21 12:07:29,814 INFO chegg_check_links
+2016-06-21 12:07:29,824 INFO assert_text_visible: '0073383074' case_sensitive=False
+2016-06-21 12:07:30,348 INFO assert_text_visible: '9780321782281' case_sensitive=False
+2016-06-21 12:07:30,879 INFO click: 'Sell books' index=0
+2016-06-21 12:07:34,717 INFO wait_for_ready_state
+2016-06-21 12:07:34,722 INFO chegg_wait_for_spinners
+2016-06-21 12:07:34,748 INFO chegg_xdebug_checks
+2016-06-21 12:07:34,771 INFO chegg_pixel_check
+2016-06-21 12:07:34,833 INFO chegg_check_links
+2016-06-21 12:07:34,846 INFO assert_text_visible: 'Sign in' case_sensitive=False
 
 
 
