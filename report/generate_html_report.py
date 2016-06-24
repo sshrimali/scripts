@@ -13,7 +13,7 @@ def transform(xmlPath, xslPath):
   transRoot = transform(xmlRoot)
 
   # return transformation result
-  return etree.tostring(transRoot)
+  return etree.tostring(transRoot,pretty_print=True)
 
 if __name__ == '__main__':
-  print(transform('./results.xml', 'temp.xsl'))
+  print(transform('./results.xml', 'report_template.xsl'))
