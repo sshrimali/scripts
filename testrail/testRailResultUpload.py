@@ -1,22 +1,47 @@
+#!/usr/bin/env python
 import xml.etree.ElementTree as ET
-
+import pprint
 import sys
+from testrail import *
+
+testRailURL='https://chegg.testrail.com/'
+userName='corexeng@chegg.com'
+password='testing'
+projectId='24'  # For core project
 
 
-def getTestIds(filename):
+
+def updateResults(filename):
     tree = ET.parse(fileName)
     root = tree.findall("testcase")
+    resultset=[]
     for testcase in root:
-        print testcase.get('name')
+        testcaseID=testcase.get('name').split()[0]
+        error=testcase.findall("error[@type]")
+        if len(error) is 0:
+            result="PASS"
+        else:
+            result="Failed"
+        #print (testcaseID + " : " + result);
+        result={"case_id" : testcaseID , "status_id" : 5 , "comment" : "test failed"}
+        resultset.append(result)
+    client = APIClient(testRailURL)
+    client.user = userName
+    client.password = password
+    # Get Run ID
+    runs = client.send_get('get_runs/' + projectId)
+    lastRun=runs[-1]
+    testRunID=str(lastRun["id"])
+    #testRunID="126"
+    print("add_results_for_cases/" + testRunID, {"results " : resultset})
+    client.send_post("add_results_for_cases/" + testRunID, {"results" : resultset})
+
 
 
 def getArgs():
     fileName=sys.argv[1];
     return fileName
 
-def updateResults():
-    print ("test");
 
 fileName=getArgs()
-getTestIds(fileName)
-updateResults()
+updateResults(fileName)
