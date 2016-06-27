@@ -510,12 +510,12 @@
 				<xsl:when test="failure">
 					<td>Failure</td>
 					<td><xsl:apply-templates select="failure"/></td>
-						<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+						<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Entry</a> " || " <a href="./{@name} (after).png" target="_blank">Exit</a>
 						<xsl:apply-templates select="error"/></td>
 				</xsl:when>
 				<xsl:when test="error">
 					<td>Failure</td>
-					<td class="FailureDetails"> Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+					<td class="FailureDetails"> Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Entry</a>  | <a href="./{@name} (after).png" target="_blank">Exit</a>
 						<br/><br/>
 						Error message:
 						<br/>
@@ -540,7 +540,7 @@
 				</xsl:when>
 				<xsl:otherwise>
 					<td>Success</td>
-					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Before</a>  <a style="float:right" href="./{@name} (after).png" target="_blank">After</a>
+					<td>Screenshot : <br/><a href="./{@name} (before).png" target="_blank">Entry</a>  |  <a href="./{@name} (after).png" target="_blank">Exit</a>
 					</td>
 
 				</xsl:otherwise>
