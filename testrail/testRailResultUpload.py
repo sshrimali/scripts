@@ -18,10 +18,9 @@ def updateResults(fileName):
     client.password = password
     # Get Run ID
     runs = client.send_get('get_runs/' + projectId)
-    lastRun = runs[-1]
+    lastRun = runs[0]
     testRunID = str(lastRun["id"])
     testInRun = client.send_get('get_tests/' + testRunID)
-
     ErrorMsg="";
     ErrorMsgLast=""
     updatedId=[]
@@ -39,7 +38,6 @@ def updateResults(fileName):
                     ErrorMsg=i + ErrorMsgLast
                     ErrorMsgLast=i;
             resultComment="Test failed in automated run, error message : \n" + ErrorMsg
-            print(testcaseID , " : Comment : ",resultComment)
         for tcId in testInRun:
             if str(testcaseID) == str(tcId["case_id"]):
                 resultNode={"case_id" : testcaseID , "status_id" : resultStatus, "comment": resultComment}
