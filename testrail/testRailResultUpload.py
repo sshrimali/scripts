@@ -2,9 +2,9 @@
 import xml.etree.ElementTree as ET
 import sys
 from testrail import *
-testRailURL='https://chegg.testrail.com/'
-userName='corexeng@chegg.com'
-password='testing'
+testRailURL=''
+userName=''
+password=''
 projectId='24'  # For core project
 
 
